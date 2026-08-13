@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!-- 基础淳平：普通机械培育器。每个配方单独追加，避免列表 Patch 的兼容性问题。 -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="MechGestator"]/recipes</xpath>
+    <value>
+      <li>Gestate_ChunPing_Calligrapher</li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="MechGestator"]/recipes</xpath>
+    <value>
+      <li>Gestate_ChunPing_Waiter</li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="MechGestator"]/recipes</xpath>
+    <value>
+      <li>Gestate_ChunPing_Construction</li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="MechGestator"]/recipes</xpath>
+    <value>
+      <li>Gestate_ChunPing_Kendo</li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="MechGestator"]/recipes</xpath>
+    <value>
+      <li>Gestate_ChunPing_Gardener</li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="MechGestator"]/recipes</xpath>
+    <value>
+      <li>Gestate_ChunPing_Mechanic</li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="MechGestator"]/recipes</xpath>
+    <value>
+      <li>Gestate_ChunPing_Blond</li>
+    </value>
+  </Operation>
+  <!-- 标准、高级、终极淳平：大型机械培育器。 -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="LargeMechGestator"]/recipes</xpath>
+    <value>
+      <li>Gestate_ChunPing_Doctor</li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="LargeMechGestator"]/recipes</xpath>
+    <value>
+      <li>Gestate_ChunPing_Bully</li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="LargeMechGestator"]/recipes</xpath>
+    <value>
+      <li>Gestate_ChunPing_Patient</li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="LargeMechGestator"]/recipes</xpath>
+    <value>
+      <li>Gestate_ChunPing_Police</li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="LargeMechGestator"]/recipes</xpath>
+    <value>
+      <li>Gestate_ChunPing_WasedaHero</li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="LargeMechGestator"]/recipes</xpath>
+    <value>
+      <li>Gestate_ChunPing_Hulk</li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="LargeMechGestator"]/recipes</xpath>
+    <value>
+      <li>Gestate_ChunPing_SnowSamurai</li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="LargeMechGestator"]/recipes</xpath>
+    <value>
+      <li>Gestate_ChunPing_BigBrother</li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="LargeMechGestator"]/recipes</xpath>
+    <value>
+      <li>Gestate_ChunPing_Leo</li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="LargeMechGestator"]/recipes</xpath>
+    <value>
+      <li>Gestate_ChunPing_Beelzebub</li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="LargeMechGestator"]/recipes</xpath>
+    <value>
+      <li>Gestate_ChunPing_DemonKing</li>
+    </value>
+  </Operation>
+</Patch>

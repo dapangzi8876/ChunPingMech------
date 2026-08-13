@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <packageId>Adou.ChunPingMech</packageId>
+  <name>淳平机械体</name>
+  <supportedVersions>
+    <li>1.6</li>
+  </supportedVersions>
+  <modDependencies>
+    <li>
+      <packageId>Ludeon.RimWorld.Biotech</packageId>
+      <displayName>Biotech</displayName>
+    </li>
+  </modDependencies>
+  <forceLoadAfter>
+    <li>Ludeon.RimWorld.Biotech</li>
+  </forceLoadAfter>
+  <author>超级威猛陈阿斗</author>
+  <description>增加第一阶段淳平机械体：18 种可制造、可控制的工作与战斗机械体。所有单位暂时使用 RimWorld 原版 Fabricor 贴图和原版机械武器标签作为占位资源，后续可直接替换 Def 中的 texPath、maskPath 和武器字段。
+
+当前未实现主动技能、特殊战斗机制、召唤、陷阱、自爆、Boss 和敌对淳平袭击。
+
+[AI 辅助生成]</description>
+</ModMetaData>

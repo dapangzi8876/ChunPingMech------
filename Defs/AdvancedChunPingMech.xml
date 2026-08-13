@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- 标准科技单位。特殊技能、处决、自爆和控制效果均留待后续阶段。 -->
+  <ThingDef ParentName="ChunPingMechBase">
+    <defName>Mech_ChunPing_Doctor</defName>
+    <label>大医生淳平</label>
+    <description>执行医疗和科研工作的专业机械体。</description>
+    <statBases>
+      <MarketValue>1400</MarketValue>
+      <BandwidthCost>2</BandwidthCost>
+      <MoveSpeed>3.3</MoveSpeed>
+      <ArmorRating_Blunt>0.12</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.25</ArmorRating_Sharp>
+    </statBases>
+    <race>
+      <mechWeightClass>Medium</mechWeightClass>
+      <!-- 同时作用于医疗与研究；以主职医疗 20 为准。 -->
+      <mechFixedSkillLevel>20</mechFixedSkillLevel>
+      <mechEnabledWorkTypes>
+        <li>Doctor</li>
+        <li>Research</li>
+      </mechEnabledWorkTypes>
+    </race>
+  </ThingDef>
+  <PawnKindDef ParentName="ChunPingMechBaseKind">
+    <defName>Mech_ChunPing_Doctor</defName>
+    <label>大医生淳平</label>
+    <race>Mech_ChunPing_Doctor</race>
+  </PawnKindDef>
+  <ThingDef ParentName="ChunPingMechBase">
+    <defName>Mech_ChunPing_Bully</defName>
+    <label>恶霸淳平</label>
+    <description>拥有强化近战能力和基础远程能力的多用途战斗机械体。霸凌技能暂未实现。</description>
+    <statBases>
+      <MarketValue>1700</MarketValue>
+      <BandwidthCost>3</BandwidthCost>
+      <MoveSpeed>3.2</MoveSpeed>
+      <ArmorRating_Blunt>0.18</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.34</ArmorRating_Sharp>
+      <!-- 等效近战 16、射击 12。 -->
+      <MeleeHitChance>12</MeleeHitChance>
+      <ShootingAccuracyPawn>4</ShootingAccuracyPawn>
+    </statBases>
+    <tools>
+      <li>
+        <label>heavy fist</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>20</power>
+        <cooldownTime>2.2</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+      </li>
+    </tools>
+    <race>
+      <baseHealthScale>1.25</baseHealthScale>
+      <mechWeightClass>Medium</mechWeightClass>
+    </race>
+  </ThingDef>
+  <PawnKindDef ParentName="ChunPingMechBaseKind">
+    <defName>Mech_ChunPing_Bully</defName>
+    <label>恶霸淳平</label>
+    <race>Mech_ChunPing_Bully</race>
+    <isFighter>true</isFighter>
+    <combatPower>190</combatPower>
+    <weaponTags>
+      <li>MechanoidGunShortRange</li>
+    </weaponTags>
+  </PawnKindDef>
+  <!-- TODO: 后续加入患者自爆机制。第一阶段保持为廉价轻型战斗单位。 -->
+  <ThingDef ParentName="ChunPingMechBase">
+    <defName>Mech_ChunPing_Patient</defName>
+    <label>患者淳平</label>
+    <description>廉价、快速且脆弱的轻型战斗机械体。自爆机制暂未实现。</description>
+    <statBases>
+      <MarketValue>1000</MarketValue>
+      <BandwidthCost>1</BandwidthCost>
+      <MoveSpeed>4.2</MoveSpeed>
+      <ArmorRating_Blunt>0.05</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.10</ArmorRating_Sharp>
+      <!-- 等效近战 8。 -->
+      <MeleeHitChance>4</MeleeHitChance>
+    </statBases>
+    <race>
+      <baseHealthScale>0.62</baseHealthScale>
+      <mechWeightClass>Medium</mechWeightClass>
+    </race>
+  </ThingDef>
+  <PawnKindDef ParentName="ChunPingMechBaseKind">
+    <defName>Mech_ChunPing_Patient</defName>
+    <label>患者淳平</label>
+    <race>Mech_ChunPing_Patient</race>
+    <isFighter>true</isFighter>
+    <combatPower>70</combatPower>
+  </PawnKindDef>
+  <!-- 警察暂用原版中远程机械枪标签，射速/强度由原版武器控制。 -->
+  <ThingDef ParentName="ChunPingMechBase">
+    <defName>Mech_ChunPing_Police</defName>
+    <label>警察淳平</label>
+    <description>中型持续火力机械体。部署、压制和主动技能暂未实现。</description>
+    <statBases>
+      <MarketValue>1900</MarketValue>
+      <BandwidthCost>3</BandwidthCost>
+      <MoveSpeed>2.9</MoveSpeed>
+      <ArmorRating_Blunt>0.16</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.32</ArmorRating_Sharp>
+      <!-- 等效射击 18。 -->
+      <ShootingAccuracyPawn>10</ShootingAccuracyPawn>
+    </statBases>
+    <race>
+      <baseHealthScale>1.35</baseHealthScale>
+      <mechWeightClass>Medium</mechWeightClass>
+    </race>
+  </ThingDef>
+  <PawnKindDef ParentName="ChunPingMechBaseKind">
+    <defName>Mech_ChunPing_Police</defName>
+    <label>警察淳平</label>
+    <race>Mech_ChunPing_Police</race>
+    <isFighter>true</isFighter>
+    <combatPower>230</combatPower>
+    <weaponTags>
+      <li>MechanoidGunMedium</li>
+    </weaponTags>
+  </PawnKindDef>
+</Defs>

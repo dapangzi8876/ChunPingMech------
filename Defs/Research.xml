@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ResearchTabDef>
+    <defName>ChunPingMechResearch</defName>
+    <label>淳平机械工程</label>
+    <generalTitle>淳平机械工程</generalTitle>
+    <generalDescription>研究并解锁不同等级的淳平机械体。</generalDescription>
+  </ResearchTabDef>
+  <ResearchProjectDef ParentName="MechtechBase">
+    <defName>ChunPing_BasicMechtech</defName>
+    <label>淳平基础机械工程</label>
+    <description>解锁基础淳平机械体及其培育配方。</description>
+    <baseCost>400</baseCost>
+    <techLevel>Industrial</techLevel>
+    <tab>ChunPingMechResearch</tab>
+    <researchViewX>1</researchViewX>
+    <researchViewY>1</researchViewY>
+    <prerequisites>
+      <li>BasicMechtech</li>
+    </prerequisites>
+  </ResearchProjectDef>
+  <ResearchProjectDef ParentName="MechtechBase">
+    <defName>ChunPing_StandardMechtech</defName>
+    <label>淳平标准机械工程</label>
+    <description>解锁标准淳平机械体及其培育配方。</description>
+    <baseCost>1200</baseCost>
+    <techLevel>Industrial</techLevel>
+    <tab>ChunPingMechResearch</tab>
+    <researchViewX>3</researchViewX>
+    <researchViewY>1</researchViewY>
+    <prerequisites>
+      <li>StandardMechtech</li>
+      <li>ChunPing_BasicMechtech</li>
+    </prerequisites>
+  </ResearchProjectDef>
+  <ResearchProjectDef ParentName="MechtechBase">
+    <defName>ChunPing_HighMechtech</defName>
+    <label>淳平高级机械工程</label>
+    <description>解锁高级淳平机械体及其培育配方。</description>
+    <baseCost>3200</baseCost>
+    <techLevel>Spacer</techLevel>
+    <tab>ChunPingMechResearch</tab>
+    <researchViewX>5</researchViewX>
+    <researchViewY>1</researchViewY>
+    <prerequisites>
+      <li>HighMechtech</li>
+      <li>ChunPing_StandardMechtech</li>
+    </prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities>
+      <li>MultiAnalyzer</li>
+    </requiredResearchFacilities>
+  </ResearchProjectDef>
+  <ResearchProjectDef ParentName="MechtechBase">
+    <defName>ChunPing_UltraMechtech</defName>
+    <label>淳平终极机械工程</label>
+    <description>解锁终极淳平机械体及其培育配方。</description>
+    <baseCost>5500</baseCost>
+    <techLevel>Ultra</techLevel>
+    <tab>ChunPingMechResearch</tab>
+    <researchViewX>7</researchViewX>
+    <researchViewY>1</researchViewY>
+    <prerequisites>
+      <li>UltraMechtech</li>
+      <li>ChunPing_HighMechtech</li>
+    </prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities>
+      <li>MultiAnalyzer</li>
+    </requiredResearchFacilities>
+  </ResearchProjectDef>
+</Defs>

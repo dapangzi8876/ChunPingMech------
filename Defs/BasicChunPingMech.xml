@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- 第一阶段公共父类。贴图、声音和基础机械生命逻辑均暂时复用原版 Fabricor。 -->
+  <ThingDef Name="ChunPingMechBase" ParentName="LightMechanoid" Abstract="True">
+    <statBases>
+      <MarketValue>850</MarketValue>
+      <BandwidthCost>1</BandwidthCost>
+      <MoveSpeed>3.4</MoveSpeed>
+      <ArmorRating_Blunt>0.10</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.20</ArmorRating_Sharp>
+    </statBases>
+    <race>
+      <lifeStageAges>
+        <li>
+          <def>MechanoidFullyFormed</def>
+          <minAge>0</minAge>
+          <soundWounded>Pawn_Mech_Fabricor_Wounded</soundWounded>
+          <soundDeath>Pawn_Mech_Fabricor_Death</soundDeath>
+          <soundCall>Pawn_Mech_Fabricor_Call</soundCall>
+        </li>
+        <li>
+          <def>MechanoidFullyFormed</def>
+          <minAge>100</minAge>
+          <soundWounded>Pawn_Mech_Fabricor_Wounded</soundWounded>
+          <soundDeath>Pawn_Mech_Fabricor_Death</soundDeath>
+          <soundCall>Pawn_Mech_Fabricor_Call</soundCall>
+        </li>
+      </lifeStageAges>
+    </race>
+    <!-- TODO: 用正式淳平贴图/音效替换以下原版占位资源。 -->
+  </ThingDef>
+  <PawnKindDef Name="ChunPingMechBaseKind" ParentName="NonCombatLightMechanoidKind" Abstract="True">
+    <lifeStages Inherit="False">
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Mechanoid/Fabricor</texPath>
+          <maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/Mech_Fabricor</maskPath>
+          <shaderType>CutoutWithOverlay</shaderType>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>1.1</drawSize>
+        </bodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Mechanoid/Fabricor</texPath>
+          <maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/Mech_Fabricor</maskPath>
+          <shaderType>CutoutWithOverlay</shaderType>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>1.1</drawSize>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+  <!-- 基础科技：工作型机械体。 -->
+  <ThingDef ParentName="ChunPingMechBase">
+    <defName>Mech_ChunPing_Calligrapher</defName>
+    <label>书法家淳平</label>
+    <description>专门进行艺术创作的淳平机械体。</description>
+    <race>
+      <!-- 原版机械体用单一固定工作技能等级，不使用 PawnKindDef.skills。 -->
+      <mechFixedSkillLevel>20</mechFixedSkillLevel>
+      <mechEnabledWorkTypes>
+        <li>Art</li>
+      </mechEnabledWorkTypes>
+    </race>
+  </ThingDef>
+  <PawnKindDef ParentName="ChunPingMechBaseKind">
+    <defName>Mech_ChunPing_Calligrapher</defName>
+    <label>书法家淳平</label>
+    <race>Mech_ChunPing_Calligrapher</race>
+  </PawnKindDef>
+  <ThingDef ParentName="ChunPingMechBase">
+    <defName>Mech_ChunPing_Waiter</defName>
+    <label>服务员淳平</label>
+    <description>执行杂务、烹饪和清洁工作的综合服务机械体。</description>
+    <statBases>
+      <FoodPoisonChance>0.001</FoodPoisonChance>
+      <BandwidthCost>1</BandwidthCost>
+    </statBases>
+    <race>
+      <!-- 同时作用于烹饪、清洁和基础工作。 -->
+      <mechFixedSkillLevel>15</mechFixedSkillLevel>
+      <mechEnabledWorkTypes>
+        <li>BasicWorker</li>
+        <li>Cooking</li>
+        <li>Cleaning</li>
+      </mechEnabledWorkTypes>
+    </race>
+  </ThingDef>
+  <PawnKindDef ParentName="ChunPingMechBaseKind">
+    <defName>Mech_ChunPing_Waiter</defName>
+    <label>服务员淳平</label>
+    <race>Mech_ChunPing_Waiter</race>
+  </PawnKindDef>
+  <ThingDef ParentName="ChunPingMechBase">
+    <defName>Mech_ChunPing_Construction</defName>
+    <label>土木淳平</label>
+    <description>用于建筑、维修和采矿的工程机械体。</description>
+    <statBases>
+      <MoveSpeed>3.1</MoveSpeed>
+      <BandwidthCost>1</BandwidthCost>
+      <ArmorRating_Blunt>0.12</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.24</ArmorRating_Sharp>
+    </statBases>
+    <race>
+      <!-- 一个机械体只能有一个固定工作等级，取主职建造的 18。 -->
+      <mechFixedSkillLevel>18</mechFixedSkillLevel>
+      <mechEnabledWorkTypes>
+        <li>Construction</li>
+        <li>Mining</li>
+      </mechEnabledWorkTypes>
+      <baseHealthScale>0.85</baseHealthScale>
+    </race>
+  </ThingDef>
+  <PawnKindDef ParentName="ChunPingMechBaseKind">
+    <defName>Mech_ChunPing_Construction</defName>
+    <label>土木淳平</label>
+    <race>Mech_ChunPing_Construction</race>
+  </PawnKindDef>
+  <ThingDef ParentName="ChunPingMechBase">
+    <defName>Mech_ChunPing_Kendo</defName>
+    <label>剑道部淳平</label>
+    <description>兼顾制造、搬运和基础近战的机械体。</description>
+    <statBases>
+      <MoveSpeed>3.5</MoveSpeed>
+      <BandwidthCost>1</BandwidthCost>
+      <ArmorRating_Blunt>0.13</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.26</ArmorRating_Sharp>
+      <!-- 等效近战 14。MeleeHitChance 使用未最终化的技能等价值。 -->
+      <MeleeHitChance>10</MeleeHitChance>
+    </statBases>
+    <tools>
+      <li>
+        <label>reinforced fist</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>14</power>
+        <cooldownTime>2.3</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+      </li>
+    </tools>
+    <race>
+      <mechFixedSkillLevel>12</mechFixedSkillLevel>
+      <mechEnabledWorkTypes>
+        <li>Crafting</li>
+        <li>Hauling</li>
+      </mechEnabledWorkTypes>
+    </race>
+  </ThingDef>
+  <PawnKindDef ParentName="ChunPingMechBaseKind">
+    <defName>Mech_ChunPing_Kendo</defName>
+    <label>剑道部淳平</label>
+    <race>Mech_ChunPing_Kendo</race>
+    <isFighter>true</isFighter>
+    <combatPower>80</combatPower>
+  </PawnKindDef>
+  <ThingDef ParentName="ChunPingMechBase">
+    <defName>Mech_ChunPing_Gardener</defName>
+    <label>园丁淳平</label>
+    <description>负责播种、收获、砍伐和农产品搬运的农业机械体。</description>
+    <statBases>
+      <MoveSpeed>3.5</MoveSpeed>
+      <BandwidthCost>1</BandwidthCost>
+      <PlantWorkSpeed>0.8</PlantWorkSpeed>
+    </statBases>
+    <race>
+      <mechFixedSkillLevel>20</mechFixedSkillLevel>
+      <mechEnabledWorkTypes>
+        <li>Growing</li>
+        <li>PlantCutting</li>
+        <li>Hauling</li>
+      </mechEnabledWorkTypes>
+    </race>
+  </ThingDef>
+  <PawnKindDef ParentName="ChunPingMechBaseKind">
+    <defName>Mech_ChunPing_Gardener</defName>
+    <label>园丁淳平</label>
+    <race>Mech_ChunPing_Gardener</race>
+  </PawnKindDef>
+  <ThingDef ParentName="ChunPingMechBase">
+    <defName>Mech_ChunPing_Mechanic</defName>
+    <label>汽车修理工淳平</label>
+    <description>用于锻造、缝纫和工业制造的作业机械体。</description>
+    <statBases>
+      <BandwidthCost>1</BandwidthCost>
+    </statBases>
+    <race>
+      <mechFixedSkillLevel>20</mechFixedSkillLevel>
+      <mechEnabledWorkTypes>
+        <li>Crafting</li>
+        <li>Smithing</li>
+        <li>Tailoring</li>
+      </mechEnabledWorkTypes>
+    </race>
+  </ThingDef>
+  <PawnKindDef ParentName="ChunPingMechBaseKind">
+    <defName>Mech_ChunPing_Mechanic</defName>
+    <label>汽车修理工淳平</label>
+    <race>Mech_ChunPing_Mechanic</race>
+  </PawnKindDef>
+  <!-- 黄毛的武器暂用原版短程机械枪；正式武器资源待替换。 -->
+  <ThingDef ParentName="ChunPingMechBase">
+    <defName>Mech_ChunPing_Blond</defName>
+    <label>黄毛淳平</label>
+    <description>基础远程和狩猎机械体。远程武器暂用原版轻型机械枪占位。</description>
+    <statBases>
+      <MoveSpeed>3.6</MoveSpeed>
+      <BandwidthCost>2</BandwidthCost>
+      <ArmorRating_Blunt>0.08</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.16</ArmorRating_Sharp>
+      <!-- 等效射击 15；ShootingAccuracyPawn 的无技能基础偏移为 8。 -->
+      <ShootingAccuracyPawn>7</ShootingAccuracyPawn>
+    </statBases>
+    <race>
+      <!-- 狩猎工作的固定技能等级；射击命中另由 ShootingAccuracyPawn 表达。 -->
+      <mechFixedSkillLevel>15</mechFixedSkillLevel>
+      <mechEnabledWorkTypes>
+        <li>Hunting</li>
+      </mechEnabledWorkTypes>
+    </race>
+  </ThingDef>
+  <PawnKindDef ParentName="ChunPingMechBaseKind">
+    <defName>Mech_ChunPing_Blond</defName>
+    <label>黄毛淳平</label>
+    <race>Mech_ChunPing_Blond</race>
+    <isFighter>true</isFighter>
+    <combatPower>100</combatPower>
+    <weaponTags>
+      <li>MechanoidGunShortRange</li>
+    </weaponTags>
+  </PawnKindDef>
+</Defs>

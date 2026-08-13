@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- 配方父类直接继承 Biotech 原版培育配方，确保培育周期、机械师限制和工作量正确。 -->
+  <RecipeDef Name="ChunPingBasicRecipe" ParentName="LightMechanoidRecipe" Abstract="True">
+    <researchPrerequisite>ChunPing_BasicMechtech</researchPrerequisite>
+    <displayPriority>100</displayPriority>
+  </RecipeDef>
+  <RecipeDef Name="ChunPingStandardRecipe" ParentName="MediumMechanoidRecipe" Abstract="True">
+    <researchPrerequisite>ChunPing_StandardMechtech</researchPrerequisite>
+    <displayPriority>200</displayPriority>
+    <ingredients Inherit="False">
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Steel</li>
+          </thingDefs>
+        </filter>
+        <count>100</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Plasteel</li>
+          </thingDefs>
+        </filter>
+        <count>50</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ComponentIndustrial</li>
+          </thingDefs>
+        </filter>
+        <count>4</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SubcoreRegular</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+  </RecipeDef>
+  <RecipeDef Name="ChunPingHighRecipe" ParentName="HeavyMechanoidRecipe" Abstract="True">
+    <researchPrerequisite>ChunPing_HighMechtech</researchPrerequisite>
+    <displayPriority>300</displayPriority>
+    <gestationCycles>6</gestationCycles>
+    <ingredients Inherit="False">
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Steel</li>
+          </thingDefs>
+        </filter>
+        <count>200</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Plasteel</li>
+          </thingDefs>
+        </filter>
+        <count>150</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ComponentIndustrial</li>
+          </thingDefs>
+        </filter>
+        <count>8</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SubcoreHigh</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+  </RecipeDef>
+  <RecipeDef Name="ChunPingUltraRecipe" ParentName="SuperHeavyMechanoidRecipe" Abstract="True">
+    <researchPrerequisite>ChunPing_UltraMechtech</researchPrerequisite>
+    <displayPriority>400</displayPriority>
+    <ingredients Inherit="False">
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Steel</li>
+          </thingDefs>
+        </filter>
+        <count>350</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Plasteel</li>
+          </thingDefs>
+        </filter>
+        <count>250</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ComponentSpacer</li>
+          </thingDefs>
+        </filter>
+        <count>2</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>NanostructuringChip</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SubcoreHigh</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+  </RecipeDef>
+  <!-- 普通机械培育器：基础机械体。 -->
+  <RecipeDef ParentName="ChunPingBasicRecipe">
+    <defName>Gestate_ChunPing_Calligrapher</defName>
+    <label>孕育书法家淳平</label>
+    <description>在机械培育器中孕育书法家淳平。</description>
+    <products>
+      <Mech_ChunPing_Calligrapher>1</Mech_ChunPing_Calligrapher>
+    </products>
+    <descriptionHyperlinks>
+      <ThingDef>Mech_ChunPing_Calligrapher</ThingDef>
+    </descriptionHyperlinks>
+  </RecipeDef>
+  <RecipeDef ParentName="ChunPingBasicRecipe">
+    <defName>Gestate_ChunPing_Waiter</defName>
+    <label>孕育服务员淳平</label>
+    <description>在机械培育器中孕育服务员淳平。</description>
+    <products>
+      <Mech_ChunPing_Waiter>1</Mech_ChunPing_Waiter>
+    </products>
+    <descriptionHyperlinks>
+      <ThingDef>Mech_ChunPing_Waiter</ThingDef>
+    </descriptionHyperlinks>
+  </RecipeDef>
+  <RecipeDef ParentName="ChunPingBasicRecipe">
+    <defName>Gestate_ChunPing_Construction</defName>
+    <label>孕育土木淳平</label>
+    <description>在机械培育器中孕育土木淳平。</description>
+    <products>
+      <Mech_ChunPing_Construction>1</Mech_ChunPing_Construction>
+    </products>
+    <descriptionHyperlinks>
+      <ThingDef>Mech_ChunPing_Construction</ThingDef>
+    </descriptionHyperlinks>
+  </RecipeDef>
+  <RecipeDef ParentName="ChunPingBasicRecipe">
+    <defName>Gestate_ChunPing_Kendo</defName>
+    <label>孕育剑道部淳平</label>
+    <description>在机械培育器中孕育剑道部淳平。</description>
+    <products>
+      <Mech_ChunPing_Kendo>1</Mech_ChunPing_Kendo>
+    </products>
+    <descriptionHyperlinks>
+      <ThingDef>Mech_ChunPing_Kendo</ThingDef>
+    </descriptionHyperlinks>
+  </RecipeDef>
+  <RecipeDef ParentName="ChunPingBasicRecipe">
+    <defName>Gestate_ChunPing_Gardener</defName>
+    <label>孕育园丁淳平</label>
+    <description>在机械培育器中孕育园丁淳平。</description>
+    <products>
+      <Mech_ChunPing_Gardener>1</Mech_ChunPing_Gardener>
+    </products>
+    <descriptionHyperlinks>
+      <ThingDef>Mech_ChunPing_Gardener</ThingDef>
+    </descriptionHyperlinks>
+  </RecipeDef>
+  <RecipeDef ParentName="ChunPingBasicRecipe">
+    <defName>Gestate_ChunPing_Mechanic</defName>
+    <label>孕育汽车修理工淳平</label>
+    <description>在机械培育器中孕育汽车修理工淳平。</description>
+    <products>
+      <Mech_ChunPing_Mechanic>1</Mech_ChunPing_Mechanic>
+    </products>
+    <descriptionHyperlinks>
+      <ThingDef>Mech_ChunPing_Mechanic</ThingDef>
+    </descriptionHyperlinks>
+  </RecipeDef>
+  <RecipeDef ParentName="ChunPingBasicRecipe">
+    <defName>Gestate_ChunPing_Blond</defName>
+    <label>孕育黄毛淳平</label>
+    <description>在机械培育器中孕育黄毛淳平。</description>
+    <products>
+      <Mech_ChunPing_Blond>1</Mech_ChunPing_Blond>
+    </products>
+    <descriptionHyperlinks>
+      <ThingDef>Mech_ChunPing_Blond</ThingDef>
+    </descriptionHyperlinks>
+  </RecipeDef>
+  <!-- 大型机械培育器：标准机械体。 -->
+  <RecipeDef ParentName="ChunPingStandardRecipe">
+    <defName>Gestate_ChunPing_Doctor</defName>
+    <label>孕育大医生淳平</label>
+    <description>在大型机械培育器中孕育大医生淳平。</description>
+    <products>
+      <Mech_ChunPing_Doctor>1</Mech_ChunPing_Doctor>
+    </products>
+    <descriptionHyperlinks>
+      <ThingDef>Mech_ChunPing_Doctor</ThingDef>
+    </descriptionHyperlinks>
+  </RecipeDef>
+  <RecipeDef ParentName="ChunPingStandardRecipe">
+    <defName>Gestate_ChunPing_Bully</defName>
+    <label>孕育恶霸淳平</label>
+    <description>在大型机械培育器中孕育恶霸淳平。</description>
+    <products>
+      <Mech_ChunPing_Bully>1</Mech_ChunPing_Bully>
+    </products>
+    <descriptionHyperlinks>
+      <ThingDef>Mech_ChunPing_Bully</ThingDef>
+    </descriptionHyperlinks>
+  </RecipeDef>
+  <RecipeDef ParentName="ChunPingStandardRecipe">
+    <defName>Gestate_ChunPing_Patient</defName>
+    <label>孕育患者淳平</label>
+    <description>在大型机械培育器中孕育患者淳平。</description>
+    <products>
+      <Mech_ChunPing_Patient>1</Mech_ChunPing_Patient>
+    </products>
+    <descriptionHyperlinks>
+      <ThingDef>Mech_ChunPing_Patient</ThingDef>
+    </descriptionHyperlinks>
+  </RecipeDef>
+  <RecipeDef ParentName="ChunPingStandardRecipe">
+    <defName>Gestate_ChunPing_Police</defName>
+    <label>孕育警察淳平</label>
+    <description>在大型机械培育器中孕育警察淳平。</description>
+    <products>
+      <Mech_ChunPing_Police>1</Mech_ChunPing_Police>
+    </products>
+    <descriptionHyperlinks>
+      <ThingDef>Mech_ChunPing_Police</ThingDef>
+    </descriptionHyperlinks>
+  </RecipeDef>
+  <!-- 大型机械培育器：高级机械体。 -->
+  <RecipeDef ParentName="ChunPingHighRecipe">
+    <defName>Gestate_ChunPing_WasedaHero</defName>
+    <label>孕育早稻田英雄淳平</label>
+    <description>在大型机械培育器中孕育早稻田英雄淳平。</description>
+    <products>
+      <Mech_ChunPing_WasedaHero>1</Mech_ChunPing_WasedaHero>
+    </products>
+    <descriptionHyperlinks>
+      <ThingDef>Mech_ChunPing_WasedaHero</ThingDef>
+    </descriptionHyperlinks>
+  </RecipeDef>
+  <RecipeDef ParentName="ChunPingHighRecipe">
+    <defName>Gestate_ChunPing_Hulk</defName>
+    <label>孕育绿巨人淳平</label>
+    <description>在大型机械培育器中孕育绿巨人淳平。</description>
+    <products>
+      <Mech_ChunPing_Hulk>1</Mech_ChunPing_Hulk>
+    </products>
+    <descriptionHyperlinks>
+      <ThingDef>Mech_ChunPing_Hulk</ThingDef>
+    </descriptionHyperlinks>
+  </RecipeDef>
+  <RecipeDef ParentName="ChunPingHighRecipe">
+    <defName>Gestate_ChunPing_SnowSamurai</defName>
+    <label>孕育雪之武士淳平</label>
+    <description>在大型机械培育器中孕育雪之武士淳平。</description>
+    <products>
+      <Mech_ChunPing_SnowSamurai>1</Mech_ChunPing_SnowSamurai>
+    </products>
+    <descriptionHyperlinks>
+      <ThingDef>Mech_ChunPing_SnowSamurai</ThingDef>
+    </descriptionHyperlinks>
+  </RecipeDef>
+  <RecipeDef ParentName="ChunPingHighRecipe">
+    <defName>Gestate_ChunPing_BigBrother</defName>
+    <label>孕育淳大哥</label>
+    <description>在大型机械培育器中孕育淳大哥。</description>
+    <products>
+      <Mech_ChunPing_BigBrother>1</Mech_ChunPing_BigBrother>
+    </products>
+    <descriptionHyperlinks>
+      <ThingDef>Mech_ChunPing_BigBrother</ThingDef>
+    </descriptionHyperlinks>
+  </RecipeDef>
+  <!-- 大型机械培育器：终极机械体。 -->
+  <RecipeDef ParentName="ChunPingUltraRecipe">
+    <defName>Gestate_ChunPing_Leo</defName>
+    <label>孕育雷奥淳平</label>
+    <description>在大型机械培育器中孕育雷奥淳平。</description>
+    <products>
+      <Mech_ChunPing_Leo>1</Mech_ChunPing_Leo>
+    </products>
+    <descriptionHyperlinks>
+      <ThingDef>Mech_ChunPing_Leo</ThingDef>
+    </descriptionHyperlinks>
+  </RecipeDef>
+  <RecipeDef ParentName="ChunPingUltraRecipe">
+    <defName>Gestate_ChunPing_Beelzebub</defName>
+    <label>孕育贝尔泽布布淳平</label>
+    <description>在大型机械培育器中孕育贝尔泽布布淳平。</description>
+    <products>
+      <Mech_ChunPing_Beelzebub>1</Mech_ChunPing_Beelzebub>
+    </products>
+    <descriptionHyperlinks>
+      <ThingDef>Mech_ChunPing_Beelzebub</ThingDef>
+    </descriptionHyperlinks>
+  </RecipeDef>
+  <RecipeDef ParentName="ChunPingUltraRecipe">
+    <defName>Gestate_ChunPing_DemonKing</defName>
+    <label>孕育魔王淳平</label>
+    <description>在大型机械培育器中孕育魔王淳平。</description>
+    <products>
+      <Mech_ChunPing_DemonKing>1</Mech_ChunPing_DemonKing>
+    </products>
+    <descriptionHyperlinks>
+      <ThingDef>Mech_ChunPing_DemonKing</ThingDef>
+    </descriptionHyperlinks>
+  </RecipeDef>
+</Defs>
