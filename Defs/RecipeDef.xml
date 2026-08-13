@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+
+    <!-- ======================================================== -->
+    <!-- 1. 书法家淳平                                             -->
+    <!-- ======================================================== -->
+
+    <RecipeDef ParentName="LightMechanoidRecipe">
+        <defName>Gestate_ChunPing_Calligrapher</defName>
+        <label>孕育书法家淳平</label>
+        <description>
+            孕育一台书法家淳平机械体。
+            该型号以淳平的书法家造型为模板，专门用于艺术创作。
+        </description>
+
+        <researchPrerequisite>HighMechtech</researchPrerequisite>
+
+        <ingredients Inherit="False">
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Steel</li>
+                    </thingDefs>
+                </filter>
+                <count>100</count>
+            </li>
+
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>SubcoreHigh</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+
+        <products>
+            <Mech_ChunPing_Calligrapher>1</Mech_ChunPing_Calligrapher>
+        </products>
+
+        <descriptionHyperlinks>
+            <ThingDef>Mech_ChunPing_Calligrapher</ThingDef>
+        </descriptionHyperlinks>
+
+    </RecipeDef>
+
+
+    <!-- ======================================================== -->
+    <!-- 2. 服务员淳平                                             -->
+    <!-- ======================================================== -->
+
+    <RecipeDef ParentName="LightMechanoidRecipe">
+        <defName>Gestate_ChunPing_Waiter</defName>
+        <label>孕育服务员淳平</label>
+        <description>
+            孕育一台服务员淳平机械体。
+            该型号搭载餐饮、清洁以及基础服务程序。
+        </description>
+
+        <researchPrerequisite>HighMechtech</researchPrerequisite>
+
+        <ingredients Inherit="False">
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Steel</li>
+                    </thingDefs>
+                </filter>
+                <count>100</count>
+            </li>
+
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>SubcoreHigh</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+
+        <products>
+            <Mech_ChunPing_Waiter>1</Mech_ChunPing_Waiter>
+        </products>
+
+        <descriptionHyperlinks>
+            <ThingDef>Mech_ChunPing_Waiter</ThingDef>
+        </descriptionHyperlinks>
+
+    </RecipeDef>
+
+
+    <!-- ======================================================== -->
+    <!-- 3. 土木淳平                                               -->
+    <!-- ======================================================== -->
+
+    <RecipeDef ParentName="LightMechanoidRecipe">
+        <defName>Gestate_ChunPing_Construction</defName>
+        <label>孕育土木淳平</label>
+        <description>
+            孕育一台土木淳平机械体。
+            该型号专门负责建筑施工和矿物开采。
+        </description>
+
+        <researchPrerequisite>HighMechtech</researchPrerequisite>
+
+        <ingredients Inherit="False">
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Steel</li>
+                    </thingDefs>
+                </filter>
+                <count>120</count>
+            </li>
+
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>SubcoreHigh</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+
+        <products>
+            <Mech_ChunPing_Construction>1</Mech_ChunPing_Construction>
+        </products>
+
+        <descriptionHyperlinks>
+            <ThingDef>Mech_ChunPing_Construction</ThingDef>
+        </descriptionHyperlinks>
+
+    </RecipeDef>
+
+
+    <!-- ======================================================== -->
+    <!-- 4. 剑道部淳平                                             -->
+    <!-- ======================================================== -->
+
+    <RecipeDef ParentName="LightMechanoidRecipe">
+        <defName>Gestate_ChunPing_Kendo</defName>
+        <label>孕育剑道部淳平</label>
+        <description>
+            孕育一台剑道部淳平机械体。
+            该型号兼具近距离战斗、简单制作和搬运能力。
+        </description>
+
+        <researchPrerequisite>HighMechtech</researchPrerequisite>
+
+        <ingredients Inherit="False">
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Steel</li>
+                    </thingDefs>
+                </filter>
+                <count>130</count>
+            </li>
+
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>SubcoreHigh</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+
+        <products>
+            <Mech_ChunPing_Kendo>1</Mech_ChunPing_Kendo>
+        </products>
+
+        <descriptionHyperlinks>
+            <ThingDef>Mech_ChunPing_Kendo</ThingDef>
+        </descriptionHyperlinks>
+
+    </RecipeDef>
+
+
+    <!-- ======================================================== -->
+    <!-- 5. 大医生淳平                                             -->
+    <!-- ======================================================== -->
+
+    <RecipeDef ParentName="LightMechanoidRecipe">
+        <defName>Gestate_ChunPing_Doctor</defName>
+        <label>孕育大医生淳平</label>
+        <description>
+            孕育一台大医生淳平机械体。
+            该型号搭载精密医疗和治疗程序。
+        </description>
+
+        <researchPrerequisite>HighMechtech</researchPrerequisite>
+
+        <ingredients Inherit="False">
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Steel</li>
+                    </thingDefs>
+                </filter>
+                <count>100</count>
+            </li>
+
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>SubcoreHigh</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+
+        <products>
+            <Mech_ChunPing_Doctor>1</Mech_ChunPing_Doctor>
+        </products>
+
+        <descriptionHyperlinks>
+            <ThingDef>Mech_ChunPing_Doctor</ThingDef>
+        </descriptionHyperlinks>
+
+    </RecipeDef>
+
+
+    <!-- ======================================================== -->
+    <!-- 6. 园丁淳平                                               -->
+    <!-- ======================================================== -->
+
+    <RecipeDef ParentName="LightMechanoidRecipe">
+        <defName>Gestate_ChunPing_Gardener</defName>
+        <label>孕育园丁淳平</label>
+        <description>
+            孕育一台园丁淳平机械体。
+            该型号适用于播种、收割以及农产品搬运工作。
+        </description>
+
+        <researchPrerequisite>HighMechtech</researchPrerequisite>
+
+        <ingredients Inherit="False">
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Steel</li>
+                    </thingDefs>
+                </filter>
+                <count>90</count>
+            </li>
+
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>SubcoreHigh</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+
+        <products>
+            <Mech_ChunPing_Gardener>1</Mech_ChunPing_Gardener>
+        </products>
+
+        <descriptionHyperlinks>
+            <ThingDef>Mech_ChunPing_Gardener</ThingDef>
+        </descriptionHyperlinks>
+
+    </RecipeDef>
+
+
+    <!-- ======================================================== -->
+    <!-- 7. 汽车修理工淳平                                         -->
+    <!-- ======================================================== -->
+
+    <RecipeDef ParentName="LightMechanoidRecipe">
+        <defName>Gestate_ChunPing_Mechanic</defName>
+        <label>孕育汽车修理工淳平</label>
+        <description>
+            孕育一台汽车修理工淳平机械体。
+            该型号专门负责锻造、缝纫及相关工业加工工作。
+        </description>
+
+        <researchPrerequisite>HighMechtech</researchPrerequisite>
+
+        <ingredients Inherit="False">
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Steel</li>
+                    </thingDefs>
+                </filter>
+                <count>110</count>
+            </li>
+
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>SubcoreHigh</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+
+        <products>
+            <Mech_ChunPing_Mechanic>1</Mech_ChunPing_Mechanic>
+        </products>
+
+        <descriptionHyperlinks>
+            <ThingDef>Mech_ChunPing_Mechanic</ThingDef>
+        </descriptionHyperlinks>
+
+    </RecipeDef>
+
+
+    <!-- ======================================================== -->
+    <!-- 8. 黄毛淳平                                               -->
+    <!-- ======================================================== -->
+
+    <RecipeDef ParentName="LightMechanoidRecipe">
+        <defName>Gestate_ChunPing_Blond</defName>
+        <label>孕育黄毛淳平</label>
+        <description>
+            孕育一台黄毛淳平机械体。
+            该型号搭载远程战斗与狩猎程序，适合在殖民地外围追踪目标。
+        </description>
+
+        <researchPrerequisite>HighMechtech</researchPrerequisite>
+
+        <ingredients Inherit="False">
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Steel</li>
+                    </thingDefs>
+                </filter>
+                <count>120</count>
+            </li>
+
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>SubcoreHigh</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+
+        <products>
+            <Mech_ChunPing_Blond>1</Mech_ChunPing_Blond>
+        </products>
+
+        <descriptionHyperlinks>
+            <ThingDef>Mech_ChunPing_Blond</ThingDef>
+        </descriptionHyperlinks>
+
+    </RecipeDef>
+
+
+    <!-- ======================================================== -->
+    <!-- 9. 恶霸淳平                                               -->
+    <!-- ======================================================== -->
+
+    <RecipeDef ParentName="LightMechanoidRecipe">
+        <defName>Gestate_ChunPing_Bully</defName>
+        <label>孕育恶霸淳平</label>
+        <description>
+            孕育一台恶霸淳平机械体。
+            该型号安装了强化威慑和近距离镇压程序，并能够承担囚犯监管和搬运工作。
+        </description>
+
+        <researchPrerequisite>HighMechtech</researchPrerequisite>
+
+        <ingredients Inherit="False">
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Steel</li>
+                    </thingDefs>
+                </filter>
+                <count>120</count>
+            </li>
+
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>SubcoreHigh</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+
+        <products>
+            <Mech_ChunPing_Bully>1</Mech_ChunPing_Bully>
+        </products>
+
+        <descriptionHyperlinks>
+            <ThingDef>Mech_ChunPing_Bully</ThingDef>
+        </descriptionHyperlinks>
+
+    </RecipeDef>
+
+</Defs>
