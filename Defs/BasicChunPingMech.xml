@@ -3,22 +3,7 @@
 <Defs>
 
     <ThingDef Name="ChunPingMechBase" ParentName="LightMechanoid" Abstract="True">
-        <!-- <defName>Mech_Fabricor</defName>
-        <label>fabricor</label>
-        <description>
-            A small work mechanoid designed to craft all manner of manufactured objects.
-        </description> -->
-        <!-- <statBases>
-            <FoodPoisonChance>0.001</FoodPoisonChance>
-        </statBases> -->
         <race>
-            <!-- <mechEnabledWorkTypes>
-                <li>Crafting</li>
-                <li>Smithing</li>
-                <li>Tailoring</li>
-                <li>Cooking</li>
-                <li>Research</li>
-            </mechEnabledWorkTypes> -->
             <lifeStageAges>
                 <li>
                     <def>MechanoidFullyFormed</def>
@@ -70,9 +55,6 @@
 
 
     <PawnKindDef Name="ChunPingMechBase" ParentName="NonCombatLightMechanoidKind" Abstract="True">
-        <!-- <defName>Mech_Fabricor</defName>
-        <label>fabricor</label> -->
-        <!-- <race>Mech_Fabricor</race> -->
         <lifeStages>
             <li>
                 <bodyGraphicData>
