@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ChunPingMech")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+18146def39b453a181b1972b23aadf3ebd1c7176")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8226028e82f9e498e5d6d075908537dd5f70cb0b")]
 [assembly: System.Reflection.AssemblyProductAttribute("ChunPingMech")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ChunPingMech")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
