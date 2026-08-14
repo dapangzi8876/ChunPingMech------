@@ -1,21 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
   <!-- 高级科技单位。贴图仍统一使用 Fabricor 占位。 -->
-
-
   <ThingDef ParentName="ChunPingMechBase">
     <defName>Mech_ChunPing_WasedaHero</defName>
     <label>早稻田英雄淳平</label>
     <description>耐久较高的支援型机械体。冲锋、牺牲和光环技能暂未实现。</description>
     <statBases>
       <BandwidthCost>1</BandwidthCost>
-      <!-- 锐器护甲 -->
-      <ArmorRating_Sharp>0.2</ArmorRating_Sharp>
-      <!-- 钝器护甲 -->
-      <ArmorRating_Blunt>0.3</ArmorRating_Blunt>
+      <ArmorRating_Sharp>1.0</ArmorRating_Sharp>
+      <ArmorRating_Blunt>1.2</ArmorRating_Blunt>
       <MarketValue>2400</MarketValue>
       <MoveSpeed>3.8</MoveSpeed>
-      <!-- 等效射击 10；医疗等级由 mechFixedSkillLevel 表达。 -->
       <ShootingAccuracyPawn>2</ShootingAccuracyPawn>
     </statBases>
     <race>
@@ -48,15 +43,13 @@
     <description>高生命、高护甲并拥有较高载重能力的重型坦克机械体。</description>
     <statBases>
       <BandwidthCost>1</BandwidthCost>
-      <!-- 锐器护甲 -->
-      <ArmorRating_Sharp>0.2</ArmorRating_Sharp>
-      <!-- 钝器护甲 -->
-      <ArmorRating_Blunt>0.3</ArmorRating_Blunt>
+      <ArmorRating_Sharp>1.6</ArmorRating_Sharp>
+      <ArmorRating_Blunt>1.5</ArmorRating_Blunt>
       <MarketValue>3000</MarketValue>
       <MoveSpeed>2.2</MoveSpeed>
-      <CarryingCapacity>160</CarryingCapacity>
+      <CarryingCapacity>1200</CarryingCapacity>
       <!-- 等效近战 14。 -->
-      <MeleeHitChance>10</MeleeHitChance>
+      <MeleeHitChance>12</MeleeHitChance>
     </statBases>
     <tools>
       <li>
@@ -88,21 +81,16 @@
 
 
   <!-- TODO: 后续加入隐身、雪之呼吸、斩首和处决逻辑。 -->
-
-
   <ThingDef ParentName="ChunPingMechBase">
     <defName>Mech_ChunPing_SnowSamurai</defName>
     <label>雪之武士淳平</label>
     <description>高速、高伤害但较脆弱的近战刺客。特殊剑术暂未实现。</description>
     <statBases>
       <BandwidthCost>1</BandwidthCost>
-      <!-- 锐器护甲 -->
-      <ArmorRating_Sharp>0.2</ArmorRating_Sharp>
-      <!-- 钝器护甲 -->
-      <ArmorRating_Blunt>0.3</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.8</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.9</ArmorRating_Blunt>
       <MarketValue>2600</MarketValue>
       <MoveSpeed>5.4</MoveSpeed>
-      <!-- 等效近战 20。 -->
       <MeleeHitChance>16</MeleeHitChance>
     </statBases>
     <tools>
@@ -131,25 +119,23 @@
     <race>Mech_ChunPing_SnowSamurai</race>
     <isFighter>true</isFighter>
     <combatPower>360</combatPower>
+    <weaponTags>
+      <li>MeleeWeapon_SnowKatana</li>
+    </weaponTags>
   </PawnKindDef>
 
 
   <!-- 仅保留普通远程攻击；电子战和陷阱机制留待后续阶段。 -->
-
-
   <ThingDef ParentName="ChunPingMechBase">
     <defName>Mech_ChunPing_BigBrother</defName>
     <label>淳大哥</label>
     <description>中高级远程机械体。电子战、EMC、陷阱和诱饵机制暂未实现。</description>
     <statBases>
       <BandwidthCost>1</BandwidthCost>
-      <!-- 锐器护甲 -->
-      <ArmorRating_Sharp>0.2</ArmorRating_Sharp>
-      <!-- 钝器护甲 -->
-      <ArmorRating_Blunt>0.3</ArmorRating_Blunt>
+      <ArmorRating_Sharp>1.2</ArmorRating_Sharp>
+      <ArmorRating_Blunt>1.0</ArmorRating_Blunt>
       <MarketValue>2700</MarketValue>
       <MoveSpeed>2.8</MoveSpeed>
-      <!-- 等效射击 17。当前阶段未开放研究工作，因此不写无效的智识技能。 -->
       <ShootingAccuracyPawn>9</ShootingAccuracyPawn>
     </statBases>
     <race>
@@ -166,7 +152,7 @@
     <isFighter>true</isFighter>
     <combatPower>330</combatPower>
     <weaponTags>
-      <li>MechanoidGunMedium</li>
+      <li>Gun_ChunPingHeavyEMPLauncher</li>
     </weaponTags>
   </PawnKindDef>
 </Defs>

@@ -1,20 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
   <!-- 标准科技单位。特殊技能、处决、自爆和控制效果均留待后续阶段。 -->
-
-
   <ThingDef ParentName="ChunPingMechBase">
     <defName>Mech_ChunPing_Doctor</defName>
     <label>大医生淳平</label>
     <description>执行医疗和科研工作的专业机械体。</description>
     <statBases>
       <BandwidthCost>1</BandwidthCost>
-      <!-- 锐器护甲 -->
       <ArmorRating_Sharp>0.2</ArmorRating_Sharp>
-      <!-- 钝器护甲 -->
       <ArmorRating_Blunt>0.3</ArmorRating_Blunt>
       <MarketValue>1400</MarketValue>
-      <MoveSpeed>3.3</MoveSpeed>
+      <MoveSpeed>4.2</MoveSpeed>
     </statBases>
     <race>
       <mechWeightClass>Medium</mechWeightClass>
@@ -41,10 +37,8 @@
     <description>拥有强化近战能力和基础远程能力的多用途战斗机械体。霸凌技能暂未实现。</description>
     <statBases>
       <BandwidthCost>1</BandwidthCost>
-      <!-- 锐器护甲 -->
-      <ArmorRating_Sharp>0.2</ArmorRating_Sharp>
-      <!-- 钝器护甲 -->
-      <ArmorRating_Blunt>0.3</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.8</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.8</ArmorRating_Blunt>
       <MarketValue>1700</MarketValue>
       <MoveSpeed>3.2</MoveSpeed>
       <!-- 等效近战 16、射击 12。 -->
@@ -63,6 +57,9 @@
         <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
       </li>
     </tools>
+     <abilities>
+      <li>ChunPing_Ability_Bullying</li>
+    </abilities>
     <race>
       <baseHealthScale>1.25</baseHealthScale>
       <mechWeightClass>Medium</mechWeightClass>
@@ -77,28 +74,23 @@
     <isFighter>true</isFighter>
     <combatPower>190</combatPower>
     <weaponTags>
-      <li>MechanoidGunShortRange</li>
+      <li>MeleeWeapon_PaviaBaseballBat</li>
     </weaponTags>
   </PawnKindDef>
 
 
   <!-- TODO: 后续加入患者自爆机制。第一阶段保持为廉价轻型战斗单位。 -->
-
-
   <ThingDef ParentName="ChunPingMechBase">
     <defName>Mech_ChunPing_Patient</defName>
     <label>患者淳平</label>
     <description>廉价、快速且脆弱的轻型战斗机械体。自爆机制暂未实现。</description>
     <statBases>
       <BandwidthCost>1</BandwidthCost>
-      <!-- 锐器护甲 -->
       <ArmorRating_Sharp>0.2</ArmorRating_Sharp>
-      <!-- 钝器护甲 -->
       <ArmorRating_Blunt>0.3</ArmorRating_Blunt>
       <MarketValue>1000</MarketValue>
       <MoveSpeed>4.2</MoveSpeed>
-      <!-- 等效近战 8。 -->
-      <MeleeHitChance>4</MeleeHitChance>
+      <MeleeHitChance>3</MeleeHitChance>
     </statBases>
     <race>
       <baseHealthScale>0.62</baseHealthScale>
@@ -117,22 +109,17 @@
 
 
   <!-- 警察暂用原版中远程机械枪标签，射速/强度由原版武器控制。 -->
-
-
   <ThingDef ParentName="ChunPingMechBase">
     <defName>Mech_ChunPing_Police</defName>
     <label>警察淳平</label>
     <description>中型持续火力机械体。部署、压制和主动技能暂未实现。</description>
     <statBases>
       <BandwidthCost>1</BandwidthCost>
-      <!-- 锐器护甲 -->
-      <ArmorRating_Sharp>0.2</ArmorRating_Sharp>
-      <!-- 钝器护甲 -->
-      <ArmorRating_Blunt>0.3</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.6</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.7</ArmorRating_Blunt>
       <MarketValue>1900</MarketValue>
       <MoveSpeed>2.9</MoveSpeed>
-      <!-- 等效射击 18。 -->
-      <ShootingAccuracyPawn>10</ShootingAccuracyPawn>
+      <ShootingAccuracyPawn>11</ShootingAccuracyPawn>
     </statBases>
     <race>
       <baseHealthScale>1.35</baseHealthScale>

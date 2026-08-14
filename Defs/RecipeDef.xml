@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
   <!-- 配方父类直接继承 Biotech 原版培育配方，确保培育周期、机械师限制和工作量正确。 -->
+
+
   <RecipeDef Name="ChunPingBasicRecipe" ParentName="LightMechanoidRecipe" Abstract="True">
     <researchPrerequisite>ChunPing_BasicMechtech</researchPrerequisite>
     <displayPriority>100</displayPriority>
   </RecipeDef>
+
+
   <RecipeDef Name="ChunPingStandardRecipe" ParentName="MediumMechanoidRecipe" Abstract="True">
     <researchPrerequisite>ChunPing_StandardMechtech</researchPrerequisite>
     <displayPriority>200</displayPriority>
@@ -43,6 +47,8 @@
       </li>
     </ingredients>
   </RecipeDef>
+
+
   <RecipeDef Name="ChunPingHighRecipe" ParentName="HeavyMechanoidRecipe" Abstract="True">
     <researchPrerequisite>ChunPing_HighMechtech</researchPrerequisite>
     <displayPriority>300</displayPriority>
@@ -82,6 +88,8 @@
       </li>
     </ingredients>
   </RecipeDef>
+
+
   <RecipeDef Name="ChunPingUltraRecipe" ParentName="SuperHeavyMechanoidRecipe" Abstract="True">
     <researchPrerequisite>ChunPing_UltraMechtech</researchPrerequisite>
     <displayPriority>400</displayPriority>
@@ -128,7 +136,11 @@
       </li>
     </ingredients>
   </RecipeDef>
+
+
   <!-- 普通机械培育器：基础机械体。 -->
+
+
   <RecipeDef ParentName="ChunPingBasicRecipe">
     <defName>Gestate_ChunPing_Calligrapher</defName>
     <label>孕育书法家淳平</label>
@@ -140,6 +152,8 @@
       <ThingDef>Mech_ChunPing_Calligrapher</ThingDef>
     </descriptionHyperlinks>
   </RecipeDef>
+
+
   <RecipeDef ParentName="ChunPingBasicRecipe">
     <defName>Gestate_ChunPing_Waiter</defName>
     <label>孕育服务员淳平</label>
@@ -151,6 +165,8 @@
       <ThingDef>Mech_ChunPing_Waiter</ThingDef>
     </descriptionHyperlinks>
   </RecipeDef>
+
+
   <RecipeDef ParentName="ChunPingBasicRecipe">
     <defName>Gestate_ChunPing_Construction</defName>
     <label>孕育土木淳平</label>
@@ -162,6 +178,8 @@
       <ThingDef>Mech_ChunPing_Construction</ThingDef>
     </descriptionHyperlinks>
   </RecipeDef>
+
+
   <RecipeDef ParentName="ChunPingBasicRecipe">
     <defName>Gestate_ChunPing_Kendo</defName>
     <label>孕育剑道部淳平</label>
@@ -173,6 +191,8 @@
       <ThingDef>Mech_ChunPing_Kendo</ThingDef>
     </descriptionHyperlinks>
   </RecipeDef>
+
+
   <RecipeDef ParentName="ChunPingBasicRecipe">
     <defName>Gestate_ChunPing_Gardener</defName>
     <label>孕育园丁淳平</label>
@@ -184,6 +204,8 @@
       <ThingDef>Mech_ChunPing_Gardener</ThingDef>
     </descriptionHyperlinks>
   </RecipeDef>
+
+
   <RecipeDef ParentName="ChunPingBasicRecipe">
     <defName>Gestate_ChunPing_Mechanic</defName>
     <label>孕育汽车修理工淳平</label>
@@ -195,6 +217,8 @@
       <ThingDef>Mech_ChunPing_Mechanic</ThingDef>
     </descriptionHyperlinks>
   </RecipeDef>
+
+
   <RecipeDef ParentName="ChunPingBasicRecipe">
     <defName>Gestate_ChunPing_Blond</defName>
     <label>孕育黄毛淳平</label>
@@ -206,7 +230,11 @@
       <ThingDef>Mech_ChunPing_Blond</ThingDef>
     </descriptionHyperlinks>
   </RecipeDef>
+
+
   <!-- 大型机械培育器：标准机械体。 -->
+
+
   <RecipeDef ParentName="ChunPingStandardRecipe">
     <defName>Gestate_ChunPing_Doctor</defName>
     <label>孕育大医生淳平</label>
@@ -218,6 +246,8 @@
       <ThingDef>Mech_ChunPing_Doctor</ThingDef>
     </descriptionHyperlinks>
   </RecipeDef>
+
+
   <RecipeDef ParentName="ChunPingStandardRecipe">
     <defName>Gestate_ChunPing_Bully</defName>
     <label>孕育恶霸淳平</label>
@@ -229,6 +259,8 @@
       <ThingDef>Mech_ChunPing_Bully</ThingDef>
     </descriptionHyperlinks>
   </RecipeDef>
+
+
   <RecipeDef ParentName="ChunPingStandardRecipe">
     <defName>Gestate_ChunPing_Patient</defName>
     <label>孕育患者淳平</label>
@@ -240,6 +272,8 @@
       <ThingDef>Mech_ChunPing_Patient</ThingDef>
     </descriptionHyperlinks>
   </RecipeDef>
+
+
   <RecipeDef ParentName="ChunPingStandardRecipe">
     <defName>Gestate_ChunPing_Police</defName>
     <label>孕育警察淳平</label>
@@ -251,7 +285,11 @@
       <ThingDef>Mech_ChunPing_Police</ThingDef>
     </descriptionHyperlinks>
   </RecipeDef>
+
+
   <!-- 大型机械培育器：高级机械体。 -->
+
+
   <RecipeDef ParentName="ChunPingHighRecipe">
     <defName>Gestate_ChunPing_WasedaHero</defName>
     <label>孕育早稻田英雄淳平</label>
@@ -263,6 +301,8 @@
       <ThingDef>Mech_ChunPing_WasedaHero</ThingDef>
     </descriptionHyperlinks>
   </RecipeDef>
+
+
   <RecipeDef ParentName="ChunPingHighRecipe">
     <defName>Gestate_ChunPing_Hulk</defName>
     <label>孕育绿巨人淳平</label>
@@ -274,6 +314,8 @@
       <ThingDef>Mech_ChunPing_Hulk</ThingDef>
     </descriptionHyperlinks>
   </RecipeDef>
+
+
   <RecipeDef ParentName="ChunPingHighRecipe">
     <defName>Gestate_ChunPing_SnowSamurai</defName>
     <label>孕育雪之武士淳平</label>
@@ -285,6 +327,8 @@
       <ThingDef>Mech_ChunPing_SnowSamurai</ThingDef>
     </descriptionHyperlinks>
   </RecipeDef>
+
+
   <RecipeDef ParentName="ChunPingHighRecipe">
     <defName>Gestate_ChunPing_BigBrother</defName>
     <label>孕育淳大哥</label>
@@ -296,7 +340,11 @@
       <ThingDef>Mech_ChunPing_BigBrother</ThingDef>
     </descriptionHyperlinks>
   </RecipeDef>
+
+
   <!-- 大型机械培育器：终极机械体。 -->
+
+
   <RecipeDef ParentName="ChunPingUltraRecipe">
     <defName>Gestate_ChunPing_Leo</defName>
     <label>孕育雷奥淳平</label>
@@ -308,6 +356,8 @@
       <ThingDef>Mech_ChunPing_Leo</ThingDef>
     </descriptionHyperlinks>
   </RecipeDef>
+
+
   <RecipeDef ParentName="ChunPingUltraRecipe">
     <defName>Gestate_ChunPing_Beelzebub</defName>
     <label>孕育贝尔泽布布淳平</label>
@@ -319,6 +369,8 @@
       <ThingDef>Mech_ChunPing_Beelzebub</ThingDef>
     </descriptionHyperlinks>
   </RecipeDef>
+
+
   <RecipeDef ParentName="ChunPingUltraRecipe">
     <defName>Gestate_ChunPing_DemonKing</defName>
     <label>孕育魔王淳平</label>

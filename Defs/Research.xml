@@ -6,6 +6,8 @@
     <generalTitle>淳平机械工程</generalTitle>
     <generalDescription>研究并解锁不同等级的淳平机械体。</generalDescription>
   </ResearchTabDef>
+
+
   <ResearchProjectDef ParentName="MechtechBase">
     <defName>ChunPing_BasicMechtech</defName>
     <label>淳平基础机械工程</label>
@@ -19,6 +21,8 @@
       <li>BasicMechtech</li>
     </prerequisites>
   </ResearchProjectDef>
+
+
   <ResearchProjectDef ParentName="MechtechBase">
     <defName>ChunPing_StandardMechtech</defName>
     <label>淳平标准机械工程</label>
@@ -33,6 +37,8 @@
       <li>ChunPing_BasicMechtech</li>
     </prerequisites>
   </ResearchProjectDef>
+
+
   <ResearchProjectDef ParentName="MechtechBase">
     <defName>ChunPing_HighMechtech</defName>
     <label>淳平高级机械工程</label>
@@ -51,6 +57,8 @@
       <li>MultiAnalyzer</li>
     </requiredResearchFacilities>
   </ResearchProjectDef>
+
+
   <ResearchProjectDef ParentName="MechtechBase">
     <defName>ChunPing_UltraMechtech</defName>
     <label>淳平终极机械工程</label>

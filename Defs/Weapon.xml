@@ -45,4 +45,118 @@
             </li>
         </tools>
     </ThingDef>
+
+
+
+    <ThingDef ParentName="BaseMeleeWeapon_Sharp">
+        <defName>MeleeWeapon_SnowKatana</defName>
+        <label>雪之太刀</label>
+        <description>一柄散发着凛冽寒意的太刀。刀锋锐利异常，挥舞时仿佛能带起冰冷的风雪。</description>
+        <possessionCount>1</possessionCount>
+        <graphicData>
+            <texPath>Things/Item/Equipment/WeaponMelee/LongSword</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <techLevel>Medieval</techLevel>
+        <weaponTags>
+            <li>SnowKatana</li>
+            <li>MedievalMeleeAdvanced</li>
+        </weaponTags>
+        <statBases>
+            <WorkToMake>36000</WorkToMake>
+            <Mass>4</Mass>
+        </statBases>
+        <equippedAngleOffset>-65</equippedAngleOffset>
+        <tools>
+            <li>
+                <label>刀柄</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>18</power>
+                <cooldownTime>2</cooldownTime>
+            </li>
+            <li>
+                <label>刀尖</label>
+                <capacities>
+                    <li>Stab</li>
+                </capacities>
+                <power>46</power>
+                <cooldownTime>2.6</cooldownTime>
+            </li>
+            <li>
+                <label>刀刃</label>
+                <capacities>
+                    <li>Cut</li>
+                </capacities>
+                <power>46</power>
+                <cooldownTime>2.6</cooldownTime>
+            </li>
+        </tools>
+    </ThingDef>
+
+
+
+    <ThingDef ParentName="BaseWeapon">
+        <defName>Gun_ChunPingHeavyEMPLauncher</defName>
+        <label>强化 EMP 发射器</label>
+        <description>为重型支援机械体搭载的专用电磁脉冲发射器。能够从较远距离持续投射 EMP 弹药，对机械单位、炮塔和能量护盾实施高效压制。</description>
+        <graphicData>
+            <texPath>Things/Item/Equipment/WeaponRanged/EMPLauncher</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <soundInteract>Interact_Rifle</soundInteract>
+        <weaponClasses>
+            <li>RangedHeavy</li>
+        </weaponClasses>
+        <!-- 专门用于让指定机械体生成这把武器 -->
+        <weaponTags>
+            <li>ChunPingHeavyEMP</li>
+        </weaponTags>
+        <statBases>
+            <Mass>4.5</Mass>
+            <RangedWeapon_Cooldown>2.2</RangedWeapon_Cooldown>
+        </statBases>
+        <verbs>
+            <li>
+                <verbClass>Verb_Shoot</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <!-- 暂时继续使用原版 EMP 弹 -->
+                <defaultProjectile>Bullet_EMPLauncher</defaultProjectile>
+                <!-- 原版 3.5 -->
+                <warmupTime>2.0</warmupTime>
+                <!-- 原版 23.9 -->
+                <range>32</range>
+                <!-- 原版 1.9 -->
+                <forcedMissRadius>0.8</forcedMissRadius>
+                <burstShotCount>1</burstShotCount>
+                <soundCast>Shot_IncendiaryLauncher</soundCast>
+                <soundCastTail>GunTail_Medium</soundCastTail>
+                <muzzleFlashScale>14</muzzleFlashScale>
+                <targetParams>
+                    <canTargetLocations>true</canTargetLocations>
+                </targetParams>
+            </li>
+        </verbs>
+        <!-- 被敌人贴脸后，可以直接拿发射器砸 -->
+        <tools>
+            <li>
+                <label>枪托</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>12</power>
+                <cooldownTime>2</cooldownTime>
+            </li>
+            <li>
+                <label>枪管</label>
+                <capacities>
+                    <li>Blunt</li>
+                    <li>Poke</li>
+                </capacities>
+                <power>12</power>
+                <cooldownTime>2</cooldownTime>
+            </li>
+        </tools>
+    </ThingDef>
 </Defs>

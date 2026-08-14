@@ -1,1 +1,41 @@
-﻿
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <AbilityDef>
+    <defName>ChunPing_Ability_Bullying</defName>
+    <label>霸凌</label>
+    <description>
+      恶霸淳平对目标实施残酷霸凌，使其陷入“私密马赛”状态并失去行动能力。
+    </description>
+    <!-- 暂时使用原版能力图标，之后可以换 -->
+    <iconPath>UI/Abilities/Stun</iconPath>
+    <!-- 2 游戏小时 = 5000 ticks -->
+    <cooldownTicksRange>5000~5000</cooldownTicksRange>
+    <displayOrder>100</displayOrder>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <!-- 我建议做成近距离霸凌 -->
+      <range>3.9</range>
+      <!-- 快速释放 -->
+      <warmupTime>0.35</warmupTime>
+      <drawAimPie>true</drawAimPie>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetBuildings>false</canTargetBuildings>
+        <canTargetLocations>false</canTargetLocations>
+        <canTargetCorpses>false</canTargetCorpses>
+        <canTargetSelf>false</canTargetSelf>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="CompProperties_AbilityGiveHediff">
+        <compClass>CompAbilityEffect_GiveHediff</compClass>
+        <hediffDef>ChunPing_Sumimasen</hediffDef>
+        <severity>1</severity>
+        <onlyBrain>false</onlyBrain>
+        <replaceExisting>true</replaceExisting>
+      </li>
+    </comps>
+  </AbilityDef>
+
+</Defs>
