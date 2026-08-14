@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+</Defs>
+    <ThingDef ParentName="BaseMeleeWeapon_Blunt">
+        <defName>MeleeWeapon_PaviaBaseballBat</defName>
+        <label>棒球棍</label>
+        <description>棒球棍</description>
+        <possessionCount>1</possessionCount>
+        <graphicData>
+            <texPath>Things/Item/Equipment/WeaponMelee/LongSword</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <techLevel>Medieval</techLevel>
+        <weaponTags>
+            <li>MedievalMeleeBasic</li>
+        </weaponTags>
+        <statBases>
+            <Mass>2.6</Mass>
+        </statBases>
+         <recipeMaker Inherit="False" />
+        <equippedAngleOffset>-65</equippedAngleOffset>
+        <tools>
+            <li>
+                <label>握柄</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>12</power>
+                <cooldownTime>2</cooldownTime>
+            </li>
+            <li>
+                <label>棒身</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>30</power>
+                <cooldownTime>2.6</cooldownTime>
+            </li>
+            <li>
+                <label>重击</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>30</power>
+                <cooldownTime>2.6</cooldownTime>
+            </li>
+        </tools>
+    </ThingDef>
+</Defs>

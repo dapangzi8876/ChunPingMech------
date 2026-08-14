@@ -6,11 +6,13 @@
     <label>雷奥淳平</label>
     <description>非常强的超重型近战机械体。范围攻击和特殊技能暂未实现。</description>
     <statBases>
+      <BandwidthCost>1</BandwidthCost>
+      <!-- 锐器护甲 -->
+      <ArmorRating_Sharp>0.2</ArmorRating_Sharp>
+      <!-- 钝器护甲 -->
+      <ArmorRating_Blunt>0.3</ArmorRating_Blunt>
       <MarketValue>4800</MarketValue>
-      <BandwidthCost>6</BandwidthCost>
       <MoveSpeed>1.8</MoveSpeed>
-      <ArmorRating_Blunt>0.38</ArmorRating_Blunt>
-      <ArmorRating_Sharp>0.78</ArmorRating_Sharp>
       <!-- 等效近战 20。 -->
       <MeleeHitChance>16</MeleeHitChance>
     </statBases>
@@ -32,6 +34,8 @@
       <mechWeightClass>UltraHeavy</mechWeightClass>
     </race>
   </ThingDef>
+
+
   <PawnKindDef ParentName="ChunPingMechBaseKind">
     <defName>Mech_ChunPing_Leo</defName>
     <label>雷奥淳平</label>
@@ -39,17 +43,23 @@
     <isFighter>true</isFighter>
     <combatPower>650</combatPower>
   </PawnKindDef>
+
+
   <!-- TODO: 后续加入战争女皇召唤系统；当前仅为中等输出的重型远程单位。 -->
+
+
   <ThingDef ParentName="ChunPingMechBase">
     <defName>Mech_ChunPing_Beelzebub</defName>
     <label>贝尔泽布布淳平</label>
     <description>重型远程或中近距离战斗机械体。召唤系统暂未实现。</description>
     <statBases>
+      <BandwidthCost>1</BandwidthCost>
+      <!-- 锐器护甲 -->
+      <ArmorRating_Sharp>0.2</ArmorRating_Sharp>
+      <!-- 钝器护甲 -->
+      <ArmorRating_Blunt>0.3</ArmorRating_Blunt>
       <MarketValue>4300</MarketValue>
-      <BandwidthCost>6</BandwidthCost>
       <MoveSpeed>2.0</MoveSpeed>
-      <ArmorRating_Blunt>0.30</ArmorRating_Blunt>
-      <ArmorRating_Sharp>0.62</ArmorRating_Sharp>
       <!-- 等效射击 16。 -->
       <ShootingAccuracyPawn>8</ShootingAccuracyPawn>
     </statBases>
@@ -58,6 +68,8 @@
       <mechWeightClass>UltraHeavy</mechWeightClass>
     </race>
   </ThingDef>
+
+
   <PawnKindDef ParentName="ChunPingMechBaseKind">
     <defName>Mech_ChunPing_Beelzebub</defName>
     <label>贝尔泽布布淳平</label>
@@ -68,17 +80,23 @@
       <li>MechanoidGunMedium</li>
     </weaponTags>
   </PawnKindDef>
+
+
   <!-- 魔王炮、蓄力、部署和 AOE 留待后续；当前使用原版远程武器标签。 -->
+
+
   <ThingDef ParentName="ChunPingMechBase">
     <defName>Mech_ChunPing_DemonKing</defName>
     <label>魔王淳平</label>
     <description>超重型远程炮台。特殊炮击模式、蓄力和范围攻击暂未实现。</description>
     <statBases>
+      <BandwidthCost>1</BandwidthCost>
+      <!-- 锐器护甲 -->
+      <ArmorRating_Sharp>0.2</ArmorRating_Sharp>
+      <!-- 钝器护甲 -->
+      <ArmorRating_Blunt>0.3</ArmorRating_Blunt>
       <MarketValue>5200</MarketValue>
-      <BandwidthCost>7</BandwidthCost>
       <MoveSpeed>1.7</MoveSpeed>
-      <ArmorRating_Blunt>0.34</ArmorRating_Blunt>
-      <ArmorRating_Sharp>0.70</ArmorRating_Sharp>
       <!-- 等效射击 20。 -->
       <ShootingAccuracyPawn>12</ShootingAccuracyPawn>
     </statBases>
@@ -87,6 +105,8 @@
       <mechWeightClass>UltraHeavy</mechWeightClass>
     </race>
   </ThingDef>
+
+
   <PawnKindDef ParentName="ChunPingMechBaseKind">
     <defName>Mech_ChunPing_DemonKing</defName>
     <label>魔王淳平</label>
