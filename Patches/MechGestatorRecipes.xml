@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Patch>
   <!-- 基础淳平：普通机械培育器。每个配方单独追加，避免列表 Patch 的兼容性问题。 -->
   <Operation Class="PatchOperationAdd">

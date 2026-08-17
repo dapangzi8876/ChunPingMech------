@@ -3,7 +3,6 @@
   <JobDef>
     <defName>ChunPing_DashExplosion</defName>
     <driverClass>ChunPingMech.JobDriver_ChunPingDashExplosion</driverClass>
-    <reportString>鍐插埡涓</reportString>
+    <reportString>冲刺中</reportString>
   </JobDef>
 </Defs>
-

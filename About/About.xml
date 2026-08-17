@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
   <packageId>Adou.ChunPingMech</packageId>
-  <name>娣冲钩鏈烘浣</name>
+  <name>淳平机械体</name>
   <supportedVersions>
     <li>1.6</li>
   </supportedVersions>
@@ -14,8 +14,10 @@
   <forceLoadAfter>
     <li>Ludeon.RimWorld.Biotech</li>
   </forceLoadAfter>
-  <author>瓒呯骇濞佺寷闄堥樋鏂</author>
-  <description>澧炲姞绗竴闃舵娣冲钩鏈烘浣擄細18 绉嶅彲鍒堕€犮€佸彲鎺у埗鐨勫伐浣滀笌鎴樻枟鏈烘浣撱€傛墍鏈夊崟浣嶆殏鏃朵娇鐢?RimWorld 鍘熺増 Fabricor 璐村浘鍜屽師鐗堟満姊版鍣ㄦ爣绛句綔涓哄崰浣嶈祫婧愶紝鍚庣画鍙洿鎺ユ浛鎹?Def 涓殑 texPath銆乵askPath 鍜屾鍣ㄥ瓧娈点€?
-褰撳墠鏈疄鐜颁富鍔ㄦ妧鑳姐€佺壒娈婃垬鏂楁満鍒躲€佸彫鍞ゃ€侀櫡闃便€佽嚜鐖嗐€丅oss 鍜屾晫瀵规烦骞宠鍑汇€?
-[AI 杈呭姪鐢熸垚]</description>
+  <author>超级威猛陈阿斗</author>
+  <description>增加第一阶段淳平机械体：18 种可制造、可控制的工作与战斗机械体。所有单位暂时使用 RimWorld 原版 Fabricor 贴图和原版机械武器标签作为占位资源，后续可直接替换 Def 中的 texPath、maskPath 和武器字段。
+
+当前未实现主动技能、特殊战斗机制、召唤、陷阱、自爆、Boss 和敌对淳平袭击。
+
+[AI 辅助生成]</description>
 </ModMetaData>

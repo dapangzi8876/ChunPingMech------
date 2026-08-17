@@ -1,23 +1,23 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-  <!-- 缁堟瀬绉戞妧鍗曚綅銆傛墍鏈夌壒娈婃ā寮忋€佸彫鍞ゃ€佽搫鍔涘拰鑼冨洿鎶€鑳藉潎鏆傛湭瀹炵幇銆?-->
+  <!-- 终极科技单位。所有特殊模式、召唤、蓄力和范围技能均暂未实现。 -->
   <ThingDef ParentName="ChunPingMechBase">
     <defName>Mech_ChunPing_Leo</defName>
-    <label>闆峰ゥ娣冲钩</label>
-    <description>闈炲父寮虹殑瓒呴噸鍨嬭繎鎴樻満姊颁綋锛岃兘澶熼€氳繃缁嗚優閲嶇粍杩呴€熸不鎰堝弸鍐涚殑浼ゅ娍銆</description>
+    <label>雷奥淳平</label>
+    <description>非常强的超重型近战机械体，能够通过细胞重组迅速治愈友军的伤势。</description>
     <statBases>
       <BandwidthCost>1</BandwidthCost>
       <ArmorRating_Sharp>1.8</ArmorRating_Sharp>
       <ArmorRating_Blunt>1.9</ArmorRating_Blunt>
       <MarketValue>4800</MarketValue>
       <MoveSpeed>4.4</MoveSpeed>
-      <!-- 绛夋晥杩戞垬 20銆?-->
+      <!-- 等效近战 20。 -->
       <MeleeHitChance>20</MeleeHitChance>
     </statBases>
     <tools>
-      <!-- 涓诲姏閲嶆嫵 -->
+      <!-- 主力重拳 -->
       <li>
-        <label>闆峰ゥ閲嶆嫵</label>
+        <label>雷奥重拳</label>
         <capacities>
           <li>Blunt</li>
         </capacities>
@@ -25,9 +25,9 @@
         <cooldownTime>2.4</cooldownTime>
         <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
       </li>
-      <!-- 濞佸姏鏋侀珮浣嗘瘮杈冩參 -->
+      <!-- 威力极高但比较慢 -->
       <li>
-        <label>闆峰ゥ閲嶈涪</label>
+        <label>雷奥重踢</label>
         <capacities>
           <li>Blunt</li>
         </capacities>
@@ -35,9 +35,9 @@
         <cooldownTime>3.5</cooldownTime>
         <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
       </li>
-      <!-- 杈冨揩鐨勬櫘閫氭敾鍑?-->
+      <!-- 较快的普通攻击 -->
       <li>
-        <label>闆峰ゥ鎺屽嚮</label>
+        <label>雷奥掌击</label>
         <capacities>
           <li>Blunt</li>
         </capacities>
@@ -59,7 +59,7 @@
 
   <PawnKindDef ParentName="ChunPingMechBaseKind">
     <defName>Mech_ChunPing_Leo</defName>
-    <label>闆峰ゥ娣冲钩</label>
+    <label>雷奥淳平</label>
     <race>Mech_ChunPing_Leo</race>
     <lifeStages Inherit="False">
       <li>
@@ -86,18 +86,18 @@
   </PawnKindDef>
 
 
-  <!-- TODO: 鍚庣画鍔犲叆鎴樹簤濂崇殗鍙敜绯荤粺锛涘綋鍓嶄粎涓轰腑绛夎緭鍑虹殑閲嶅瀷杩滅▼鍗曚綅銆?-->
+  <!-- TODO: 后续加入战争女皇召唤系统；当前仅为中等输出的重型远程单位。 -->
   <ThingDef ParentName="ChunPingMechBase">
     <defName>Mech_ChunPing_Beelzebub</defName>
-    <label>璐濆皵娉藉竷甯冩烦骞</label>
-    <description>閲嶅瀷杩滅▼鎴栦腑杩戣窛绂绘垬鏂楁満姊颁綋锛岃兘澶熼噴鏀惧痉宸濆拰鎴戜慨闄袱绉嶈嚜涓绘垬鏂楁満姊颁綋銆</description>
+    <label>贝尔泽布布淳平</label>
+    <description>重型远程或中近距离战斗机械体，能够释放德川和我修院两种自主战斗机械体。</description>
     <statBases>
       <BandwidthCost>1</BandwidthCost>
       <ArmorRating_Sharp>1.2</ArmorRating_Sharp>
       <ArmorRating_Blunt>1.2</ArmorRating_Blunt>
       <MarketValue>4300</MarketValue>
       <MoveSpeed>2.0</MoveSpeed>
-      <!-- 绛夋晥灏勫嚮 16銆?-->
+      <!-- 等效射击 16。 -->
       <ShootingAccuracyPawn>8</ShootingAccuracyPawn>
     </statBases>
     <race>
@@ -113,7 +113,7 @@
 
   <PawnKindDef ParentName="ChunPingMechBaseKind">
     <defName>Mech_ChunPing_Beelzebub</defName>
-    <label>璐濆皵娉藉竷甯冩烦骞</label>
+    <label>贝尔泽布布淳平</label>
     <race>Mech_ChunPing_Beelzebub</race>
     <lifeStages Inherit="False">
       <li>
@@ -143,18 +143,18 @@
   </PawnKindDef>
 
 
-  <!-- 榄旂帇鐐€佽搫鍔涖€侀儴缃插拰 AOE 鐣欏緟鍚庣画锛涘綋鍓嶄娇鐢ㄥ師鐗堣繙绋嬫鍣ㄦ爣绛俱€?-->
+  <!-- 魔王炮、蓄力、部署和 AOE 留待后续；当前使用原版远程武器标签。 -->
   <ThingDef ParentName="ChunPingMechBase">
     <defName>Mech_ChunPing_DemonKing</defName>
-    <label>榄旂帇娣冲钩</label>
-    <description>瓒呴噸鍨嬭繙绋嬬偖鍙般€傜壒娈婄偖鍑绘ā寮忋€佽搫鍔涘拰鑼冨洿鏀诲嚮鏆傛湭瀹炵幇銆</description>
+    <label>魔王淳平</label>
+    <description>超重型远程炮台。特殊炮击模式、蓄力和范围攻击暂未实现。</description>
     <statBases>
       <BandwidthCost>1</BandwidthCost>
       <ArmorRating_Sharp>1.3</ArmorRating_Sharp>
       <ArmorRating_Blunt>1.5</ArmorRating_Blunt>
       <MarketValue>5200</MarketValue>
       <MoveSpeed>1.7</MoveSpeed>
-      <!-- 绛夋晥灏勫嚮 20銆?-->
+      <!-- 等效射击 20。 -->
       <ShootingAccuracyPawn>12</ShootingAccuracyPawn>
     </statBases>
     <race>
@@ -166,7 +166,7 @@
 
   <PawnKindDef ParentName="ChunPingMechBaseKind">
     <defName>Mech_ChunPing_DemonKing</defName>
-    <label>榄旂帇娣冲钩</label>
+    <label>魔王淳平</label>
     <race>Mech_ChunPing_DemonKing</race>
     <lifeStages Inherit="False">
       <li>
@@ -196,11 +196,11 @@
   </PawnKindDef>
 
 
-  <!-- 璐濆皵娉藉竷甯冮噴鏀剧殑鑷富杩戞垬鏈烘浣擄紝瀹氫綅鍙傝€冨師鐗堟垬浜夊皬闀般€?-->
+  <!-- 贝尔泽布布释放的自主近战机械体，定位参考原版战争小镰。 -->
   <ThingDef ParentName="ChunPingMechBase">
     <defName>Mech_ChunPing_Tokugawa</defName>
-    <label>寰峰窛鏈烘浣</label>
-    <description>鐢辫礉灏旀辰甯冨竷娣冲钩閲婃斁鐨勮交鍨嬭嚜涓昏繎鎴樻満姊颁綋锛岄€熷害蹇絾鐢熷瓨鑳藉姏鏈夐檺銆</description>
+    <label>德川机械体</label>
+    <description>由贝尔泽布布淳平释放的轻型自主近战机械体，速度快但生存能力有限。</description>
     <statBases>
       <BandwidthCost>0</BandwidthCost>
       <MarketValue>180</MarketValue>
@@ -211,7 +211,7 @@
     </statBases>
     <tools>
       <li>
-        <label>寰峰窛鍒囧壊鍣</label>
+        <label>德川切割器</label>
         <capacities>
           <li>Cut</li>
           <li>Stab</li>
@@ -239,7 +239,7 @@
 
   <PawnKindDef ParentName="ChunPingMechBaseKind">
     <defName>Mech_ChunPing_Tokugawa</defName>
-    <label>寰峰窛鏈烘浣</label>
+    <label>德川机械体</label>
     <race>Mech_ChunPing_Tokugawa</race>
     <lifeStages Inherit="False">
       <li>
@@ -266,11 +266,11 @@
   </PawnKindDef>
 
 
-  <!-- 璐濆皵娉藉竷甯冮噴鏀剧殑鑷富鐭▼灏勫嚮鏈烘浣撱€?-->
+  <!-- 贝尔泽布布释放的自主短程射击机械体。 -->
   <ThingDef ParentName="ChunPingMechBase">
     <defName>Mech_ChunPing_Ishuin</defName>
-    <label>鎴戜慨闄㈡満姊颁綋</label>
-    <description>鐢辫礉灏旀辰甯冨竷娣冲钩閲婃斁鐨勮交鍨嬭嚜涓诲皠鍑绘満姊颁綋锛岃礋璐ｇ煭绋嬬伀鍔涙敮鎻淬</description>
+    <label>我修院机械体</label>
+    <description>由贝尔泽布布淳平释放的轻型自主射击机械体，负责短程火力支援。</description>
     <statBases>
       <BandwidthCost>0</BandwidthCost>
       <MarketValue>200</MarketValue>
@@ -296,7 +296,7 @@
 
   <PawnKindDef ParentName="ChunPingMechBaseKind">
     <defName>Mech_ChunPing_Ishuin</defName>
-    <label>鎴戜慨闄㈡満姊颁綋</label>
+    <label>我修院机械体</label>
     <race>Mech_ChunPing_Ishuin</race>
     <lifeStages Inherit="False">
       <li>
@@ -326,11 +326,11 @@
   </PawnKindDef>
 
 
-  <!-- 娣冲ぇ鍝ラ儴缃茬殑楂樹粐鎭ㄨ楗碉紝鍑犱箮娌℃湁杈撳嚭鑳藉姏銆?-->
+  <!-- 淳大哥部署的高仇恨诱饵，几乎没有输出能力。 -->
   <ThingDef ParentName="ChunPingMechBase">
     <defName>Mech_ChunPing_TokugawaDecoy</defName>
-    <label>寰峰窛璇遍サ</label>
-    <description>涓€鍙颁細鎸佺画骞挎挱鎸戣淇″彿鐨勮楗垫満姊颁綋锛屾敾鍑诲姏寰堜綆浣嗕細寮虹儓鍚稿紩闄勮繎鏁屼汉銆</description>
+    <label>德川诱饵</label>
+    <description>一台会持续广播挑衅信号的诱饵机械体，攻击力很低但会强烈吸引附近敌人。</description>
     <statBases>
       <BandwidthCost>0</BandwidthCost>
       <MarketValue>60</MarketValue>
@@ -341,7 +341,7 @@
     </statBases>
     <tools>
       <li>
-        <label>璇遍サ鎺ㄦ挒</label>
+        <label>诱饵推撞</label>
         <capacities>
           <li>Blunt</li>
         </capacities>
@@ -371,7 +371,7 @@
 
   <PawnKindDef ParentName="ChunPingMechBaseKind">
     <defName>Mech_ChunPing_TokugawaDecoy</defName>
-    <label>寰峰窛璇遍サ</label>
+    <label>德川诱饵</label>
     <race>Mech_ChunPing_TokugawaDecoy</race>
     <lifeStages Inherit="False">
       <li>
@@ -397,5 +397,3 @@
     <combatPower>15</combatPower>
   </PawnKindDef>
 </Defs>
-
-

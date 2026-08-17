@@ -3,8 +3,8 @@
 
   <ThingDef>
     <defName>ChunPing_SchemeTrap</defName>
-    <label>鍋氬眬闄烽槺</label>
-    <description>涓€鍙颁綋绉緢灏忕殑鑷姩鎰熷簲瑁呯疆銆傛晫瀵瑰崟浣嶉潬杩戝悗浼氱珛鍗冲紩鐖嗐</description>
+    <label>做局陷阱</label>
+    <description>一台体积很小的自动感应装置。敌对单位靠近后会立即引爆。</description>
     <thingClass>Building</thingClass>
     <category>Building</category>
     <tickerType>Rare</tickerType>
@@ -38,4 +38,3 @@
   </ThingDef>
 
 </Defs>
-

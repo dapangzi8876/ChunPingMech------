@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-  <!-- 鏍囧噯绉戞妧鍗曚綅銆傜壒娈婃妧鑳姐€佸鍐炽€佽嚜鐖嗗拰鎺у埗鏁堟灉鍧囩暀寰呭悗缁樁娈点€?-->
+  <!-- 标准科技单位。特殊技能、处决、自爆和控制效果均留待后续阶段。 -->
   <ThingDef ParentName="ChunPingMechBase">
     <defName>Mech_ChunPing_Doctor</defName>
-    <label>澶у尰鐢熸烦骞</label>
-    <description>鎵ц鍖荤枟鍜岀鐮斿伐浣滅殑涓撲笟鏈烘浣撱</description>
+    <label>大医生淳平</label>
+    <description>执行医疗和科研工作的专业机械体。</description>
     <statBases>
       <BandwidthCost>1</BandwidthCost>
       <ArmorRating_Sharp>0.2</ArmorRating_Sharp>
@@ -14,7 +14,7 @@
     </statBases>
     <race>
       <mechWeightClass>Medium</mechWeightClass>
-      <!-- 鍚屾椂浣滅敤浜庡尰鐤椾笌鐮旂┒锛涗互涓昏亴鍖荤枟 20 涓哄噯銆?-->
+      <!-- 同时作用于医疗与研究；以主职医疗 20 为准。 -->
       <mechFixedSkillLevel>20</mechFixedSkillLevel>
       <mechEnabledWorkTypes>
         <li>Doctor</li>
@@ -26,7 +26,7 @@
 
   <PawnKindDef ParentName="ChunPingMechBaseKind">
     <defName>Mech_ChunPing_Doctor</defName>
-    <label>澶у尰鐢熸烦骞</label>
+    <label>大医生淳平</label>
     <race>Mech_ChunPing_Doctor</race>
     <lifeStages Inherit="False">
       <li>
@@ -53,8 +53,8 @@
 
   <ThingDef ParentName="ChunPingMechBase">
     <defName>Mech_ChunPing_Bully_ballBat</defName>
-    <label>鎭堕湼娣冲钩(妫掔悆妫?</label>
-    <description>瑁呭妫掔悆妫嶇殑涓瀷鎴樻枟鏈烘浣擄紝鎷ユ湁杈冨己鐨勮繎鎴樿兘鍔涖</description>
+    <label>恶霸淳平(棒球棍)</label>
+    <description>装备棒球棍的中型战斗机械体，拥有较强的近战能力。</description>
     <statBases>
       <BandwidthCost>1</BandwidthCost>
       <ArmorRating_Sharp>0.8</ArmorRating_Sharp>
@@ -85,7 +85,7 @@
 
   <PawnKindDef ParentName="ChunPingMechBaseKind">
     <defName>Mech_ChunPing_Bully_ballBat</defName>
-    <label>鎭堕湼娣冲钩(妫掔悆妫?</label>
+    <label>恶霸淳平(棒球棍)</label>
     <race>Mech_ChunPing_Bully_ballBat</race>
     <lifeStages Inherit="False">
       <li>
@@ -121,8 +121,8 @@
 
   <ThingDef ParentName="ChunPingMechBase">
     <defName>Mech_ChunPing_Bully_Gun</defName>
-    <label>鎭堕湼娣冲钩(鏋)</label>
-    <description>瑁呭杩滅▼姝﹀櫒鐨勪腑鍨嬫垬鏂楁満姊颁綋锛岃兘澶熻繘琛屼腑璺濈鐏姏鏀彺锛屽悓鏃跺叿澶囧熀纭€杩戞垬鑳藉姏銆</description>
+    <label>恶霸淳平(枪械)</label>
+    <description>装备远程武器的中型战斗机械体，能够进行中距离火力支援，同时具备基础近战能力。</description>
     <statBases>
       <BandwidthCost>1</BandwidthCost>
       <ArmorRating_Sharp>0.8</ArmorRating_Sharp>
@@ -153,7 +153,7 @@
 
   <PawnKindDef ParentName="ChunPingMechBaseKind">
     <defName>Mech_ChunPing_Bully_Gun</defName>
-    <label>鎭堕湼娣冲钩(鏋)</label>
+    <label>恶霸淳平(枪械)</label>
     <race>Mech_ChunPing_Bully_Gun</race>
     <lifeStages Inherit="False">
       <li>
@@ -186,11 +186,11 @@
   </PawnKindDef>
 
 
-  <!-- 涓嶈澶囨鍣ㄣ€佷笉鎼哄甫鎶€鑳界殑绾槻寰℃満姊颁綋銆?-->
+  <!-- 不装备武器、不携带技能的纯防御机械体。 -->
   <ThingDef ParentName="ChunPingMechBase">
     <defName>Mech_ChunPing_Bully_Shield</defName>
-    <label>鎭堕湼娣冲钩锛堢浘锛</label>
-    <description>鎶寕瓒呴噸瑁呯敳鐨勯槻寰″瀷鎭堕湼娣冲钩銆傚畠娌℃湁涓撶敤姝﹀櫒鍜屼富鍔ㄦ妧鑳斤紝浣滅敤鏄湪鐏姏涓嬪潥瀹堥樀绾垮苟涓哄叾浠栧崟浣嶅惛鏀朵激瀹炽</description>
+    <label>恶霸淳平（盾）</label>
+    <description>披挂超重装甲的防御型恶霸淳平。它没有专用武器和主动技能，作用是在火力下坚守阵线并为其他单位吸收伤害。</description>
     <statBases>
       <BandwidthCost>1</BandwidthCost>
       <ArmorRating_Sharp>2.2</ArmorRating_Sharp>
@@ -210,7 +210,7 @@
 
   <PawnKindDef ParentName="ChunPingMechBaseKind">
     <defName>Mech_ChunPing_Bully_Shield</defName>
-    <label>鎭堕湼娣冲钩锛堢浘锛</label>
+    <label>恶霸淳平（盾）</label>
     <race>Mech_ChunPing_Bully_Shield</race>
     <lifeStages Inherit="False">
       <li>
@@ -238,11 +238,11 @@
   </PawnKindDef>
 
 
-  <!-- TODO: 鍚庣画鍔犲叆鎮ｈ€呰嚜鐖嗘満鍒躲€傜涓€闃舵淇濇寔涓哄粔浠疯交鍨嬫垬鏂楀崟浣嶃€?-->
+  <!-- TODO: 后续加入患者自爆机制。第一阶段保持为廉价轻型战斗单位。 -->
   <ThingDef ParentName="ChunPingMechBase">
     <defName>Mech_ChunPing_Patient</defName>
-    <label>鎮ｈ€呮烦骞</label>
-    <description>寤変环銆佸揩閫熶笖鑴嗗急鐨勮交鍨嬫垬鏂楁満姊颁綋銆傝兘澶熼€夊畾浣嶇疆鍚庡啿鍒鸿繃鍘伙紝骞跺湪鎶佃揪鏃跺紩鐖嗐</description>
+    <label>患者淳平</label>
+    <description>廉价、快速且脆弱的轻型战斗机械体。能够选定位置后冲刺过去，并在抵达时引爆。</description>
     <statBases>
       <BandwidthCost>1</BandwidthCost>
       <ArmorRating_Sharp>0.2</ArmorRating_Sharp>
@@ -263,7 +263,7 @@
 
   <PawnKindDef ParentName="ChunPingMechBaseKind">
     <defName>Mech_ChunPing_Patient</defName>
-    <label>鎮ｈ€呮烦骞</label>
+    <label>患者淳平</label>
     <race>Mech_ChunPing_Patient</race>
     <lifeStages Inherit="False">
       <li>
@@ -290,11 +290,11 @@
   </PawnKindDef>
 
 
-  <!-- 璀﹀療鏆傜敤鍘熺増涓繙绋嬫満姊版灙鏍囩锛屽皠閫?寮哄害鐢卞師鐗堟鍣ㄦ帶鍒躲€?-->
+  <!-- 警察暂用原版中远程机械枪标签，射速/强度由原版武器控制。 -->
   <ThingDef ParentName="ChunPingMechBase">
     <defName>Mech_ChunPing_Police</defName>
-    <label>璀﹀療娣冲钩</label>
-    <description>涓瀷鎸佺画鐏姏鏈烘浣撱€傞儴缃层€佸帇鍒跺拰涓诲姩鎶€鑳芥殏鏈疄鐜般</description>
+    <label>警察淳平</label>
+    <description>中型持续火力机械体。部署、压制和主动技能暂未实现。</description>
     <statBases>
       <BandwidthCost>1</BandwidthCost>
       <ArmorRating_Sharp>0.6</ArmorRating_Sharp>
@@ -312,7 +312,7 @@
 
   <PawnKindDef ParentName="ChunPingMechBaseKind">
     <defName>Mech_ChunPing_Police</defName>
-    <label>璀﹀療娣冲钩</label>
+    <label>警察淳平</label>
     <race>Mech_ChunPing_Police</race>
     <lifeStages Inherit="False">
       <li>
@@ -344,5 +344,3 @@
     </abilities>
   </PawnKindDef>
 </Defs>
-
-

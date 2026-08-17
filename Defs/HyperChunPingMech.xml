@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-  <!-- 楂樼骇绉戞妧鍗曚綅銆傝创鍥句粛缁熶竴浣跨敤 Fabricor 鍗犱綅銆?-->
+  <!-- 高级科技单位。贴图仍统一使用 Fabricor 占位。 -->
   <ThingDef ParentName="ChunPingMechBase">
     <defName>Mech_ChunPing_WasedaHero</defName>
-    <label>鏃╃ɑ鐢拌嫳闆勬烦骞</label>
-    <description>鑰愪箙杈冮珮鐨勬敮鎻村瀷鏈烘浣撱€傝兘澶熺灛绉绘晳鎻村弸鍐涖€佹不鎰堜激鍙ｃ€佽浆绉讳激鍔匡紝骞剁敤鏃╃ɑ鐢扮簿绁為紦鑸炲叏鍦恒</description>
+    <label>早稻田英雄淳平</label>
+    <description>耐久较高的支援型机械体。能够瞬移救援友军、治愈伤口、转移伤势，并用早稻田精神鼓舞全场。</description>
     <statBases>
       <BandwidthCost>1</BandwidthCost>
       <ArmorRating_Sharp>1.0</ArmorRating_Sharp>
@@ -41,7 +41,7 @@
 
   <PawnKindDef ParentName="ChunPingMechBaseKind">
     <defName>Mech_ChunPing_WasedaHero</defName>
-    <label>鏃╃ɑ鐢拌嫳闆勬烦骞</label>
+    <label>早稻田英雄淳平</label>
     <race>Mech_ChunPing_WasedaHero</race>
     <lifeStages Inherit="False">
       <li>
@@ -73,8 +73,8 @@
 
   <ThingDef ParentName="ChunPingMechBase">
     <defName>Mech_ChunPing_Hulk</defName>
-    <label>缁垮法浜烘烦骞</label>
-    <description>楂樼敓鍛姐€侀珮鎶ょ敳骞舵嫢鏈夎緝楂樿浇閲嶈兘鍔涚殑閲嶅瀷鍧﹀厠鏈烘浣撱</description>
+    <label>绿巨人淳平</label>
+    <description>高生命、高护甲并拥有较高载重能力的重型坦克机械体。</description>
     <statBases>
       <BandwidthCost>1</BandwidthCost>
       <ArmorRating_Sharp>1.6</ArmorRating_Sharp>
@@ -85,7 +85,7 @@
       <EnergyShieldRechargeRate>0.12</EnergyShieldRechargeRate>
       <EnergyShieldEnergyMax>2.4</EnergyShieldEnergyMax>
       <EMPResistance>0.45</EMPResistance>
-      <!-- 绛夋晥杩戞垬 14銆?-->
+      <!-- 等效近战 14。 -->
       <MeleeHitChance>12</MeleeHitChance>
     </statBases>
     <tools>
@@ -125,7 +125,7 @@
 
   <PawnKindDef ParentName="ChunPingMechBaseKind">
     <defName>Mech_ChunPing_Hulk</defName>
-    <label>缁垮法浜烘烦骞</label>
+    <label>绿巨人淳平</label>
     <race>Mech_ChunPing_Hulk</race>
     <lifeStages Inherit="False">
       <li>
@@ -154,8 +154,8 @@
 
   <ThingDef ParentName="ChunPingMechBase">
     <defName>Mech_ChunPing_SnowSamurai</defName>
-    <label>闆箣姝﹀＋娣冲钩</label>
-    <description>楂橀€熴€侀珮浼ゅ浣嗚緝鑴嗗急鐨勮繎鎴樺埡瀹€傝兘澶熼殣韬€佷娇鐢ㄩ洩涔嬪懠鍚革紝骞跺鍐虫繏姝绘晫浜恒</description>
+    <label>雪之武士淳平</label>
+    <description>高速、高伤害但较脆弱的近战刺客。能够隐身、使用雪之呼吸，并处决濒死敌人。</description>
     <statBases>
       <BandwidthCost>1</BandwidthCost>
       <ArmorRating_Sharp>0.8</ArmorRating_Sharp>
@@ -191,7 +191,7 @@
 
   <PawnKindDef ParentName="ChunPingMechBaseKind">
     <defName>Mech_ChunPing_SnowSamurai</defName>
-    <label>闆箣姝﹀＋娣冲钩</label>
+    <label>雪之武士淳平</label>
     <race>Mech_ChunPing_SnowSamurai</race>
     <lifeStages Inherit="False">
       <li>
@@ -221,11 +221,11 @@
   </PawnKindDef>
 
 
-  <!-- 鐢靛瓙鎴樹笌鎴樺満鎺у埗鍗曚綅銆?-->
+  <!-- 电子战与战场控制单位。 -->
   <ThingDef ParentName="ChunPingMechBase">
     <defName>Mech_ChunPing_BigBrother</defName>
-    <label>娣冲ぇ鍝</label>
-    <description>涓珮绾ц繙绋嬬數瀛愭垬鏈烘浣擄紝鑳藉鍒堕€犲ぇ鑼冨洿鐢电鑴夊啿銆侀儴缃查櫡闃卞拰璇遍サ锛屽苟鏍囪鏁屼汉鐨勫急鐐广</description>
+    <label>淳大哥</label>
+    <description>中高级远程电子战机械体，能够制造大范围电磁脉冲、部署陷阱和诱饵，并标记敌人的弱点。</description>
     <statBases>
       <BandwidthCost>1</BandwidthCost>
       <ArmorRating_Sharp>1.2</ArmorRating_Sharp>
@@ -249,7 +249,7 @@
 
   <PawnKindDef ParentName="ChunPingMechBaseKind">
     <defName>Mech_ChunPing_BigBrother</defName>
-    <label>娣冲ぇ鍝</label>
+    <label>淳大哥</label>
     <race>Mech_ChunPing_BigBrother</race>
     <lifeStages Inherit="False">
       <li>
@@ -277,10 +277,12 @@
       <li>ChunPingHeavyEMP</li>
     </weaponTags>
   </PawnKindDef>
+
+
   <ThingDef ParentName="ChunPingMechBase">
     <defName>Mech_ChunPing_Bully_BatGun</defName>
-    <label>鎭堕湼娣冲钩锛堟鏋級</label>
-    <description>鍚屾椂瑁呭妫掔悆妫嶅紡杩戞垬宸ュ叿涓庡師鐗堥€熷皠鏈烘灙锛圙un_Minigun锛夌殑鎭堕湼娣冲钩銆傚畠鑳藉湪杩戣窛绂荤嫚鐙犲共鏋讹紝涔熻兘鍦ㄤ腑璺濈鐢ㄨ繛鍙戠伀鍔涙寔缁帇鍒剁洰鏍囷紝杩樹細涓诲姩鏂藉睍闇稿噷鎶€鑳姐</description>
+    <label>恶霸淳平（棍枪）</label>
+    <description>同时装备棒球棍式近战工具与速射机枪的恶霸淳平。它能在近距离狠狠干架，也能在中距离用连发火力持续压制目标，还会主动施展霸凌技能。</description>
     <statBases>
       <BandwidthCost>1</BandwidthCost>
       <ArmorRating_Sharp>1.0</ArmorRating_Sharp>
@@ -292,7 +294,7 @@
     </statBases>
     <tools>
       <li>
-        <label>妫掔悆妫</label>
+        <label>棒球棍</label>
         <capacities>
           <li>Blunt</li>
         </capacities>
@@ -314,7 +316,7 @@
 
   <PawnKindDef ParentName="ChunPingMechBaseKind">
     <defName>Mech_ChunPing_Bully_BatGun</defName>
-    <label>鎭堕湼娣冲钩锛堟鏋級</label>
+    <label>恶霸淳平（棍枪）</label>
     <race>Mech_ChunPing_Bully_BatGun</race>
     <lifeStages Inherit="False">
       <li>
@@ -344,5 +346,3 @@
     </weaponTags>
   </PawnKindDef>
 </Defs>
-
-

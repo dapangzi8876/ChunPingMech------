@@ -3,19 +3,19 @@
 
   <AbilityDef>
     <defName>ChunPing_Ability_Bullying</defName>
-    <label>闇稿噷</label>
-    <description>鎭堕湼娣冲钩瀵圭洰鏍囧疄鏂芥畫閰烽湼鍑岋紝浣垮叾闄峰叆鈥滅瀵嗛┈璧涒€濈姸鎬佸苟澶卞幓琛屽姩鑳藉姏銆</description>
+    <label>霸凌</label>
+    <description>恶霸淳平对目标实施残酷霸凌，使其陷入“私密马赛”状态并失去行动能力。</description>
     <iconPath>UI/Abilities/Stun</iconPath>
     <cooldownTicksRange>5000~5000</cooldownTicksRange>
     <displayOrder>100</displayOrder>
-    <!-- 鏈緛鍙姸鎬佷篃鏄剧ず骞跺厑璁镐娇鐢?-->
+    <!-- 未征召状态也显示并允许使用 -->
     <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
     <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
-    <!-- 寰佸彫鐘舵€佷篃鏄剧ず -->
+    <!-- 征召状态也显示 -->
     <showWhenDrafted>true</showWhenDrafted>
-    <!-- 鑷姩璧板埌鐩爣鏃佽竟 -->
+    <!-- 自动走到目标旁边 -->
     <jobDef>CastAbilityOnThingMelee</jobDef>
-    <!-- 鏂芥硶杩囩▼涓鐩爣鍋滀綇锛岄槻姝竴鐩磋拷涓嶄笂 -->
+    <!-- 施法过程中让目标停住，防止一直追不上 -->
     <stunTargetWhileCasting>true</stunTargetWhileCasting>
     <verbProperties>
       <verbClass>Verb_CastAbilityTouch</verbClass>
@@ -55,8 +55,8 @@
 
   <AbilityDef>
     <defName>ChunPing_Ability_DashExplosion</defName>
-    <label>鍐插埡鐖嗙牬</label>
-    <description>閫夊畾涓€涓綅缃紝蹇€熷啿鍒哄埌閭ｉ噷锛屽苟鍦ㄦ姷杈惧悗寮曠垎銆</description>
+    <label>冲刺爆破</label>
+    <description>选定一个位置，快速冲刺到那里，并在抵达后引爆。</description>
     <iconPath>UI/Abilities/Skip</iconPath>
     <cooldownTicksRange>3600~3600</cooldownTicksRange>
     <displayOrder>110</displayOrder>
@@ -95,8 +95,8 @@
 
   <AbilityDef>
     <defName>ChunPing_Ability_GuangZhouPolice</defName>
-    <label>骞垮窞璀﹀療</label>
-    <description>鐭椂闂村己鍖栬嚜韬殑灏勫嚮涓庢満鍔ㄨ兘鍔涳紝鏇撮€傚悎蹇€熷帇鍒跺拰鎸佺画寮€鐏</description>
+    <label>广州警察</label>
+    <description>短时间强化自身的射击与机动能力，更适合快速压制和持续开火。</description>
     <iconPath>UI/Abilities/Skip</iconPath>
     <cooldownTicksRange>7200~7200</cooldownTicksRange>
     <displayOrder>120</displayOrder>
@@ -133,8 +133,8 @@
 
   <AbilityDef>
     <defName>ChunPing_Ability_HeroRescue</defName>
-    <label>鑻遍泟鏁戝満</label>
-    <description>鐬Щ鍒板弸鍐涜韩杈逛繚鎶や粬銆傚弸鍐涘彈鍒扮殑浼ゅ鍑忓崐锛屾棭绋荤敯鑻遍泟鑾峰緱鐭殏鐨勮嫳闆勪富涔夈</description>
+    <label>英雄救场</label>
+    <description>瞬移到友军身边保护他。友军受到的伤害减半，早稻田英雄获得短暂的英雄主义。</description>
     <iconPath>UI/Abilities/Skip</iconPath>
     <cooldownTicksRange>3600~3600</cooldownTicksRange>
     <displayOrder>130</displayOrder>
@@ -166,8 +166,8 @@
 
   <AbilityDef>
     <defName>ChunPing_Ability_HeroHeal</defName>
-    <label>娌绘剤</label>
-    <description>涓轰竴鍚嶅弸鍐涘寘鎵庢墍鏈夊彲浠ュ鐞嗙殑浼ゅ彛銆</description>
+    <label>治愈</label>
+    <description>为一名友军包扎所有可以处理的伤口。</description>
     <iconPath>UI/Abilities/Heal</iconPath>
     <cooldownTicksRange>1800~1800</cooldownTicksRange>
     <displayOrder>140</displayOrder>
@@ -197,8 +197,8 @@
 
   <AbilityDef>
     <defName>ChunPing_Ability_DamageTransfer</defName>
-    <label>浼ゅ杞Щ</label>
-    <description>灏嗗弸鍐涜韩涓婄殑鎵€鏈夊浼よ浆绉诲埌鏃╃ɑ鐢拌嫳闆勮韩涓娿</description>
+    <label>伤害转移</label>
+    <description>将友军身上的所有外伤转移到早稻田英雄身上。</description>
     <iconPath>UI/Abilities/Skip</iconPath>
     <cooldownTicksRange>6000~6000</cooldownTicksRange>
     <displayOrder>150</displayOrder>
@@ -228,8 +228,8 @@
 
   <AbilityDef>
     <defName>ChunPing_Ability_WasedaSpirit</defName>
-    <label>鏃╃ɑ鐢扮簿绁</label>
-    <description>榧撹垶鍦板浘涓婄殑鎵€鏈夊弸鍐涳紝鐭椂闂存彁楂樼Щ鍔ㄣ€佸懡涓拰鎵夸激鑳藉姏锛屽苟娑堥櫎鐤肩棝銆</description>
+    <label>早稻田精神</label>
+    <description>鼓舞地图上的所有友军，短时间提高移动、命中和承伤能力，并消除疼痛。</description>
     <iconPath>UI/Abilities/Inspire</iconPath>
     <cooldownTicksRange>7200~7200</cooldownTicksRange>
     <displayOrder>160</displayOrder>
@@ -259,8 +259,8 @@
 
   <AbilityDef>
     <defName>ChunPing_Ability_SnowInvisibility</defName>
-    <label>闅愯韩</label>
-    <description>闆箣姝﹀＋娣冲钩鏆傛椂浠庢晫浜虹殑璁ょ煡涓秷澶便</description>
+    <label>隐身</label>
+    <description>雪之武士淳平暂时从敌人的认知中消失。</description>
     <iconPath>UI/Abilities/Skip</iconPath>
     <cooldownTicksRange>3600~3600</cooldownTicksRange>
     <displayOrder>170</displayOrder>
@@ -292,8 +292,8 @@
 
   <AbilityDef>
     <defName>ChunPing_Ability_SnowBreath</defName>
-    <label>闆箣鍛煎惛</label>
-    <description>鐭椂闂村唴鍔犲揩绉诲姩鍜岃繎鎴樻敾鍑婚€熷害銆</description>
+    <label>雪之呼吸</label>
+    <description>短时间内加快移动和近战攻击速度。</description>
     <iconPath>UI/Abilities/Skip</iconPath>
     <cooldownTicksRange>3600~3600</cooldownTicksRange>
     <displayOrder>180</displayOrder>
@@ -325,8 +325,8 @@
 
   <AbilityDef>
     <defName>ChunPing_Ability_Execution</defName>
-    <label>澶勫喅</label>
-    <description>瀵规晫浜哄彂鍔ㄥ己鍔涙柀鍑伙紱鏁屼汉鐢熷懡浣庝簬 20% 鏃剁洿鎺ユ柀鏉€銆</description>
+    <label>处决</label>
+    <description>对敌人发动强力斩击；敌人生命低于 10% 时直接斩杀。</description>
     <iconPath>UI/Abilities/Stun</iconPath>
     <cooldownTicksRange>2400~2400</cooldownTicksRange>
     <displayOrder>190</displayOrder>
@@ -353,15 +353,15 @@
         <compClass>ChunPingMech.CompAbilityEffect_Execution</compClass>
         <damageAmount>70</damageAmount>
         <armorPenetration>1.5</armorPenetration>
-        <executionHealthThreshold>0.2</executionHealthThreshold>
+        <executionHealthThreshold>0.1</executionHealthThreshold>
       </li>
     </comps>
   </AbilityDef>
 
   <AbilityDef>
     <defName>ChunPing_Ability_CellRecombination</defName>
-    <label>缁嗚優閲嶇粍</label>
-    <description>浣夸竴鍚嶅彈浼ゅ弸鍐涚殑缁勭粐杩涘叆楂橀€熼噸缁勭姸鎬侊紝鍦?15 绉掑唴鎸佺画蹇€熸不鎰堜激鍔裤</description>
+    <label>细胞重组</label>
+    <description>使一名受伤友军的组织进入高速重组状态，在 15 秒内持续快速治愈伤势。</description>
     <iconPath>UI/Abilities/Heal</iconPath>
     <cooldownTicksRange>3600~3600</cooldownTicksRange>
     <displayOrder>200</displayOrder>
@@ -393,8 +393,8 @@
 
   <AbilityDef>
     <defName>ChunPing_Ability_ReleaseTokugawa</defName>
-    <label>閲婃斁寰峰窛</label>
-    <description>鍍忔垬浜夊コ鐨囬噴鏀炬垬浜夊皬闀颁竴鏍凤紝鍦ㄦ寚瀹氫綅缃噴鏀句竴鍙版搮闀胯繎鎴樼殑寰峰窛鏈烘浣撱€傚彫鍞ょ墿浼氬湪 120 绉掑悗澶辨晥銆</description>
+    <label>释放德川</label>
+    <description>像战争女皇释放战争小镰一样，在指定位置释放一台擅长近战的德川机械体。召唤物会在 120 秒后失效。</description>
     <iconPath>UI/Abilities/Skip</iconPath>
     <cooldownTicksRange>2700~2700</cooldownTicksRange>
     <displayOrder>210</displayOrder>
@@ -423,8 +423,8 @@
 
   <AbilityDef>
     <defName>ChunPing_Ability_ReleaseIshuin</defName>
-    <label>閲婃斁鎴戜慨闄</label>
-    <description>鍍忔垬浜夊コ鐨囬噴鏀炬垬浜夊皬闀颁竴鏍凤紝鍦ㄦ寚瀹氫綅缃噴鏀句竴鍙版搮闀跨煭绋嬪皠鍑荤殑鎴戜慨闄㈡満姊颁綋銆傚彫鍞ょ墿浼氬湪 120 绉掑悗澶辨晥銆</description>
+    <label>释放我修院</label>
+    <description>像战争女皇释放战争小镰一样，在指定位置释放一台擅长短程射击的我修院机械体。召唤物会在 120 秒后失效。</description>
     <iconPath>UI/Abilities/Skip</iconPath>
     <cooldownTicksRange>2700~2700</cooldownTicksRange>
     <displayOrder>220</displayOrder>
@@ -454,7 +454,7 @@
   <AbilityDef>
     <defName>ChunPing_Ability_EMC</defName>
     <label>EMC</label>
-    <description>鎸囧畾涓€涓尯鍩燂紝寮曞彂涓€娆″崐寰?8 鏍肩殑澶ц妯＄數纾佽剦鍐诧紝鐦棯鑼冨洿鍐呯殑鏈烘浣撱€佹姢鐩惧拰鐢靛瓙璁惧銆</description>
+    <description>指定一个区域，引发一次半径 8 格的大规模电磁脉冲，瘫痪范围内的机械体、护盾和电子设备。</description>
     <iconPath>UI/Abilities/Stun</iconPath>
     <cooldownTicksRange>6000~6000</cooldownTicksRange>
     <displayOrder>230</displayOrder>
@@ -484,8 +484,8 @@
 
   <AbilityDef>
     <defName>ChunPing_Ability_SchemeTrap</defName>
-    <label>鍋氬眬闄烽槺</label>
-    <description>鍦ㄦ寚瀹氫綅缃儴缃蹭竴鍙板皬鍨嬮殣钄借缃€傛晫浜鸿繘鍏?3.5 鏍艰寖鍥村悗锛岃缃細鑷姩寮曠垎銆</description>
+    <label>做局陷阱</label>
+    <description>在指定位置部署一台小型隐蔽装置。敌人进入 3.5 格范围后，装置会自动引爆。</description>
     <iconPath>UI/Abilities/Skip</iconPath>
     <cooldownTicksRange>3600~3600</cooldownTicksRange>
     <displayOrder>240</displayOrder>
@@ -514,8 +514,8 @@
 
   <AbilityDef>
     <defName>ChunPing_Ability_TokugawaDecoy</defName>
-    <label>寰峰窛璇遍サ</label>
-    <description>鍦ㄦ寚瀹氬湴鐐圭敓鎴愪竴鍙版敾鍑诲姏寰堜綆鐨勫痉宸濊楗点€傝楗典細寮虹儓鍚稿紩 24 鏍煎唴鏁屼汉鐨勬敾鍑伙紝骞跺湪 60 绉掑悗澶辨晥銆</description>
+    <label>德川诱饵</label>
+    <description>在指定地点生成一台攻击力很低的德川诱饵。诱饵会强烈吸引 24 格内敌人的攻击，并在 60 秒后失效。</description>
     <iconPath>UI/Abilities/Skip</iconPath>
     <cooldownTicksRange>4500~4500</cooldownTicksRange>
     <displayOrder>250</displayOrder>
@@ -544,8 +544,8 @@
 
   <AbilityDef>
     <defName>ChunPing_Ability_IshuinMark</defName>
-    <label>鎴戜慨闄</label>
-    <description>鏍囪涓€涓晫浜?20 绉掞紝浣垮叾鍙楀埌鐨勪激瀹虫彁楂樿嚦 150%锛岀Щ鍔ㄩ€熷害闄嶄綆鑷?80%銆</description>
+    <label>我修院</label>
+    <description>标记一个敌人 20 秒，使其受到的伤害提高至 150%，移动速度降低至 80%。</description>
     <iconPath>UI/Abilities/Stun</iconPath>
     <cooldownTicksRange>3600~3600</cooldownTicksRange>
     <displayOrder>260</displayOrder>
@@ -576,5 +576,3 @@
   </AbilityDef>
 
 </Defs>
-
-

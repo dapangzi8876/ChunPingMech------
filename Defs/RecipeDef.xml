@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-  <!-- 閰嶆柟鐖剁被鐩存帴缁ф壙 Biotech 鍘熺増鍩硅偛閰嶆柟锛岀‘淇濆煿鑲插懆鏈熴€佹満姊板笀闄愬埗鍜屽伐浣滈噺姝ｇ‘銆?-->
+  <!-- 配方父类直接继承 Biotech 原版培育配方，确保培育周期、机械师限制和工作量正确。 -->
 
 
   <RecipeDef Name="ChunPingBasicRecipe" ParentName="LightMechanoidRecipe" Abstract="True">
@@ -138,13 +138,13 @@
   </RecipeDef>
 
 
-  <!-- 鏅€氭満姊板煿鑲插櫒锛氬熀纭€鏈烘浣撱€?-->
+  <!-- 普通机械培育器：基础机械体。 -->
 
 
   <RecipeDef ParentName="ChunPingBasicRecipe">
     <defName>Gestate_ChunPing_Calligrapher</defName>
-    <label>瀛曡偛涔︽硶瀹舵烦骞</label>
-    <description>鍦ㄦ満姊板煿鑲插櫒涓瓡鑲蹭功娉曞娣冲钩銆</description>
+    <label>孕育书法家淳平</label>
+    <description>在机械培育器中孕育书法家淳平。</description>
     <products>
       <Mech_ChunPing_Calligrapher>1</Mech_ChunPing_Calligrapher>
     </products>
@@ -156,8 +156,8 @@
 
   <RecipeDef ParentName="ChunPingBasicRecipe">
     <defName>Gestate_ChunPing_Waiter</defName>
-    <label>瀛曡偛鏈嶅姟鍛樻烦骞</label>
-    <description>鍦ㄦ満姊板煿鑲插櫒涓瓡鑲叉湇鍔″憳娣冲钩銆</description>
+    <label>孕育服务员淳平</label>
+    <description>在机械培育器中孕育服务员淳平。</description>
     <products>
       <Mech_ChunPing_Waiter>1</Mech_ChunPing_Waiter>
     </products>
@@ -169,8 +169,8 @@
 
   <RecipeDef ParentName="ChunPingBasicRecipe">
     <defName>Gestate_ChunPing_Construction</defName>
-    <label>瀛曡偛鍦熸湪娣冲钩</label>
-    <description>鍦ㄦ満姊板煿鑲插櫒涓瓡鑲插湡鏈ㄦ烦骞炽</description>
+    <label>孕育土木淳平</label>
+    <description>在机械培育器中孕育土木淳平。</description>
     <products>
       <Mech_ChunPing_Construction>1</Mech_ChunPing_Construction>
     </products>
@@ -182,8 +182,8 @@
 
   <RecipeDef ParentName="ChunPingBasicRecipe">
     <defName>Gestate_ChunPing_Kendo</defName>
-    <label>瀛曡偛鍓戦亾閮ㄦ烦骞</label>
-    <description>鍦ㄦ満姊板煿鑲插櫒涓瓡鑲插墤閬撻儴娣冲钩銆</description>
+    <label>孕育剑道部淳平</label>
+    <description>在机械培育器中孕育剑道部淳平。</description>
     <products>
       <Mech_ChunPing_Kendo>1</Mech_ChunPing_Kendo>
     </products>
@@ -195,8 +195,8 @@
 
   <RecipeDef ParentName="ChunPingBasicRecipe">
     <defName>Gestate_ChunPing_Gardener</defName>
-    <label>瀛曡偛鍥竵娣冲钩</label>
-    <description>鍦ㄦ満姊板煿鑲插櫒涓瓡鑲插洯涓佹烦骞炽</description>
+    <label>孕育园丁淳平</label>
+    <description>在机械培育器中孕育园丁淳平。</description>
     <products>
       <Mech_ChunPing_Gardener>1</Mech_ChunPing_Gardener>
     </products>
@@ -208,8 +208,8 @@
 
   <RecipeDef ParentName="ChunPingBasicRecipe">
     <defName>Gestate_ChunPing_Mechanic</defName>
-    <label>瀛曡偛姹借溅淇悊宸ユ烦骞</label>
-    <description>鍦ㄦ満姊板煿鑲插櫒涓瓡鑲叉苯杞︿慨鐞嗗伐娣冲钩銆</description>
+    <label>孕育汽车修理工淳平</label>
+    <description>在机械培育器中孕育汽车修理工淳平。</description>
     <products>
       <Mech_ChunPing_Mechanic>1</Mech_ChunPing_Mechanic>
     </products>
@@ -221,8 +221,8 @@
 
   <RecipeDef ParentName="ChunPingBasicRecipe">
     <defName>Gestate_ChunPing_Blond</defName>
-    <label>瀛曡偛榛勬瘺娣冲钩</label>
-    <description>鍦ㄦ満姊板煿鑲插櫒涓瓡鑲查粍姣涙烦骞炽</description>
+    <label>孕育黄毛淳平</label>
+    <description>在机械培育器中孕育黄毛淳平。</description>
     <products>
       <Mech_ChunPing_Blond>1</Mech_ChunPing_Blond>
     </products>
@@ -232,13 +232,13 @@
   </RecipeDef>
 
 
-  <!-- 澶у瀷鏈烘鍩硅偛鍣細鏍囧噯鏈烘浣撱€?-->
+  <!-- 大型机械培育器：标准机械体。 -->
 
 
   <RecipeDef ParentName="ChunPingStandardRecipe">
     <defName>Gestate_ChunPing_Doctor</defName>
-    <label>瀛曡偛澶у尰鐢熸烦骞</label>
-    <description>鍦ㄥぇ鍨嬫満姊板煿鑲插櫒涓瓡鑲插ぇ鍖荤敓娣冲钩銆</description>
+    <label>孕育大医生淳平</label>
+    <description>在大型机械培育器中孕育大医生淳平。</description>
     <products>
       <Mech_ChunPing_Doctor>1</Mech_ChunPing_Doctor>
     </products>
@@ -250,8 +250,8 @@
 
   <RecipeDef ParentName="ChunPingStandardRecipe">
     <defName>Gestate_ChunPing_Bully_ballBat</defName>
-    <label>瀛曡偛鎭堕湼娣冲钩锛堟鐞冩锛</label>
-    <description>鍦ㄥぇ鍨嬫満姊板煿鑲插櫒涓瓡鑲蹭竴鍙拌澶囨鐞冩鐨勬伓闇告烦骞炽</description>
+    <label>孕育恶霸淳平（棒球棍）</label>
+    <description>在大型机械培育器中孕育一台装备棒球棍的恶霸淳平。</description>
     <products>
       <Mech_ChunPing_Bully_ballBat>1</Mech_ChunPing_Bully_ballBat>
     </products>
@@ -263,8 +263,8 @@
 
   <RecipeDef ParentName="ChunPingStandardRecipe">
     <defName>Gestate_ChunPing_Bully_Gun</defName>
-    <label>瀛曡偛鎭堕湼娣冲钩锛堟灙姊帮級</label>
-    <description>鍦ㄥぇ鍨嬫満姊板煿鑲插櫒涓瓡鑲蹭竴鍙拌澶囨灙姊扮殑鎭堕湼娣冲钩銆</description>
+    <label>孕育恶霸淳平（枪械）</label>
+    <description>在大型机械培育器中孕育一台装备枪械的恶霸淳平。</description>
     <products>
       <Mech_ChunPing_Bully_Gun>1</Mech_ChunPing_Bully_Gun>
     </products>
@@ -276,8 +276,8 @@
 
   <RecipeDef ParentName="ChunPingStandardRecipe">
     <defName>Gestate_ChunPing_Bully_Shield</defName>
-    <label>瀛曡偛鎭堕湼娣冲钩锛堢浘锛</label>
-    <description>鍦ㄥぇ鍨嬫満姊板煿鑲插櫒涓瓡鑲蹭竴鍙版姭鎸傝秴閲嶈鐢茬殑鎭堕湼娣冲钩銆</description>
+    <label>孕育恶霸淳平（盾）</label>
+    <description>在大型机械培育器中孕育一台披挂超重装甲的恶霸淳平。</description>
     <products>
       <Mech_ChunPing_Bully_Shield>1</Mech_ChunPing_Bully_Shield>
     </products>
@@ -289,8 +289,8 @@
 
   <RecipeDef ParentName="ChunPingStandardRecipe">
     <defName>Gestate_ChunPing_Patient</defName>
-    <label>瀛曡偛鎮ｈ€呮烦骞</label>
-    <description>鍦ㄥぇ鍨嬫満姊板煿鑲插櫒涓瓡鑲叉偅鑰呮烦骞炽</description>
+    <label>孕育患者淳平</label>
+    <description>在大型机械培育器中孕育患者淳平。</description>
     <products>
       <Mech_ChunPing_Patient>1</Mech_ChunPing_Patient>
     </products>
@@ -302,8 +302,8 @@
 
   <RecipeDef ParentName="ChunPingStandardRecipe">
     <defName>Gestate_ChunPing_Police</defName>
-    <label>瀛曡偛璀﹀療娣冲钩</label>
-    <description>鍦ㄥぇ鍨嬫満姊板煿鑲插櫒涓瓡鑲茶瀵熸烦骞炽</description>
+    <label>孕育警察淳平</label>
+    <description>在大型机械培育器中孕育警察淳平。</description>
     <products>
       <Mech_ChunPing_Police>1</Mech_ChunPing_Police>
     </products>
@@ -313,13 +313,13 @@
   </RecipeDef>
 
 
-  <!-- 澶у瀷鏈烘鍩硅偛鍣細楂樼骇鏈烘浣撱€?-->
+  <!-- 大型机械培育器：高级机械体。 -->
 
 
   <RecipeDef ParentName="ChunPingHighRecipe">
     <defName>Gestate_ChunPing_WasedaHero</defName>
-    <label>瀛曡偛鏃╃ɑ鐢拌嫳闆勬烦骞</label>
-    <description>鍦ㄥぇ鍨嬫満姊板煿鑲插櫒涓瓡鑲叉棭绋荤敯鑻遍泟娣冲钩銆</description>
+    <label>孕育早稻田英雄淳平</label>
+    <description>在大型机械培育器中孕育早稻田英雄淳平。</description>
     <products>
       <Mech_ChunPing_WasedaHero>1</Mech_ChunPing_WasedaHero>
     </products>
@@ -331,8 +331,8 @@
 
   <RecipeDef ParentName="ChunPingHighRecipe">
     <defName>Gestate_ChunPing_Hulk</defName>
-    <label>瀛曡偛缁垮法浜烘烦骞</label>
-    <description>鍦ㄥぇ鍨嬫満姊板煿鑲插櫒涓瓡鑲茬豢宸ㄤ汉娣冲钩銆</description>
+    <label>孕育绿巨人淳平</label>
+    <description>在大型机械培育器中孕育绿巨人淳平。</description>
     <products>
       <Mech_ChunPing_Hulk>1</Mech_ChunPing_Hulk>
     </products>
@@ -344,8 +344,8 @@
 
   <RecipeDef ParentName="ChunPingHighRecipe">
     <defName>Gestate_ChunPing_SnowSamurai</defName>
-    <label>瀛曡偛闆箣姝﹀＋娣冲钩</label>
-    <description>鍦ㄥぇ鍨嬫満姊板煿鑲插櫒涓瓡鑲查洩涔嬫澹烦骞炽</description>
+    <label>孕育雪之武士淳平</label>
+    <description>在大型机械培育器中孕育雪之武士淳平。</description>
     <products>
       <Mech_ChunPing_SnowSamurai>1</Mech_ChunPing_SnowSamurai>
     </products>
@@ -357,8 +357,8 @@
 
   <RecipeDef ParentName="ChunPingHighRecipe">
     <defName>Gestate_ChunPing_BigBrother</defName>
-    <label>瀛曡偛娣冲ぇ鍝</label>
-    <description>鍦ㄥぇ鍨嬫満姊板煿鑲插櫒涓瓡鑲叉烦澶у摜銆</description>
+    <label>孕育淳大哥</label>
+    <description>在大型机械培育器中孕育淳大哥。</description>
     <products>
       <Mech_ChunPing_BigBrother>1</Mech_ChunPing_BigBrother>
     </products>
@@ -368,13 +368,10 @@
   </RecipeDef>
 
 
-  <!-- 澶у瀷鏈烘鍩硅偛鍣細缁堟瀬鏈烘浣撱€?-->
-
-
   <RecipeDef ParentName="ChunPingHighRecipe">
     <defName>Gestate_ChunPing_Bully_BatGun</defName>
-    <label>鐎涙洝鍋涢幁鍫曟辜濞ｅ啿閽╅敍鍫燁棗閺嬵亷绱</label>
-    <description>閸︺劌銇囬崹瀣簚濮婃澘鐓块懖鎻掓珤娑擃厼鐡￠懖韫閸欐媽顥婃径鍥棗閻炲啯顥掓稉搴″斧閻楀牊妫悶鍐ㄥ灡閺堢儤鐏欓惃鍕紦闂囧憡鐑﹂獮鐐解偓</description>
+    <label>孕育恶霸淳平（棍枪）</label>
+    <description>在大型机械培育器中孕育一台装备棒球棍与原版速射机枪的恶霸淳平。</description>
     <products>
       <Mech_ChunPing_Bully_BatGun>1</Mech_ChunPing_Bully_BatGun>
     </products>
@@ -384,10 +381,13 @@
   </RecipeDef>
 
 
+  <!-- 大型机械培育器：终极机械体。 -->
+
+
   <RecipeDef ParentName="ChunPingUltraRecipe">
     <defName>Gestate_ChunPing_Leo</defName>
-    <label>瀛曡偛闆峰ゥ娣冲钩</label>
-    <description>鍦ㄥぇ鍨嬫満姊板煿鑲插櫒涓瓡鑲查浄濂ユ烦骞炽</description>
+    <label>孕育雷奥淳平</label>
+    <description>在大型机械培育器中孕育雷奥淳平。</description>
     <products>
       <Mech_ChunPing_Leo>1</Mech_ChunPing_Leo>
     </products>
@@ -399,8 +399,8 @@
 
   <RecipeDef ParentName="ChunPingUltraRecipe">
     <defName>Gestate_ChunPing_Beelzebub</defName>
-    <label>瀛曡偛璐濆皵娉藉竷甯冩烦骞</label>
-    <description>鍦ㄥぇ鍨嬫満姊板煿鑲插櫒涓瓡鑲茶礉灏旀辰甯冨竷娣冲钩銆</description>
+    <label>孕育贝尔泽布布淳平</label>
+    <description>在大型机械培育器中孕育贝尔泽布布淳平。</description>
     <products>
       <Mech_ChunPing_Beelzebub>1</Mech_ChunPing_Beelzebub>
     </products>
@@ -412,8 +412,8 @@
 
   <RecipeDef ParentName="ChunPingUltraRecipe">
     <defName>Gestate_ChunPing_DemonKing</defName>
-    <label>瀛曡偛榄旂帇娣冲钩</label>
-    <description>鍦ㄥぇ鍨嬫満姊板煿鑲插櫒涓瓡鑲查瓟鐜嬫烦骞炽</description>
+    <label>孕育魔王淳平</label>
+    <description>在大型机械培育器中孕育魔王淳平。</description>
     <products>
       <Mech_ChunPing_DemonKing>1</Mech_ChunPing_DemonKing>
     </products>
@@ -422,5 +422,3 @@
     </descriptionHyperlinks>
   </RecipeDef>
 </Defs>
-
-
