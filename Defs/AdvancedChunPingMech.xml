@@ -28,20 +28,39 @@
     <defName>Mech_ChunPing_Doctor</defName>
     <label>大医生淳平</label>
     <race>Mech_ChunPing_Doctor</race>
+    <lifeStages Inherit="False">
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Mechanoid/Fabricor</texPath>
+          <maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/Mech_Fabricor</maskPath>
+          <shaderType>CutoutWithOverlay</shaderType>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>1.1</drawSize>
+        </bodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Mechanoid/FabricorAncient</texPath>
+          <maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/Mech_Fabricor</maskPath>
+          <shaderType>CutoutWithOverlay</shaderType>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>1.1</drawSize>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
   </PawnKindDef>
 
 
   <ThingDef ParentName="ChunPingMechBase">
-    <defName>Mech_ChunPing_Bully</defName>
-    <label>恶霸淳平</label>
-    <description>拥有强化近战能力和基础远程能力的多用途战斗机械体。霸凌技能暂未实现。</description>
+    <defName>Mech_ChunPing_Bully_ballBat</defName>
+    <label>恶霸淳平(棒球棍)</label>
+    <description>装备棒球棍的中型战斗机械体，拥有较强的近战能力。</description>
     <statBases>
       <BandwidthCost>1</BandwidthCost>
       <ArmorRating_Sharp>0.8</ArmorRating_Sharp>
       <ArmorRating_Blunt>0.8</ArmorRating_Blunt>
       <MarketValue>1700</MarketValue>
       <MoveSpeed>3.2</MoveSpeed>
-      <!-- 等效近战 16、射击 12。 -->
       <MeleeHitChance>12</MeleeHitChance>
       <ShootingAccuracyPawn>4</ShootingAccuracyPawn>
     </statBases>
@@ -57,9 +76,6 @@
         <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
       </li>
     </tools>
-     <abilities>
-      <li>ChunPing_Ability_Bullying</li>
-    </abilities>
     <race>
       <baseHealthScale>1.25</baseHealthScale>
       <mechWeightClass>Medium</mechWeightClass>
@@ -68,14 +84,105 @@
 
 
   <PawnKindDef ParentName="ChunPingMechBaseKind">
-    <defName>Mech_ChunPing_Bully</defName>
-    <label>恶霸淳平</label>
-    <race>Mech_ChunPing_Bully</race>
+    <defName>Mech_ChunPing_Bully_ballBat</defName>
+    <label>恶霸淳平(棒球棍)</label>
+    <race>Mech_ChunPing_Bully_ballBat</race>
+    <lifeStages Inherit="False">
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Mechanoid/Fabricor</texPath>
+          <maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/Mech_Fabricor</maskPath>
+          <shaderType>CutoutWithOverlay</shaderType>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>1.1</drawSize>
+        </bodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Mechanoid/FabricorAncient</texPath>
+          <maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/Mech_Fabricor</maskPath>
+          <shaderType>CutoutWithOverlay</shaderType>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>1.1</drawSize>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+    <isFighter>true</isFighter>
+    <combatPower>190</combatPower>
+    <weaponMoney>9999~9999</weaponMoney>
+    <weaponTags Inherit="False">
+      <li>MeleeWeapon_PaviaBaseballBat</li>
+    </weaponTags>
+    <abilities>
+      <li>ChunPing_Ability_Bullying</li>
+    </abilities>
+  </PawnKindDef>
+
+
+  <ThingDef ParentName="ChunPingMechBase">
+    <defName>Mech_ChunPing_Bully_Gun</defName>
+    <label>恶霸淳平(枪械)</label>
+    <description>装备远程武器的中型战斗机械体，能够进行中距离火力支援，同时具备基础近战能力。</description>
+    <statBases>
+      <BandwidthCost>1</BandwidthCost>
+      <ArmorRating_Sharp>0.8</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.8</ArmorRating_Blunt>
+      <MarketValue>1700</MarketValue>
+      <MoveSpeed>3.2</MoveSpeed>
+      <MeleeHitChance>12</MeleeHitChance>
+      <ShootingAccuracyPawn>4</ShootingAccuracyPawn>
+    </statBases>
+    <tools>
+      <li>
+        <label>heavy fist</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>20</power>
+        <cooldownTime>2.2</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+      </li>
+    </tools>
+    <race>
+      <baseHealthScale>1.25</baseHealthScale>
+      <mechWeightClass>Medium</mechWeightClass>
+    </race>
+  </ThingDef>
+
+
+  <PawnKindDef ParentName="ChunPingMechBaseKind">
+    <defName>Mech_ChunPing_Bully_Gun</defName>
+    <label>恶霸淳平(枪械)</label>
+    <race>Mech_ChunPing_Bully_Gun</race>
+    <lifeStages Inherit="False">
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Mechanoid/Fabricor</texPath>
+          <maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/Mech_Fabricor</maskPath>
+          <shaderType>CutoutWithOverlay</shaderType>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>1.1</drawSize>
+        </bodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Mechanoid/FabricorAncient</texPath>
+          <maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/Mech_Fabricor</maskPath>
+          <shaderType>CutoutWithOverlay</shaderType>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>1.1</drawSize>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
     <isFighter>true</isFighter>
     <combatPower>190</combatPower>
     <weaponTags>
-      <li>MeleeWeapon_PaviaBaseballBat</li>
+      <li>MechanoidGunMedium</li>
     </weaponTags>
+    <abilities>
+      <li>ChunPing_Ability_Bullying</li>
+    </abilities>
   </PawnKindDef>
 
 
@@ -103,6 +210,26 @@
     <defName>Mech_ChunPing_Patient</defName>
     <label>患者淳平</label>
     <race>Mech_ChunPing_Patient</race>
+    <lifeStages Inherit="False">
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Mechanoid/Fabricor</texPath>
+          <maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/Mech_Fabricor</maskPath>
+          <shaderType>CutoutWithOverlay</shaderType>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>1.1</drawSize>
+        </bodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Mechanoid/FabricorAncient</texPath>
+          <maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/Mech_Fabricor</maskPath>
+          <shaderType>CutoutWithOverlay</shaderType>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>1.1</drawSize>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
     <isFighter>true</isFighter>
     <combatPower>70</combatPower>
   </PawnKindDef>
@@ -132,6 +259,26 @@
     <defName>Mech_ChunPing_Police</defName>
     <label>警察淳平</label>
     <race>Mech_ChunPing_Police</race>
+    <lifeStages Inherit="False">
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Mechanoid/Fabricor</texPath>
+          <maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/Mech_Fabricor</maskPath>
+          <shaderType>CutoutWithOverlay</shaderType>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>1.1</drawSize>
+        </bodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Mechanoid/FabricorAncient</texPath>
+          <maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/Mech_Fabricor</maskPath>
+          <shaderType>CutoutWithOverlay</shaderType>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>1.1</drawSize>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
     <isFighter>true</isFighter>
     <combatPower>230</combatPower>
     <weaponTags>

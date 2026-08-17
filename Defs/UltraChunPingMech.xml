@@ -17,35 +17,35 @@
     <tools>
       <!-- 主力重拳 -->
       <li>
-          <label>雷奥重拳</label>
-          <capacities>
-              <li>Blunt</li>
-          </capacities>
-          <power>45</power>
-          <cooldownTime>2.4</cooldownTime>
-          <linkedBodyPartsGroup>Hands</linkedBodyPartsGroup>
+        <label>雷奥重拳</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>45</power>
+        <cooldownTime>2.4</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
       </li>
       <!-- 威力极高但比较慢 -->
       <li>
-          <label>雷奥重踢</label>
-          <capacities>
-              <li>Blunt</li>
-          </capacities>
-          <power>60</power>
-          <cooldownTime>3.5</cooldownTime>
-          <linkedBodyPartsGroup>Feet</linkedBodyPartsGroup>
+        <label>雷奥重踢</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>60</power>
+        <cooldownTime>3.5</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
       </li>
       <!-- 较快的普通攻击 -->
       <li>
-          <label>雷奥掌击</label>
-          <capacities>
-              <li>Blunt</li>
-          </capacities>
-          <power>32</power>
-          <cooldownTime>1.8</cooldownTime>
-          <linkedBodyPartsGroup>Hands</linkedBodyPartsGroup>
+        <label>雷奥掌击</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>32</power>
+        <cooldownTime>1.8</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
       </li>
-  </tools>
+    </tools>
     <race>
       <baseBodySize>2.0</baseBodySize>
       <baseHealthScale>3.6</baseHealthScale>
@@ -58,6 +58,26 @@
     <defName>Mech_ChunPing_Leo</defName>
     <label>雷奥淳平</label>
     <race>Mech_ChunPing_Leo</race>
+    <lifeStages Inherit="False">
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Mechanoid/Fabricor</texPath>
+          <maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/Mech_Fabricor</maskPath>
+          <shaderType>CutoutWithOverlay</shaderType>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>1.1</drawSize>
+        </bodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Mechanoid/FabricorAncient</texPath>
+          <maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/Mech_Fabricor</maskPath>
+          <shaderType>CutoutWithOverlay</shaderType>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>1.1</drawSize>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
     <isFighter>true</isFighter>
     <combatPower>650</combatPower>
   </PawnKindDef>
@@ -88,6 +108,26 @@
     <defName>Mech_ChunPing_Beelzebub</defName>
     <label>贝尔泽布布淳平</label>
     <race>Mech_ChunPing_Beelzebub</race>
+    <lifeStages Inherit="False">
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Mechanoid/Fabricor</texPath>
+          <maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/Mech_Fabricor</maskPath>
+          <shaderType>CutoutWithOverlay</shaderType>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>1.1</drawSize>
+        </bodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Mechanoid/FabricorAncient</texPath>
+          <maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/Mech_Fabricor</maskPath>
+          <shaderType>CutoutWithOverlay</shaderType>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>1.1</drawSize>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
     <isFighter>true</isFighter>
     <combatPower>560</combatPower>
     <weaponTags>
@@ -121,6 +161,26 @@
     <defName>Mech_ChunPing_DemonKing</defName>
     <label>魔王淳平</label>
     <race>Mech_ChunPing_DemonKing</race>
+    <lifeStages Inherit="False">
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Mechanoid/Fabricor</texPath>
+          <maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/Mech_Fabricor</maskPath>
+          <shaderType>CutoutWithOverlay</shaderType>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>1.1</drawSize>
+        </bodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Mechanoid/FabricorAncient</texPath>
+          <maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/Mech_Fabricor</maskPath>
+          <shaderType>CutoutWithOverlay</shaderType>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>1.1</drawSize>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
     <isFighter>true</isFighter>
     <combatPower>620</combatPower>
     <weaponTags>

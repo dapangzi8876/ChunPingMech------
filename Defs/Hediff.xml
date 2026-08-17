@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
+
   <HediffDef>
     <defName>ChunPing_Sumimasen</defName>
     <label>私密马赛</label>
@@ -8,6 +9,7 @@
     <isBad>true</isBad>
     <stages>
       <li>
+        <minSeverity>0</minSeverity>
         <capMods>
           <li>
             <capacity>Consciousness</capacity>
@@ -16,10 +18,12 @@
         </capMods>
       </li>
     </stages>
-    <!-- 这里控制私密马赛本身持续多久 -->
     <comps>
+      <!-- <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-50.0</severityPerDay>
+      </li> -->
       <li Class="HediffCompProperties_Disappears">
-        <disappearsAfterTicks>7500~7500</disappearsAfterTicks>
+        <disappearsAfterTicks>10000</disappearsAfterTicks>
         <showRemainingTime>true</showRemainingTime>
       </li>
     </comps>

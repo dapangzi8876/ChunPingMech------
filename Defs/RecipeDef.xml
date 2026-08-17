@@ -249,14 +249,27 @@
 
 
   <RecipeDef ParentName="ChunPingStandardRecipe">
-    <defName>Gestate_ChunPing_Bully</defName>
-    <label>孕育恶霸淳平</label>
-    <description>在大型机械培育器中孕育恶霸淳平。</description>
+    <defName>Gestate_ChunPing_Bully_ballBat</defName>
+    <label>孕育恶霸淳平（棒球棍）</label>
+    <description>在大型机械培育器中孕育一台装备棒球棍的恶霸淳平。</description>
     <products>
-      <Mech_ChunPing_Bully>1</Mech_ChunPing_Bully>
+      <Mech_ChunPing_Bully_ballBat>1</Mech_ChunPing_Bully_ballBat>
     </products>
     <descriptionHyperlinks>
-      <ThingDef>Mech_ChunPing_Bully</ThingDef>
+      <ThingDef>Mech_ChunPing_Bully_ballBat</ThingDef>
+    </descriptionHyperlinks>
+  </RecipeDef>
+
+
+  <RecipeDef ParentName="ChunPingStandardRecipe">
+    <defName>Gestate_ChunPing_Bully_Gun</defName>
+    <label>孕育恶霸淳平（枪械）</label>
+    <description>在大型机械培育器中孕育一台装备枪械的恶霸淳平。</description>
+    <products>
+      <Mech_ChunPing_Bully_Gun>1</Mech_ChunPing_Bully_Gun>
+    </products>
+    <descriptionHyperlinks>
+      <ThingDef>Mech_ChunPing_Bully_Gun</ThingDef>
     </descriptionHyperlinks>
   </RecipeDef>
 

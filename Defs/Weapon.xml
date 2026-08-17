@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-</Defs>
+<Defs>
     <ThingDef ParentName="BaseMeleeWeapon_Blunt">
         <defName>MeleeWeapon_PaviaBaseballBat</defName>
         <label>棒球棍</label>
@@ -11,13 +11,21 @@
         </graphicData>
         <techLevel>Medieval</techLevel>
         <weaponTags>
-            <li>MedievalMeleeBasic</li>
+            <li>MeleeWeapon_PaviaBaseballBat</li>
         </weaponTags>
         <statBases>
             <Mass>2.6</Mass>
+            <MarketValue>120</MarketValue>
         </statBases>
-         <recipeMaker Inherit="False" />
+        <weaponClasses>
+            <li>MeleeBlunt</li>
+        </weaponClasses>
         <equippedAngleOffset>-65</equippedAngleOffset>
+        <tradeability>None</tradeability>
+        <destroyOnDrop>true</destroyOnDrop>
+        <relicChance>0</relicChance>
+        <smeltable>false</smeltable>
+        <recipeMaker IsNull="True" />
         <tools>
             <li>
                 <label>握柄</label>
@@ -59,14 +67,20 @@
         </graphicData>
         <techLevel>Medieval</techLevel>
         <weaponTags>
+            <li>MeleeWeapon_SnowKatana</li>
             <li>SnowKatana</li>
             <li>MedievalMeleeAdvanced</li>
         </weaponTags>
+        <weaponClasses>
+            <li>MeleePiercer</li>
+        </weaponClasses>
         <statBases>
             <WorkToMake>36000</WorkToMake>
             <Mass>4</Mass>
         </statBases>
         <equippedAngleOffset>-65</equippedAngleOffset>
+        <smeltable>false</smeltable>
+        <recipeMaker IsNull="True" />
         <tools>
             <li>
                 <label>刀柄</label>
@@ -109,6 +123,7 @@
         <weaponClasses>
             <li>RangedHeavy</li>
         </weaponClasses>
+        <techLevel>Medieval</techLevel>
         <!-- 专门用于让指定机械体生成这把武器 -->
         <weaponTags>
             <li>ChunPingHeavyEMP</li>
@@ -117,6 +132,7 @@
             <Mass>4.5</Mass>
             <RangedWeapon_Cooldown>2.2</RangedWeapon_Cooldown>
         </statBases>
+        <smeltable>false</smeltable>
         <verbs>
             <li>
                 <verbClass>Verb_Shoot</verbClass>

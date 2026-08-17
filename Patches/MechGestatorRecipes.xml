@@ -50,10 +50,18 @@
       <li>Gestate_ChunPing_Doctor</li>
     </value>
   </Operation>
+  <!-- 恶霸淳平：棒球棍版 -->
   <Operation Class="PatchOperationAdd">
     <xpath>Defs/ThingDef[defName="LargeMechGestator"]/recipes</xpath>
     <value>
-      <li>Gestate_ChunPing_Bully</li>
+      <li>Gestate_ChunPing_Bully_ballBat</li>
+    </value>
+  </Operation>
+  <!-- 恶霸淳平：枪械版 -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="LargeMechGestator"]/recipes</xpath>
+    <value>
+      <li>Gestate_ChunPing_Bully_Gun</li>
     </value>
   </Operation>
   <Operation Class="PatchOperationAdd">

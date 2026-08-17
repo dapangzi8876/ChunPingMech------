@@ -1,26 +1,32 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
   <AbilityDef>
     <defName>ChunPing_Ability_Bullying</defName>
     <label>霸凌</label>
-    <description>
-      恶霸淳平对目标实施残酷霸凌，使其陷入“私密马赛”状态并失去行动能力。
-    </description>
-    <!-- 暂时使用原版能力图标，之后可以换 -->
+    <description>恶霸淳平对目标实施残酷霸凌，使其陷入“私密马赛”状态并失去行动能力。</description>
     <iconPath>UI/Abilities/Stun</iconPath>
-    <!-- 2 游戏小时 = 5000 ticks -->
     <cooldownTicksRange>5000~5000</cooldownTicksRange>
     <displayOrder>100</displayOrder>
+    <!-- 未征召状态也显示并允许使用 -->
+    <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+    <!-- 征召状态也显示 -->
+    <showWhenDrafted>true</showWhenDrafted>
+    <!-- 自动走到目标旁边 -->
+    <jobDef>CastAbilityOnThingMelee</jobDef>
+    <!-- 施法过程中让目标停住，防止一直追不上 -->
+    <stunTargetWhileCasting>true</stunTargetWhileCasting>
     <verbProperties>
-      <verbClass>Verb_CastAbility</verbClass>
-      <!-- 我建议做成近距离霸凌 -->
-      <range>3.9</range>
-      <!-- 快速释放 -->
+      <verbClass>Verb_CastAbilityTouch</verbClass>
+      <range>-1</range>
       <warmupTime>0.35</warmupTime>
-      <drawAimPie>true</drawAimPie>
+      <drawAimPie>false</drawAimPie>
       <targetParams>
         <canTargetPawns>true</canTargetPawns>
+        <canTargetHumans>true</canTargetHumans>
+        <canTargetAnimals>true</canTargetAnimals>
+        <canTargetMechs>false</canTargetMechs>
         <canTargetBuildings>false</canTargetBuildings>
         <canTargetLocations>false</canTargetLocations>
         <canTargetCorpses>false</canTargetCorpses>
@@ -33,9 +39,18 @@
         <hediffDef>ChunPing_Sumimasen</hediffDef>
         <severity>1</severity>
         <onlyBrain>false</onlyBrain>
-        <replaceExisting>true</replaceExisting>
+        <!-- <replaceExisting>true</replaceExisting> -->
       </li>
     </comps>
+
+    <!-- <comps>
+      <li Class="CompProperties_AbilityGiveHediff">
+        <compClass>CompAbilityEffect_GiveHediff</compClass>
+        <hediffDef>ChunPing_Sumimasen</hediffDef>
+        <onlyBrain>false</onlyBrain>
+        <durationSecondsOverride>60~60</durationSecondsOverride>
+      </li>
+    </comps> -->
   </AbilityDef>
 
 </Defs>
