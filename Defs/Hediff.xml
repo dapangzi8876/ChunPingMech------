@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
   <HediffDef>
     <defName>ChunPing_Sumimasen</defName>
-    <label>私密马赛</label>
-    <description>遭到了恶霸淳平的残酷霸凌，目标陷入几乎无法维持意识的状态。</description>
+    <label>绉佸瘑椹禌</label>
+    <description>閬埌浜嗘伓闇告烦骞崇殑娈嬮叿闇稿噷锛岀洰鏍囬櫡鍏ュ嚑涔庢棤娉曠淮鎸佹剰璇嗙殑鐘舵€併</description>
     <hediffClass>HediffWithComps</hediffClass>
     <isBad>true</isBad>
     <stages>
@@ -31,8 +31,8 @@
 
   <HediffDef>
     <defName>ChunPing_DashRush</defName>
-    <label>冲刺蓄势</label>
-    <description>短时间内大幅提高移动速度，帮助机械体快速冲向目标位置。</description>
+    <label>鍐插埡钃勫娍</label>
+    <description>鐭椂闂村唴澶у箙鎻愰珮绉诲姩閫熷害锛屽府鍔╂満姊颁綋蹇€熷啿鍚戠洰鏍囦綅缃</description>
     <hediffClass>HediffWithComps</hediffClass>
     <isBad>false</isBad>
     <stages>
@@ -52,8 +52,8 @@
 
   <HediffDef>
     <defName>ChunPing_GuangZhouPolice</defName>
-    <label>广州警察</label>
-    <description>短时间内强化射击精度、开火效率和机动能力，并借助更好的视野提升远距离压制表现。</description>
+    <label>骞垮窞璀﹀療</label>
+    <description>鐭椂闂村唴寮哄寲灏勫嚮绮惧害銆佸紑鐏晥鐜囧拰鏈哄姩鑳藉姏锛屽苟鍊熷姪鏇村ソ鐨勮閲庢彁鍗囪繙璺濈鍘嬪埗琛ㄧ幇銆</description>
     <hediffClass>HediffWithComps</hediffClass>
     <isBad>false</isBad>
     <stages>
@@ -81,8 +81,8 @@
 
   <HediffDef>
     <defName>ChunPing_HeroProtection</defName>
-    <label>英雄救场</label>
-    <description>早稻田英雄正在替这名友军承受战场压力。</description>
+    <label>鑻遍泟鏁戝満</label>
+    <description>鏃╃ɑ鐢拌嫳闆勬鍦ㄦ浛杩欏悕鍙嬪啗鎵垮彈鎴樺満鍘嬪姏銆</description>
     <hediffClass>HediffWithComps</hediffClass>
     <isBad>false</isBad>
     <stages>
@@ -102,8 +102,8 @@
 
   <HediffDef>
     <defName>ChunPing_Heroism</defName>
-    <label>英雄主义</label>
-    <description>早稻田英雄为了保护友军而爆发出更快的速度和更强的承伤能力。</description>
+    <label>鑻遍泟涓讳箟</label>
+    <description>鏃╃ɑ鐢拌嫳闆勪负浜嗕繚鎶ゅ弸鍐涜€岀垎鍙戝嚭鏇村揩鐨勯€熷害鍜屾洿寮虹殑鎵夸激鑳藉姏銆</description>
     <hediffClass>HediffWithComps</hediffClass>
     <isBad>false</isBad>
     <stages>
@@ -124,8 +124,8 @@
 
   <HediffDef>
     <defName>ChunPing_WasedaSpirit</defName>
-    <label>早稻田精神</label>
-    <description>早稻田英雄的精神鼓舞着所有友军。</description>
+    <label>鏃╃ɑ鐢扮簿绁</label>
+    <description>鏃╃ɑ鐢拌嫳闆勭殑绮剧榧撹垶鐫€鎵€鏈夊弸鍐涖</description>
     <hediffClass>HediffWithComps</hediffClass>
     <isBad>false</isBad>
     <stages>
@@ -149,8 +149,8 @@
 
   <HediffDef>
     <defName>ChunPing_HeroLastStand</defName>
-    <label>英雄不死于无名之处</label>
-    <description>英雄濒危时点燃了附近友军的战意。</description>
+    <label>鑻遍泟涓嶆浜庢棤鍚嶄箣澶</label>
+    <description>鑻遍泟婵掑嵄鏃剁偣鐕冧簡闄勮繎鍙嬪啗鐨勬垬鎰忋</description>
     <hediffClass>HediffWithComps</hediffClass>
     <isBad>false</isBad>
     <stages>
@@ -173,8 +173,8 @@
 
   <HediffDef>
     <defName>ChunPing_HeroLegacy</defName>
-    <label>英雄的遗志</label>
-    <description>英雄倒下后留下的遗志，短暂提升战斗能力。</description>
+    <label>鑻遍泟鐨勯仐蹇</label>
+    <description>鑻遍泟鍊掍笅鍚庣暀涓嬬殑閬楀織锛岀煭鏆傛彁鍗囨垬鏂楄兘鍔涖</description>
     <hediffClass>HediffWithComps</hediffClass>
     <isBad>false</isBad>
     <stages>
@@ -199,8 +199,8 @@
 
   <HediffDef>
     <defName>ChunPing_HeroDeathTrigger</defName>
-    <label>英雄遗志</label>
-    <description>记录英雄死亡时的遗志触发状态。</description>
+    <label>鑻遍泟閬楀織</label>
+    <description>璁板綍鑻遍泟姝讳骸鏃剁殑閬楀織瑙﹀彂鐘舵€併</description>
     <hediffClass>HediffWithComps</hediffClass>
     <isBad>false</isBad>
     <comps>
@@ -213,8 +213,8 @@
 
   <HediffDef>
     <defName>ChunPing_SnowInvisibility</defName>
-    <label>隐身</label>
-    <description>雪之武士淳平暂时隐去身形。</description>
+    <label>闅愯韩</label>
+    <description>闆箣姝﹀＋娣冲钩鏆傛椂闅愬幓韬舰銆</description>
     <hediffClass>HediffWithComps</hediffClass>
     <isBad>false</isBad>
     <comps>
@@ -230,8 +230,8 @@
 
   <HediffDef>
     <defName>ChunPing_SnowBreath</defName>
-    <label>雪之呼吸</label>
-    <description>寒冷的呼吸让雪之武士淳平以更快的速度移动和挥刀。</description>
+    <label>闆箣鍛煎惛</label>
+    <description>瀵掑喎鐨勫懠鍚歌闆箣姝﹀＋娣冲钩浠ユ洿蹇殑閫熷害绉诲姩鍜屾尌鍒€銆</description>
     <hediffClass>HediffWithComps</hediffClass>
     <isBad>false</isBad>
     <stages>
@@ -252,8 +252,8 @@
 
   <HediffDef>
     <defName>ChunPing_CellRecombination</defName>
-    <label>细胞重组</label>
-    <description>受影响单位的组织正在高速重组，每秒快速修复所有现存伤势。</description>
+    <label>缁嗚優閲嶇粍</label>
+    <description>鍙楀奖鍝嶅崟浣嶇殑缁勭粐姝ｅ湪楂橀€熼噸缁勶紝姣忕蹇€熶慨澶嶆墍鏈夌幇瀛樹激鍔裤</description>
     <hediffClass>HediffWithComps</hediffClass>
     <isBad>false</isBad>
     <comps>
@@ -271,8 +271,8 @@
 
   <HediffDef>
     <defName>ChunPing_IshuinMark</defName>
-    <label>我修院标记</label>
-    <description>目标的弱点已被完全暴露，受到的伤害显著增加且移动速度下降。</description>
+    <label>鎴戜慨闄㈡爣璁</label>
+    <description>鐩爣鐨勫急鐐瑰凡琚畬鍏ㄦ毚闇诧紝鍙楀埌鐨勪激瀹虫樉钁楀鍔犱笖绉诲姩閫熷害涓嬮檷銆</description>
     <hediffClass>HediffWithComps</hediffClass>
     <isBad>true</isBad>
     <stages>
@@ -292,3 +292,5 @@
   </HediffDef>
 
 </Defs>
+
+

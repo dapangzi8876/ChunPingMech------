@@ -13,7 +13,7 @@ RimWorld 1.6 + Biotech 机械体 MOD。
 
 ## 当前规模
 
-- 20 种可研究、可培育的淳平机械体
+- 21 种可研究、可培育的淳平机械体
 - 3 种技能生成的临时机械体
 - 4 个机械科技研究项目
 - 普通机械培育器负责基础机械体
@@ -40,6 +40,7 @@ RimWorld 1.6 + Biotech 机械体 MOD。
 | 大医生淳平 | `Mech_ChunPing_Doctor` | 医疗与科研 |
 | 恶霸淳平（棒球棍） | `Mech_ChunPing_Bully_ballBat` | 棒球棍近战；拥有“霸凌” |
 | 恶霸淳平（枪械） | `Mech_ChunPing_Bully_Gun` | 中距离射击；拥有“霸凌” |
+| 恶霸淳平（棍枪） | `Mech_ChunPing_Bully_BatGun` | 棒球棍近战 + 原版速射机枪（Gun_Minigun）；拥有“霸凌” |
 | 恶霸淳平（盾） | `Mech_ChunPing_Bully_Shield` | 无专用武器、无技能；极高护甲和生命，低移速 |
 | 患者淳平 | `Mech_ChunPing_Patient` | “冲刺爆破”：冲向指定地点并爆炸 |
 | 警察淳平 | `Mech_ChunPing_Police` | “广州警察”：强化命中、射速、移速和射程 |
@@ -77,7 +78,7 @@ RimWorld 1.6 + Biotech 机械体 MOD。
 
 | AbilityDef | 显示名称 | 使用者 |
 | --- | --- | --- |
-| `ChunPing_Ability_Bullying` | 霸凌 | 两种攻击型恶霸淳平 |
+| `ChunPing_Ability_Bullying` | 霸凌 | 三种攻击型恶霸淳平 |
 | `ChunPing_Ability_DashExplosion` | 冲刺爆破 | 患者淳平 |
 | `ChunPing_Ability_GuangZhouPolice` | 广州警察 | 警察淳平 |
 | `ChunPing_Ability_HeroRescue` | 英雄救场 | 早稻田英雄淳平 |

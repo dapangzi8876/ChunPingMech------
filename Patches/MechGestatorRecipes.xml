@@ -125,4 +125,10 @@
       <li>Gestate_ChunPing_DemonKing</li>
     </value>
   </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="LargeMechGestator"]/recipes</xpath>
+    <value>
+      <li>Gestate_ChunPing_Bully_BatGun</li>
+    </value>
+  </Operation>
 </Patch>
