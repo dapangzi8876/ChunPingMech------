@@ -1,0 +1,11 @@
+E:\BaiduNetdiskDownload\Mods\淳平机械体\Source\ChunPingMech\obj\Debug\ChunPingMech.GeneratedMSBuildEditorConfig.editorconfig
+E:\BaiduNetdiskDownload\Mods\淳平机械体\Source\ChunPingMech\obj\Debug\ChunPingMech.AssemblyInfoInputs.cache
+E:\BaiduNetdiskDownload\Mods\淳平机械体\Source\ChunPingMech\obj\Debug\ChunPingMech.AssemblyInfo.cs
+E:\BaiduNetdiskDownload\Mods\淳平机械体\Source\ChunPingMech\obj\Debug\ChunPingMech.csproj.CoreCompileInputs.cache
+E:\BaiduNetdiskDownload\Mods\淳平机械体\Source\ChunPingMech\obj\Debug\ChunPingMech.sourcelink.json
+E:\BaiduNetdiskDownload\Mods\淳平机械体\Source\ChunPingMech\obj\Debug\ChunPingMech.csproj.AssemblyReference.cache
+E:\BaiduNetdiskDownload\Mods\淳平机械体\Assemblies\ChunPingMech.deps.json
+E:\BaiduNetdiskDownload\Mods\淳平机械体\Assemblies\ChunPingMech.dll
+E:\BaiduNetdiskDownload\Mods\淳平机械体\Assemblies\ChunPingMech.pdb
+E:\BaiduNetdiskDownload\Mods\淳平机械体\Source\ChunPingMech\obj\Debug\ChunPingMech.dll
+E:\BaiduNetdiskDownload\Mods\淳平机械体\Source\ChunPingMech\obj\Debug\ChunPingMech.pdb

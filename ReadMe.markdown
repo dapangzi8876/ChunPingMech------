@@ -1,664 +1,109 @@
-【淳平机械体 MOD——第二阶段开发规格】
-
-============================================================
-一、当前阶段目标
-============================================================
-
-本 MOD 已完成淳平机械体的基础框架：
-
-1. 机械体 Def 可以加载
-2. 机械体可以生成
-3. 机械体可以显示占位贴图
-4. 机械体可以归属玩家机械师
-5. 工作型机械体可以执行对应工作
-6. 战斗型机械体可以使用基础武器或自身工具
-7. 机械体可以受伤、倒地、死亡
-8. 机械体已经接入机械培育系统
-9. 机械体已经按科技等级解锁
-10. 机械体可以正常消耗带宽
-11. 机械体拥有基础数值、生命阶段和 PawnKind 链路
-
-第二阶段从“基础可用”转入“特色机制开发”。
-
-本阶段可以开始开发：
-
-- Ability
-- Hediff
-- 主动技能按钮
-- 专属武器
-- 特殊攻击
-- 特殊状态
-- 召唤机制
-- 部署机制
-- 范围伤害
-- 控制效果
-- 处决逻辑
-- 特殊 AI
-- 敌对淳平事件
-- Boss 机制
-- C# 组件与系统
-
-开发原则是先保证每个机制能够稳定加载、稳定触发、稳定回收，再逐步增强表现和数值。
-
-
-============================================================
-二、资源与贴图原则
-============================================================
-
-当前机械体仍可继续使用 RimWorld 原版 Fabricor 贴图作为占位资源。
-
-每个具体 PawnKindDef 已经拥有自己的 lifeStages 字段，因此之后可以为每个淳平机械体单独替换：
-
-```xml
-<texPath>...</texPath>
-<maskPath>...</maskPath>
-<drawSize>...</drawSize>
-```
-
-推荐继续使用原版机械体贴图结构：
-
-```xml
-<shaderType>CutoutWithOverlay</shaderType>
-<graphicClass>Graphic_Multi</graphicClass>
-```
-
-贴图替换应优先在各自 PawnKindDef 的 lifeStages 内完成，避免把个体贴图写回公共父类。
-
-
-============================================================
-三、机械科技划分
-============================================================
-
-淳平机械体分成四个科技阶段。
-
-------------------------------------------------------------
-A. 基础机械科技
-------------------------------------------------------------
-
-1. 书法家淳平
-2. 服务员淳平
-3. 土木淳平
-4. 剑道部淳平
-5. 园丁淳平
-6. 汽车修理工淳平
-7. 黄毛淳平
-
-
-------------------------------------------------------------
-B. 标准机械科技
-------------------------------------------------------------
-
-1. 大医生淳平
-2. 恶霸淳平（棒球棍）
-3. 恶霸淳平（枪械）
-4. 患者淳平
-5. 警察淳平
-
-
-------------------------------------------------------------
-C. 高级机械科技
-------------------------------------------------------------
-
-1. 早稻田英雄淳平
-2. 绿巨人淳平
-3. 雪之武士淳平
-4. 淳大哥
-
-
-------------------------------------------------------------
-D. 终极机械科技
-------------------------------------------------------------
-
-1. 雷奥淳平
-2. 贝尔泽布布淳平
-3. 魔王淳平
-
-
-============================================================
-四、Def 链路约定
-============================================================
-
-每个机械体应保持以下链路清晰：
-
-```text
-ThingDef
-  ↓
-PawnKindDef
-  ↓
-RecipeDef
-  ↓
-MechGestator / LargeMechGestator Patch
-  ↓
-ResearchProjectDef 解锁
-```
-
-战斗型机械体若使用武器，应保持：
-
-```text
-PawnKindDef.weaponTags
-  ↓
-ThingDef.weaponTags
-  ↓
-实际武器 ThingDef
-```
-
-注意：`weaponTags` 是标签匹配系统，不是直接引用武器 defName。可以让 tag 名称和武器 defName 相同，但两边必须完全一致。
-
-
-============================================================
-五、当前单位状态
-============================================================
-
-------------------------------------------------------------
-1. 书法家淳平
-------------------------------------------------------------
-
-DefName：
-
-```text
-Mech_ChunPing_Calligrapher
-```
-
-定位：艺术工作机械体。
-
-工作方向：
-
-```text
-Art
-```
-
-二阶段扩展方向：
-
-- 艺术创作加成
-- 灵感相关效果
-- 专属艺术品或事件
-- 与房间美观、雕塑品质相关的机制
-
-
-------------------------------------------------------------
-2. 服务员淳平
-------------------------------------------------------------
-
-DefName：
-
-```text
-Mech_ChunPing_Waiter
-```
-
-定位：综合服务机械体。
-
-工作方向：
-
-```text
-BasicWorker
-Cooking
-Cleaning
-```
-
-二阶段扩展方向：
-
-- 清洁效率加成
-- 烹饪品质或食物安全机制
-- 服务范围、餐厅、宿舍相关效果
-
-
-------------------------------------------------------------
-3. 土木淳平
-------------------------------------------------------------
-
-DefName：
-
-```text
-Mech_ChunPing_Construction
-```
-
-定位：建筑、维修、采矿机械体。
-
-工作方向：
-
-```text
-Construction
-Mining
-```
-
-二阶段扩展方向：
-
-- 工程加速
-- 维修技能
-- 建筑强化
-- 爆破、钻探或临时防御设施
-
-
-------------------------------------------------------------
-4. 剑道部淳平
-------------------------------------------------------------
-
-DefName：
-
-```text
-Mech_ChunPing_Kendo
-```
-
-定位：基础近战与制造搬运兼用机械体。
-
-工作方向：
-
-```text
-Crafting
-Hauling
-```
-
-二阶段扩展方向：
-
-- 近战姿态
-- 格挡
-- 冲刺斩
-- 简单剑技 Ability
-
-
-------------------------------------------------------------
-5. 园丁淳平
-------------------------------------------------------------
-
-DefName：
-
-```text
-Mech_ChunPing_Gardener
-```
-
-定位：农业机械体。
-
-工作方向：
-
-```text
-Growing
-PlantCutting
-Hauling
-```
-
-二阶段扩展方向：
-
-- 作物生长辅助
-- 播种收获效率
-- 植物治疗或土壤强化
-
-
-------------------------------------------------------------
-6. 汽车修理工淳平
-------------------------------------------------------------
-
-DefName：
-
-```text
-Mech_ChunPing_Mechanic
-```
-
-定位：工业制造机械体。
-
-工作方向：
-
-```text
-Crafting
-Smithing
-Tailoring
-```
-
-二阶段扩展方向：
-
-- 维修机械体
-- 设备维护
-- 制造品质加成
-- 工坊效率机制
-
-
-------------------------------------------------------------
-7. 黄毛淳平
-------------------------------------------------------------
-
-DefName：
-
-```text
-Mech_ChunPing_Blond
-```
-
-定位：基础远程和狩猎机械体。
-
-工作方向：
-
-```text
-Hunting
-```
-
-二阶段扩展方向：
-
-- 专属轻型远程武器
-- 标记目标
-- 追击或骚扰 AI
-
-
-------------------------------------------------------------
-8. 大医生淳平
-------------------------------------------------------------
-
-DefName：
-
-```text
-Mech_ChunPing_Doctor
-```
-
-定位：医疗和科研机械体。
-
-工作方向：
-
-```text
-Doctor
-Research
-```
-
-二阶段扩展方向：
-
-- 治疗 Ability
-- 急救光环
-- 机械体修复辅助
-- 疾病、出血、麻醉相关机制
-
-
-------------------------------------------------------------
-9. 恶霸淳平（棒球棍）
-------------------------------------------------------------
-
-DefName：
-
-```text
-Mech_ChunPing_Bully_ballBat
-```
-
-定位：装备棒球棍的中型近战战斗机械体。
-
-武器链：
-
-```text
-PawnKindDef.weaponTags = MeleeWeapon_PaviaBaseballBat
-ThingDef.weaponTags    = MeleeWeapon_PaviaBaseballBat
-Weapon ThingDef        = MeleeWeapon_PaviaBaseballBat
-```
-
-已接入 Ability：
-
-```xml
-<abilities>
-  <li>ChunPing_Ability_Bullying</li>
-</abilities>
-```
-
-二阶段扩展方向：
-
-- 霸凌 Ability
-- 眩晕、减速或意识压制 Hediff
-- 棒球棍专属打击效果
-- 近距离压制 AI
-
-
-------------------------------------------------------------
-10. 恶霸淳平（枪械）
-------------------------------------------------------------
-
-DefName：
-
-```text
-Mech_ChunPing_Bully_Gun
-```
-
-定位：装备机械体枪械的中型远程战斗机械体。
-
-武器链：
-
-```text
-PawnKindDef.weaponTags = MechanoidGunMedium
-```
-
-已接入 Ability：
-
-```xml
-<abilities>
-  <li>ChunPing_Ability_Bullying</li>
-</abilities>
-```
-
-二阶段扩展方向：
-
-- 霸凌 Ability
-- 中距离压制射击
-- 枪械版专属战斗行为
-- 被贴脸后的 heavy fist 反击机制
-
-
-------------------------------------------------------------
-11. 患者淳平
-------------------------------------------------------------
-
-DefName：
-
-```text
-Mech_ChunPing_Patient
-```
-
-定位：快速、廉价、脆弱的战斗机械体。
-
-二阶段扩展方向：
-
-- 自爆机制
-- 病症传播
-- 冲向目标的特殊 AI
-- 濒死触发效果
-
-
-------------------------------------------------------------
-12. 警察淳平
-------------------------------------------------------------
-
-DefName：
-
-```text
-Mech_ChunPing_Police
-```
-
-定位：中型持续火力机械体。
-
-武器链：
-
-```text
-PawnKindDef.weaponTags = MechanoidGunMedium
-```
-
-二阶段扩展方向：
-
-- 压制射击
-- 部署模式
-- 控场 Ability
-- 逮捕、眩晕或减速机制
-
-
-------------------------------------------------------------
-13. 早稻田英雄淳平
-------------------------------------------------------------
-
-DefName：
-
-```text
-Mech_ChunPing_WasedaHero
-```
-
-定位：高速突击和近中距离战斗机械体。
-
-二阶段扩展方向：
-
-- 冲锋
-- 英雄姿态
-- 范围击退
-- 高速切入 AI
-
-
-------------------------------------------------------------
-14. 绿巨人淳平
-------------------------------------------------------------
-
-DefName：
-
-```text
-Mech_ChunPing_Hulk
-```
-
-定位：高生命、高护甲、高承载的坦克机械体。
-
-二阶段扩展方向：
-
-- 嘲讽或吸引火力
-- 护盾
-- 震地攻击
-- 掩护友军
-
-
-------------------------------------------------------------
-15. 雪之武士淳平
-------------------------------------------------------------
-
-DefName：
-
-```text
-Mech_ChunPing_SnowSamurai
-```
-
-定位：高速近战刺客。
-
-武器链：
-
-```text
-PawnKindDef.weaponTags = MeleeWeapon_SnowKatana
-ThingDef.weaponTags    = MeleeWeapon_SnowKatana
-Weapon ThingDef        = MeleeWeapon_SnowKatana
-```
-
-二阶段扩展方向：
-
-- 隐身
-- 雪之呼吸
-- 斩首
-- 处决
-- 高速位移
-
-
-------------------------------------------------------------
-16. 淳大哥
-------------------------------------------------------------
-
-DefName：
-
-```text
-Mech_ChunPing_BigBrother
-```
-
-定位：中高级远程支援机械体。
-
-武器链：
-
-```text
-PawnKindDef.weaponTags = ChunPingHeavyEMP
-ThingDef.weaponTags    = ChunPingHeavyEMP
-Weapon ThingDef        = Gun_ChunPingHeavyEMPLauncher
-```
-
-二阶段扩展方向：
-
-- EMC
-- 做局陷阱
-- 诱饵召唤
-- 电子战
-- EMP 强化机制
-
-
-------------------------------------------------------------
-17. 雷奥淳平
-------------------------------------------------------------
-
-DefName：
-
-```text
-Mech_ChunPing_Leo
-```
-
-定位：超重型近战机械体。
-
-二阶段扩展方向：
-
-- 大粪地狱
-- 范围打击
-- 震地
-- 抛掷
-- 高威胁 Boss 行为
-
-
-------------------------------------------------------------
-18. 贝尔泽布布淳平
-------------------------------------------------------------
-
-DefName：
-
-```text
-Mech_ChunPing_Beelzebub
-```
-
-定位：重型远程或召唤型机械体。
-
-二阶段扩展方向：
-
-- 战争女皇召唤
-- 小型单位生成
-- 召唤物强化
-- 指挥型 AI
-
-
-------------------------------------------------------------
-19. 魔王淳平
-------------------------------------------------------------
-
-DefName：
-
-```text
-Mech_ChunPing_DemonKing
-```
-
-定位：超重型远程炮台和终极战斗机械体。
-
-二阶段扩展方向：
-
-- 魔王炮
-- 蓄力炮击
-- 部署模式
-- 大范围伤害
-- Boss 机制
-
-
-============================================================
-六、研究与制造
-============================================================
+# 淳平机械体
+
+RimWorld 1.6 + Biotech 机械体 MOD。
+
+当前版本已经完成基础机械体框架、四级研究与培育链，并为主要战斗单位加入了主动技能、Hediff、召唤、陷阱、护盾和自定义战斗逻辑。项目仍使用原版机械体贴图作为占位资源。
+
+## 依赖与版本
+
+- RimWorld 1.6
+- Biotech DLC
+- 包 ID：`Adou.ChunPingMech`
+- C# 程序集：`Assemblies/ChunPingMech.dll`
+
+## 当前规模
+
+- 20 种可研究、可培育的淳平机械体
+- 3 种技能生成的临时机械体
+- 4 个机械科技研究项目
+- 普通机械培育器负责基础机械体
+- 大型机械培育器负责标准、高级和终极机械体
+
+## 科技与单位
+
+### 基础机械科技
+
+| 单位 | DefName | 当前定位 |
+| --- | --- | --- |
+| 书法家淳平 | `Mech_ChunPing_Calligrapher` | 艺术工作 |
+| 服务员淳平 | `Mech_ChunPing_Waiter` | 基础工作、烹饪、清洁 |
+| 土木淳平 | `Mech_ChunPing_Construction` | 建筑、采矿 |
+| 剑道部淳平 | `Mech_ChunPing_Kendo` | 制造、搬运、基础近战 |
+| 园丁淳平 | `Mech_ChunPing_Gardener` | 种植、伐木、搬运 |
+| 汽车修理工淳平 | `Mech_ChunPing_Mechanic` | 制造、锻造、缝纫 |
+| 黄毛淳平 | `Mech_ChunPing_Blond` | 狩猎与基础远程攻击 |
+
+### 标准机械科技
+
+| 单位 | DefName | 当前定位与机制 |
+| --- | --- | --- |
+| 大医生淳平 | `Mech_ChunPing_Doctor` | 医疗与科研 |
+| 恶霸淳平（棒球棍） | `Mech_ChunPing_Bully_ballBat` | 棒球棍近战；拥有“霸凌” |
+| 恶霸淳平（枪械） | `Mech_ChunPing_Bully_Gun` | 中距离射击；拥有“霸凌” |
+| 恶霸淳平（盾） | `Mech_ChunPing_Bully_Shield` | 无专用武器、无技能；极高护甲和生命，低移速 |
+| 患者淳平 | `Mech_ChunPing_Patient` | “冲刺爆破”：冲向指定地点并爆炸 |
+| 警察淳平 | `Mech_ChunPing_Police` | “广州警察”：强化命中、射速、移速和射程 |
+
+### 高级机械科技
+
+| 单位 | DefName | 当前定位与机制 |
+| --- | --- | --- |
+| 早稻田英雄淳平 | `Mech_ChunPing_WasedaHero` | 英雄救场、治愈、伤害转移、早稻田精神、重伤与死亡被动 |
+| 绿巨人淳平 | `Mech_ChunPing_Hulk` | 高生命重装坦克；拥有机械盾卫式弹丸拦截护盾 |
+| 雪之武士淳平 | `Mech_ChunPing_SnowSamurai` | 隐身、雪之呼吸、低生命目标处决 |
+| 淳大哥 | `Mech_ChunPing_BigBrother` | EMC、做局陷阱、德川诱饵、我修院易伤减速标记 |
+
+### 终极机械科技
+
+| 单位 | DefName | 当前定位与机制 |
+| --- | --- | --- |
+| 雷奥淳平 | `Mech_ChunPing_Leo` | 超重型近战；“细胞重组”持续快速治愈友军 |
+| 贝尔泽布布淳平 | `Mech_ChunPing_Beelzebub` | 重型射击与召唤；可释放德川和我修院 |
+| 魔王淳平 | `Mech_ChunPing_DemonKing` | 超重型远程炮台；特殊炮击机制尚未实现 |
+
+## 临时机械体
+
+以下单位不能通过培育器制造，只由技能生成：
+
+| 单位 | DefName | 机制 |
+| --- | --- | --- |
+| 德川机械体 | `Mech_ChunPing_Tokugawa` | 自主近战，120 秒后失效 |
+| 我修院机械体 | `Mech_ChunPing_Ishuin` | 自主短程射击，120 秒后失效 |
+| 德川诱饵 | `Mech_ChunPing_TokugawaDecoy` | 低攻击、高仇恨，60 秒后失效 |
+
+临时机械体使用原版 `WarUrchinConstant` 思考树自主战斗，不占用控制带宽，到期后不留下尸体。
+
+## 已实现技能
+
+| AbilityDef | 显示名称 | 使用者 |
+| --- | --- | --- |
+| `ChunPing_Ability_Bullying` | 霸凌 | 两种攻击型恶霸淳平 |
+| `ChunPing_Ability_DashExplosion` | 冲刺爆破 | 患者淳平 |
+| `ChunPing_Ability_GuangZhouPolice` | 广州警察 | 警察淳平 |
+| `ChunPing_Ability_HeroRescue` | 英雄救场 | 早稻田英雄淳平 |
+| `ChunPing_Ability_HeroHeal` | 治愈 | 早稻田英雄淳平 |
+| `ChunPing_Ability_DamageTransfer` | 伤害转移 | 早稻田英雄淳平 |
+| `ChunPing_Ability_WasedaSpirit` | 早稻田精神 | 早稻田英雄淳平 |
+| `ChunPing_Ability_SnowInvisibility` | 隐身 | 雪之武士淳平 |
+| `ChunPing_Ability_SnowBreath` | 雪之呼吸 | 雪之武士淳平 |
+| `ChunPing_Ability_Execution` | 处决 | 雪之武士淳平 |
+| `ChunPing_Ability_CellRecombination` | 细胞重组 | 雷奥淳平 |
+| `ChunPing_Ability_ReleaseTokugawa` | 释放德川 | 贝尔泽布布淳平 |
+| `ChunPing_Ability_ReleaseIshuin` | 释放我修院 | 贝尔泽布布淳平 |
+| `ChunPing_Ability_EMC` | EMC | 淳大哥 |
+| `ChunPing_Ability_SchemeTrap` | 做局陷阱 | 淳大哥 |
+| `ChunPing_Ability_TokugawaDecoy` | 德川诱饵 | 淳大哥 |
+| `ChunPing_Ability_IshuinMark` | 我修院 | 淳大哥 |
+
+## 研究与培育链
 
 研究项目：
 
 ```text
 ChunPing_BasicMechtech
-ChunPing_StandardMechtech
-ChunPing_HighMechtech
-ChunPing_UltraMechtech
-```
-
-制造系统：
-
-```text
-基础机械体：MechGestator
-标准机械体：LargeMechGestator
-高级机械体：LargeMechGestator
-终极机械体：LargeMechGestator
+  -> ChunPing_StandardMechtech
+  -> ChunPing_HighMechtech
+  -> ChunPing_UltraMechtech
 ```
 
 配方父类：
@@ -670,83 +115,61 @@ ChunPingHighRecipe
 ChunPingUltraRecipe
 ```
 
-新增机制时，应同步检查：
+新增可培育机械体时需要同时维护：
 
-1. ThingDef
-2. PawnKindDef
-3. RecipeDef
-4. Patch
-5. ResearchProjectDef
-6. AbilityDef
-7. HediffDef
-8. Weapon ThingDef
-9. C# 类名与 XML Class 引用
+1. `ThingDef`
+2. `PawnKindDef`
+3. `RecipeDef`
+4. `Patches/MechGestatorRecipes.xml`
+5. 对应研究项目
 
-
-============================================================
-七、二阶段开发重点
-============================================================
-
-二阶段优先开发能明显区分单位定位的机制。
-
-建议优先顺序：
-
-1. 恶霸淳平：霸凌 Ability 与 Hediff 链
-2. 雪之武士淳平：隐身、位移、斩首
-3. 淳大哥：EMP、陷阱、诱饵
-4. 患者淳平：自爆
-5. 警察淳平：压制和控场
-6. 绿巨人淳平：护盾和嘲讽
-7. 贝尔泽布布淳平：召唤
-8. 魔王淳平：部署和魔王炮
-9. 雷奥淳平：范围近战 Boss 机制
-
-
-============================================================
-八、启动日志检查
-============================================================
-
-每次新增 Def 或 C# 后，应检查 RimWorld 启动日志：
-
-- XML parse error
-- Could not resolve cross-reference
-- Could not find ThingDef
-- Could not find PawnKindDef
-- Could not find RecipeDef
-- Could not find AbilityDef
-- Could not find HediffDef
-- Could not find WeaponClassDef
-- Could not find weapon tag 对应武器
-- duplicate DefName
-- PawnKindDef lifeStages 数量与 race lifeStageAges 数量不一致
-- linkedBodyPartsGroup 不存在
-- recipeMaker 缺少 costList 或 costStuffCount
-- statBases 中出现非数值
-
-
-============================================================
-九、当前可继续开发的文件
-============================================================
-
-核心 Def：
+## 项目结构
 
 ```text
-Defs/BasicChunPingMech.xml
-Defs/AdvancedChunPingMech.xml
-Defs/HyperChunPingMech.xml
-Defs/UltraChunPingMech.xml
-Defs/RecipeDef.xml
-Defs/Research.xml
-Defs/Weapon.xml
-Defs/Abilities.xml
-Defs/Hediff.xml
-Patches/MechGestatorRecipes.xml
+Defs/BasicChunPingMech.xml       基础机械体
+Defs/AdvancedChunPingMech.xml    标准机械体
+Defs/HyperChunPingMech.xml       高级机械体
+Defs/UltraChunPingMech.xml       终极与临时机械体
+Defs/Abilities.xml               主动技能
+Defs/Hediff.xml                  Buff、Debuff 与被动状态
+Defs/SpecialThings.xml           做局陷阱等特殊 Thing
+Defs/Weapon.xml                  专属武器
+Defs/RecipeDef.xml               培育配方
+Defs/Research.xml                研究项目
+Patches/MechGestatorRecipes.xml  培育器配方注入
+Source/ChunPingMech/              C# 技能与战斗逻辑
+Assemblies/ChunPingMech.dll      编译后的程序集
 ```
 
-C# 工程：
+## 构建与检查
 
-```text
-Source/ChunPingMech/
+C# 构建命令：
+
+```powershell
+dotnet build .\Source\ChunPingMech\ChunPingMech.csproj --no-restore
 ```
 
-二阶段可以围绕 Ability、Hediff、Comp、Verb、ThinkNode、Incident、Quest 或 GameComponent 继续扩展。
+每次修改后至少检查：
+
+- 所有 Def XML 可以被 XML 解析器读取
+- 没有重复 `defName`
+- Ability、Hediff、PawnKind、Thing 和 Recipe 交叉引用存在
+- `PawnKindDef.lifeStages` 与种族生命阶段数量一致
+- C# 中的类名与 XML `Class`/`compClass` 完全一致
+- RimWorld 启动日志没有缺失 Def、贴图或类型错误
+
+## 当前限制
+
+- 所有正式机械体仍使用原版 Fabricor 贴图作为占位资源；临时召唤物使用战争小镰贴图。
+- 音效、技能特效和图标大多仍使用原版资源。
+- 技能数值只完成第一轮配置，仍需要在实际战斗中测试和平衡。
+- 尚未实现敌对淳平袭击、Boss 事件和完整特殊 AI。
+- 魔王淳平的魔王炮、蓄力炮击与部署模式尚未实现。
+
+## 后续优先级
+
+1. 在 RimWorld 内完成全部主动技能、召唤物和陷阱的启动日志与实战测试。
+2. 为魔王淳平实现部署、蓄力炮击和范围攻击。
+3. 为基础工作型机械体增加能够区分定位的被动或工作机制。
+4. 制作并替换各机械体的正式贴图、技能图标、音效和视觉效果。
+5. 开发敌对淳平派系、袭击事件与 Boss 内容。

@@ -1,0 +1,5 @@
+E:\BaiduNetdiskDownload\Mods\淳平机械体\Source\ChunPingMech\obj\Debug\netstandard2.1\ChunPingMech.GeneratedMSBuildEditorConfig.editorconfig
+E:\BaiduNetdiskDownload\Mods\淳平机械体\Source\ChunPingMech\obj\Debug\netstandard2.1\ChunPingMech.AssemblyInfoInputs.cache
+E:\BaiduNetdiskDownload\Mods\淳平机械体\Source\ChunPingMech\obj\Debug\netstandard2.1\ChunPingMech.AssemblyInfo.cs
+E:\BaiduNetdiskDownload\Mods\淳平机械体\Source\ChunPingMech\obj\Debug\netstandard2.1\ChunPingMech.csproj.CoreCompileInputs.cache
+E:\BaiduNetdiskDownload\Mods\淳平机械体\Source\ChunPingMech\obj\Debug\netstandard2.1\ChunPingMech.sourcelink.json

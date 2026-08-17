@@ -275,6 +275,19 @@
 
 
   <RecipeDef ParentName="ChunPingStandardRecipe">
+    <defName>Gestate_ChunPing_Bully_Shield</defName>
+    <label>孕育恶霸淳平（盾）</label>
+    <description>在大型机械培育器中孕育一台披挂超重装甲的恶霸淳平。</description>
+    <products>
+      <Mech_ChunPing_Bully_Shield>1</Mech_ChunPing_Bully_Shield>
+    </products>
+    <descriptionHyperlinks>
+      <ThingDef>Mech_ChunPing_Bully_Shield</ThingDef>
+    </descriptionHyperlinks>
+  </RecipeDef>
+
+
+  <RecipeDef ParentName="ChunPingStandardRecipe">
     <defName>Gestate_ChunPing_Patient</defName>
     <label>孕育患者淳平</label>
     <description>在大型机械培育器中孕育患者淳平。</description>

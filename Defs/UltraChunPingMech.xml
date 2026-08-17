@@ -4,7 +4,7 @@
   <ThingDef ParentName="ChunPingMechBase">
     <defName>Mech_ChunPing_Leo</defName>
     <label>雷奥淳平</label>
-    <description>非常强的超重型近战机械体。范围攻击和特殊技能暂未实现。</description>
+    <description>非常强的超重型近战机械体，能够通过细胞重组迅速治愈友军的伤势。</description>
     <statBases>
       <BandwidthCost>1</BandwidthCost>
       <ArmorRating_Sharp>1.8</ArmorRating_Sharp>
@@ -51,6 +51,9 @@
       <baseHealthScale>3.6</baseHealthScale>
       <mechWeightClass>UltraHeavy</mechWeightClass>
     </race>
+    <abilities>
+      <li>ChunPing_Ability_CellRecombination</li>
+    </abilities>
   </ThingDef>
 
 
@@ -87,7 +90,7 @@
   <ThingDef ParentName="ChunPingMechBase">
     <defName>Mech_ChunPing_Beelzebub</defName>
     <label>贝尔泽布布淳平</label>
-    <description>重型远程或中近距离战斗机械体。召唤系统暂未实现。</description>
+    <description>重型远程或中近距离战斗机械体，能够释放德川和我修院两种自主战斗机械体。</description>
     <statBases>
       <BandwidthCost>1</BandwidthCost>
       <ArmorRating_Sharp>1.2</ArmorRating_Sharp>
@@ -101,6 +104,10 @@
       <baseHealthScale>2.8</baseHealthScale>
       <mechWeightClass>UltraHeavy</mechWeightClass>
     </race>
+    <abilities>
+      <li>ChunPing_Ability_ReleaseTokugawa</li>
+      <li>ChunPing_Ability_ReleaseIshuin</li>
+    </abilities>
   </ThingDef>
 
 
@@ -186,5 +193,207 @@
     <weaponTags>
       <li>MechanoidGunLongRange</li>
     </weaponTags>
+  </PawnKindDef>
+
+
+  <!-- 贝尔泽布布释放的自主近战机械体，定位参考原版战争小镰。 -->
+  <ThingDef ParentName="ChunPingMechBase">
+    <defName>Mech_ChunPing_Tokugawa</defName>
+    <label>德川机械体</label>
+    <description>由贝尔泽布布淳平释放的轻型自主近战机械体，速度快但生存能力有限。</description>
+    <statBases>
+      <BandwidthCost>0</BandwidthCost>
+      <MarketValue>180</MarketValue>
+      <MoveSpeed>5.4</MoveSpeed>
+      <ArmorRating_Sharp>0.25</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.3</ArmorRating_Blunt>
+      <MeleeHitChance>8</MeleeHitChance>
+    </statBases>
+    <tools>
+      <li>
+        <label>德川切割器</label>
+        <capacities>
+          <li>Cut</li>
+          <li>Stab</li>
+        </capacities>
+        <power>14</power>
+        <cooldownTime>1.7</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+      </li>
+    </tools>
+    <race>
+      <baseBodySize>0.35</baseBodySize>
+      <baseHealthScale>0.42</baseHealthScale>
+      <mechWeightClass>Light</mechWeightClass>
+      <thinkTreeConstant>WarUrchinConstant</thinkTreeConstant>
+      <hasCorpse>false</hasCorpse>
+    </race>
+    <comps>
+      <li Class="ChunPingMech.CompProperties_SummonedLifetime">
+        <compClass>ChunPingMech.CompSummonedLifetime</compClass>
+        <lifespanTicks>7200</lifespanTicks>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <PawnKindDef ParentName="ChunPingMechBaseKind">
+    <defName>Mech_ChunPing_Tokugawa</defName>
+    <label>德川机械体</label>
+    <race>Mech_ChunPing_Tokugawa</race>
+    <lifeStages Inherit="False">
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Mechanoid/WarUrchin</texPath>
+          <maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/Mech_WarUrchin</maskPath>
+          <shaderType>CutoutWithOverlay</shaderType>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>0.75</drawSize>
+        </bodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Mechanoid/WarUrchin</texPath>
+          <maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/Mech_WarUrchin</maskPath>
+          <shaderType>CutoutWithOverlay</shaderType>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>0.75</drawSize>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+    <isFighter>true</isFighter>
+    <combatPower>75</combatPower>
+  </PawnKindDef>
+
+
+  <!-- 贝尔泽布布释放的自主短程射击机械体。 -->
+  <ThingDef ParentName="ChunPingMechBase">
+    <defName>Mech_ChunPing_Ishuin</defName>
+    <label>我修院机械体</label>
+    <description>由贝尔泽布布淳平释放的轻型自主射击机械体，负责短程火力支援。</description>
+    <statBases>
+      <BandwidthCost>0</BandwidthCost>
+      <MarketValue>200</MarketValue>
+      <MoveSpeed>4.8</MoveSpeed>
+      <ArmorRating_Sharp>0.2</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.25</ArmorRating_Blunt>
+      <ShootingAccuracyPawn>4</ShootingAccuracyPawn>
+    </statBases>
+    <race>
+      <baseBodySize>0.35</baseBodySize>
+      <baseHealthScale>0.38</baseHealthScale>
+      <mechWeightClass>Light</mechWeightClass>
+      <thinkTreeConstant>WarUrchinConstant</thinkTreeConstant>
+      <hasCorpse>false</hasCorpse>
+    </race>
+    <comps>
+      <li Class="ChunPingMech.CompProperties_SummonedLifetime">
+        <compClass>ChunPingMech.CompSummonedLifetime</compClass>
+        <lifespanTicks>7200</lifespanTicks>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <PawnKindDef ParentName="ChunPingMechBaseKind">
+    <defName>Mech_ChunPing_Ishuin</defName>
+    <label>我修院机械体</label>
+    <race>Mech_ChunPing_Ishuin</race>
+    <lifeStages Inherit="False">
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Mechanoid/WarUrchin</texPath>
+          <maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/Mech_WarUrchin</maskPath>
+          <shaderType>CutoutWithOverlay</shaderType>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>0.75</drawSize>
+        </bodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Mechanoid/WarUrchin</texPath>
+          <maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/Mech_WarUrchin</maskPath>
+          <shaderType>CutoutWithOverlay</shaderType>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>0.75</drawSize>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+    <isFighter>true</isFighter>
+    <combatPower>80</combatPower>
+    <weaponTags>
+      <li>MechanoidGunShortRange</li>
+    </weaponTags>
+  </PawnKindDef>
+
+
+  <!-- 淳大哥部署的高仇恨诱饵，几乎没有输出能力。 -->
+  <ThingDef ParentName="ChunPingMechBase">
+    <defName>Mech_ChunPing_TokugawaDecoy</defName>
+    <label>德川诱饵</label>
+    <description>一台会持续广播挑衅信号的诱饵机械体，攻击力很低但会强烈吸引附近敌人。</description>
+    <statBases>
+      <BandwidthCost>0</BandwidthCost>
+      <MarketValue>60</MarketValue>
+      <MoveSpeed>3.5</MoveSpeed>
+      <ArmorRating_Sharp>0.15</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.15</ArmorRating_Blunt>
+      <MeleeHitChance>1</MeleeHitChance>
+    </statBases>
+    <tools>
+      <li>
+        <label>诱饵推撞</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>2</power>
+        <cooldownTime>3</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+      </li>
+    </tools>
+    <race>
+      <baseBodySize>0.45</baseBodySize>
+      <baseHealthScale>0.7</baseHealthScale>
+      <mechWeightClass>Light</mechWeightClass>
+      <thinkTreeConstant>WarUrchinConstant</thinkTreeConstant>
+      <hasCorpse>false</hasCorpse>
+    </race>
+    <comps>
+      <li Class="ChunPingMech.CompProperties_SummonedLifetime">
+        <compClass>ChunPingMech.CompSummonedLifetime</compClass>
+        <lifespanTicks>3600</lifespanTicks>
+      </li>
+      <li Class="ChunPingMech.CompProperties_HighAggroDecoy">
+        <compClass>ChunPingMech.CompHighAggroDecoy</compClass>
+        <aggroRadius>24</aggroRadius>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <PawnKindDef ParentName="ChunPingMechBaseKind">
+    <defName>Mech_ChunPing_TokugawaDecoy</defName>
+    <label>德川诱饵</label>
+    <race>Mech_ChunPing_TokugawaDecoy</race>
+    <lifeStages Inherit="False">
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Mechanoid/WarUrchin</texPath>
+          <maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/Mech_WarUrchin</maskPath>
+          <shaderType>CutoutWithOverlay</shaderType>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>0.85</drawSize>
+        </bodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Mechanoid/WarUrchin</texPath>
+          <maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/Mech_WarUrchin</maskPath>
+          <shaderType>CutoutWithOverlay</shaderType>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>0.85</drawSize>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+    <isFighter>true</isFighter>
+    <combatPower>15</combatPower>
   </PawnKindDef>
 </Defs>

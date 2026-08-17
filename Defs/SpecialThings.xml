@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <ThingDef>
+    <defName>ChunPing_SchemeTrap</defName>
+    <label>做局陷阱</label>
+    <description>一台体积很小的自动感应装置。敌对单位靠近后会立即引爆。</description>
+    <thingClass>Building</thingClass>
+    <category>Building</category>
+    <tickerType>Rare</tickerType>
+    <drawerType>MapMeshOnly</drawerType>
+    <altitudeLayer>Building</altitudeLayer>
+    <useHitPoints>true</useHitPoints>
+    <selectable>true</selectable>
+    <canHaveFaction>true</canHaveFaction>
+    <size>(1,1)</size>
+    <passability>Standable</passability>
+    <fillPercent>0.05</fillPercent>
+    <pathCost>0</pathCost>
+    <graphicData>
+      <texPath>Things/Building/Security/IEDTrap</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.45</drawSize>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>40</MaxHitPoints>
+      <Flammability>0</Flammability>
+      <Beauty>-1</Beauty>
+    </statBases>
+    <comps>
+      <li Class="ChunPingMech.CompProperties_ProximityTrap">
+        <compClass>ChunPingMech.CompProximityTrap</compClass>
+        <triggerRadius>3.5</triggerRadius>
+        <explosionRadius>4</explosionRadius>
+        <damageAmount>45</damageAmount>
+      </li>
+    </comps>
+  </ThingDef>
+
+</Defs>

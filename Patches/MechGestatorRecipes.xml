@@ -64,6 +64,13 @@
       <li>Gestate_ChunPing_Bully_Gun</li>
     </value>
   </Operation>
+  <!-- 恶霸淳平：盾牌版 -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="LargeMechGestator"]/recipes</xpath>
+    <value>
+      <li>Gestate_ChunPing_Bully_Shield</li>
+    </value>
+  </Operation>
   <Operation Class="PatchOperationAdd">
     <xpath>Defs/ThingDef[defName="LargeMechGestator"]/recipes</xpath>
     <value>

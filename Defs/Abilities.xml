@@ -39,7 +39,7 @@
         <hediffDef>ChunPing_Sumimasen</hediffDef>
         <severity>1</severity>
         <onlyBrain>false</onlyBrain>
-        <!-- <replaceExisting>true</replaceExisting> -->
+        <replaceExisting>true</replaceExisting>
       </li>
     </comps>
 
@@ -51,6 +51,528 @@
         <durationSecondsOverride>60~60</durationSecondsOverride>
       </li>
     </comps> -->
+  </AbilityDef>
+
+  <AbilityDef>
+    <defName>ChunPing_Ability_DashExplosion</defName>
+    <label>冲刺爆破</label>
+    <description>选定一个位置，快速冲刺到那里，并在抵达后引爆。</description>
+    <iconPath>UI/Abilities/Skip</iconPath>
+    <cooldownTicksRange>3600~3600</cooldownTicksRange>
+    <displayOrder>110</displayOrder>
+    <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+    <showWhenDrafted>true</showWhenDrafted>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>24.9</range>
+      <warmupTime>0.2</warmupTime>
+      <requireLineOfSight>false</requireLineOfSight>
+      <drawAimPie>false</drawAimPie>
+      <targetParams>
+        <canTargetLocations>true</canTargetLocations>
+        <canTargetPawns>false</canTargetPawns>
+        <canTargetHumans>false</canTargetHumans>
+        <canTargetAnimals>false</canTargetAnimals>
+        <canTargetMechs>false</canTargetMechs>
+        <canTargetBuildings>false</canTargetBuildings>
+        <canTargetCorpses>false</canTargetCorpses>
+        <canTargetSelf>false</canTargetSelf>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="CompProperties_AbilityGiveHediff">
+        <compClass>CompAbilityEffect_GiveHediff</compClass>
+        <hediffDef>ChunPing_DashRush</hediffDef>
+        <onlyApplyToSelf>true</onlyApplyToSelf>
+        <replaceExisting>true</replaceExisting>
+      </li>
+      <li Class="ChunPingMech.CompProperties_AbilityDashExplosion">
+        <compClass>ChunPingMech.CompAbilityEffect_DashExplosion</compClass>
+      </li>
+    </comps>
+  </AbilityDef>
+
+  <AbilityDef>
+    <defName>ChunPing_Ability_GuangZhouPolice</defName>
+    <label>广州警察</label>
+    <description>短时间强化自身的射击与机动能力，更适合快速压制和持续开火。</description>
+    <iconPath>UI/Abilities/Skip</iconPath>
+    <cooldownTicksRange>7200~7200</cooldownTicksRange>
+    <displayOrder>120</displayOrder>
+    <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+    <showWhenDrafted>true</showWhenDrafted>
+    <targetRequired>false</targetRequired>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>0</range>
+      <warmupTime>0.35</warmupTime>
+      <requireLineOfSight>false</requireLineOfSight>
+      <drawAimPie>false</drawAimPie>
+      <targetParams>
+        <canTargetSelf>true</canTargetSelf>
+        <canTargetPawns>false</canTargetPawns>
+        <canTargetHumans>false</canTargetHumans>
+        <canTargetAnimals>false</canTargetAnimals>
+        <canTargetMechs>false</canTargetMechs>
+        <canTargetBuildings>false</canTargetBuildings>
+        <canTargetCorpses>false</canTargetCorpses>
+        <canTargetLocations>false</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="CompProperties_AbilityGiveHediff">
+        <compClass>CompAbilityEffect_GiveHediff</compClass>
+        <hediffDef>ChunPing_GuangZhouPolice</hediffDef>
+        <onlyApplyToSelf>true</onlyApplyToSelf>
+        <replaceExisting>true</replaceExisting>
+      </li>
+    </comps>
+  </AbilityDef>
+
+  <AbilityDef>
+    <defName>ChunPing_Ability_HeroRescue</defName>
+    <label>英雄救场</label>
+    <description>瞬移到友军身边保护他。友军受到的伤害减半，早稻田英雄获得短暂的英雄主义。</description>
+    <iconPath>UI/Abilities/Skip</iconPath>
+    <cooldownTicksRange>3600~3600</cooldownTicksRange>
+    <displayOrder>130</displayOrder>
+    <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+    <showWhenDrafted>true</showWhenDrafted>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>24.9</range>
+      <warmupTime>0.2</warmupTime>
+      <requireLineOfSight>false</requireLineOfSight>
+      <drawAimPie>false</drawAimPie>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetHumans>true</canTargetHumans>
+        <canTargetAnimals>true</canTargetAnimals>
+        <canTargetMechs>true</canTargetMechs>
+        <canTargetSelf>false</canTargetSelf>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="ChunPingMech.CompProperties_AbilityHeroRescue">
+        <compClass>ChunPingMech.CompAbilityEffect_HeroRescue</compClass>
+        <protectedHediff>ChunPing_HeroProtection</protectedHediff>
+        <heroismHediff>ChunPing_Heroism</heroismHediff>
+      </li>
+    </comps>
+  </AbilityDef>
+
+  <AbilityDef>
+    <defName>ChunPing_Ability_HeroHeal</defName>
+    <label>治愈</label>
+    <description>为一名友军包扎所有可以处理的伤口。</description>
+    <iconPath>UI/Abilities/Heal</iconPath>
+    <cooldownTicksRange>1800~1800</cooldownTicksRange>
+    <displayOrder>140</displayOrder>
+    <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+    <showWhenDrafted>true</showWhenDrafted>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>24.9</range>
+      <warmupTime>0.2</warmupTime>
+      <requireLineOfSight>false</requireLineOfSight>
+      <drawAimPie>false</drawAimPie>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetHumans>true</canTargetHumans>
+        <canTargetAnimals>true</canTargetAnimals>
+        <canTargetMechs>true</canTargetMechs>
+        <canTargetSelf>false</canTargetSelf>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="ChunPingMech.CompProperties_AbilityHeroHeal">
+        <compClass>ChunPingMech.CompAbilityEffect_HeroHeal</compClass>
+      </li>
+    </comps>
+  </AbilityDef>
+
+  <AbilityDef>
+    <defName>ChunPing_Ability_DamageTransfer</defName>
+    <label>伤害转移</label>
+    <description>将友军身上的所有外伤转移到早稻田英雄身上。</description>
+    <iconPath>UI/Abilities/Skip</iconPath>
+    <cooldownTicksRange>6000~6000</cooldownTicksRange>
+    <displayOrder>150</displayOrder>
+    <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+    <showWhenDrafted>true</showWhenDrafted>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>24.9</range>
+      <warmupTime>0.2</warmupTime>
+      <requireLineOfSight>false</requireLineOfSight>
+      <drawAimPie>false</drawAimPie>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetHumans>true</canTargetHumans>
+        <canTargetAnimals>true</canTargetAnimals>
+        <canTargetMechs>true</canTargetMechs>
+        <canTargetSelf>false</canTargetSelf>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="ChunPingMech.CompProperties_AbilityDamageTransfer">
+        <compClass>ChunPingMech.CompAbilityEffect_DamageTransfer</compClass>
+      </li>
+    </comps>
+  </AbilityDef>
+
+  <AbilityDef>
+    <defName>ChunPing_Ability_WasedaSpirit</defName>
+    <label>早稻田精神</label>
+    <description>鼓舞地图上的所有友军，短时间提高移动、命中和承伤能力，并消除疼痛。</description>
+    <iconPath>UI/Abilities/Inspire</iconPath>
+    <cooldownTicksRange>7200~7200</cooldownTicksRange>
+    <displayOrder>160</displayOrder>
+    <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+    <showWhenDrafted>true</showWhenDrafted>
+    <targetRequired>false</targetRequired>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>0</range>
+      <warmupTime>0.35</warmupTime>
+      <requireLineOfSight>false</requireLineOfSight>
+      <drawAimPie>false</drawAimPie>
+      <targetParams>
+        <canTargetSelf>true</canTargetSelf>
+        <canTargetPawns>false</canTargetPawns>
+        <canTargetLocations>false</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="ChunPingMech.CompProperties_AbilityWasedaSpirit">
+        <compClass>ChunPingMech.CompAbilityEffect_WasedaSpirit</compClass>
+        <spiritHediff>ChunPing_WasedaSpirit</spiritHediff>
+      </li>
+    </comps>
+  </AbilityDef>
+
+  <AbilityDef>
+    <defName>ChunPing_Ability_SnowInvisibility</defName>
+    <label>隐身</label>
+    <description>雪之武士淳平暂时从敌人的认知中消失。</description>
+    <iconPath>UI/Abilities/Skip</iconPath>
+    <cooldownTicksRange>3600~3600</cooldownTicksRange>
+    <displayOrder>170</displayOrder>
+    <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+    <showWhenDrafted>true</showWhenDrafted>
+    <targetRequired>false</targetRequired>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>0</range>
+      <warmupTime>0.2</warmupTime>
+      <requireLineOfSight>false</requireLineOfSight>
+      <drawAimPie>false</drawAimPie>
+      <targetParams>
+        <canTargetSelf>true</canTargetSelf>
+        <canTargetPawns>false</canTargetPawns>
+        <canTargetLocations>false</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="CompProperties_AbilityGiveHediff">
+        <compClass>CompAbilityEffect_GiveHediff</compClass>
+        <hediffDef>ChunPing_SnowInvisibility</hediffDef>
+        <onlyApplyToSelf>true</onlyApplyToSelf>
+        <replaceExisting>true</replaceExisting>
+      </li>
+    </comps>
+  </AbilityDef>
+
+  <AbilityDef>
+    <defName>ChunPing_Ability_SnowBreath</defName>
+    <label>雪之呼吸</label>
+    <description>短时间内加快移动和近战攻击速度。</description>
+    <iconPath>UI/Abilities/Skip</iconPath>
+    <cooldownTicksRange>3600~3600</cooldownTicksRange>
+    <displayOrder>180</displayOrder>
+    <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+    <showWhenDrafted>true</showWhenDrafted>
+    <targetRequired>false</targetRequired>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>0</range>
+      <warmupTime>0.2</warmupTime>
+      <requireLineOfSight>false</requireLineOfSight>
+      <drawAimPie>false</drawAimPie>
+      <targetParams>
+        <canTargetSelf>true</canTargetSelf>
+        <canTargetPawns>false</canTargetPawns>
+        <canTargetLocations>false</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="CompProperties_AbilityGiveHediff">
+        <compClass>CompAbilityEffect_GiveHediff</compClass>
+        <hediffDef>ChunPing_SnowBreath</hediffDef>
+        <onlyApplyToSelf>true</onlyApplyToSelf>
+        <replaceExisting>true</replaceExisting>
+      </li>
+    </comps>
+  </AbilityDef>
+
+  <AbilityDef>
+    <defName>ChunPing_Ability_Execution</defName>
+    <label>处决</label>
+    <description>对敌人发动强力斩击；敌人生命低于 10% 时直接斩杀。</description>
+    <iconPath>UI/Abilities/Stun</iconPath>
+    <cooldownTicksRange>2400~2400</cooldownTicksRange>
+    <displayOrder>190</displayOrder>
+    <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+    <showWhenDrafted>true</showWhenDrafted>
+    <jobDef>CastAbilityOnThingMelee</jobDef>
+    <stunTargetWhileCasting>true</stunTargetWhileCasting>
+    <verbProperties>
+      <verbClass>Verb_CastAbilityTouch</verbClass>
+      <range>-1</range>
+      <warmupTime>0.15</warmupTime>
+      <drawAimPie>false</drawAimPie>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetHumans>true</canTargetHumans>
+        <canTargetAnimals>true</canTargetAnimals>
+        <canTargetMechs>true</canTargetMechs>
+        <canTargetSelf>false</canTargetSelf>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="ChunPingMech.CompProperties_AbilityExecution">
+        <compClass>ChunPingMech.CompAbilityEffect_Execution</compClass>
+        <damageAmount>70</damageAmount>
+        <armorPenetration>1.5</armorPenetration>
+        <executionHealthThreshold>0.1</executionHealthThreshold>
+      </li>
+    </comps>
+  </AbilityDef>
+
+  <AbilityDef>
+    <defName>ChunPing_Ability_CellRecombination</defName>
+    <label>细胞重组</label>
+    <description>使一名受伤友军的组织进入高速重组状态，在 15 秒内持续快速治愈伤势。</description>
+    <iconPath>UI/Abilities/Heal</iconPath>
+    <cooldownTicksRange>3600~3600</cooldownTicksRange>
+    <displayOrder>200</displayOrder>
+    <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+    <showWhenDrafted>true</showWhenDrafted>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>24.9</range>
+      <warmupTime>0.35</warmupTime>
+      <requireLineOfSight>true</requireLineOfSight>
+      <drawAimPie>false</drawAimPie>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetHumans>true</canTargetHumans>
+        <canTargetAnimals>true</canTargetAnimals>
+        <canTargetMechs>true</canTargetMechs>
+        <canTargetSelf>false</canTargetSelf>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="ChunPingMech.CompProperties_AbilityCellRecombination">
+        <compClass>ChunPingMech.CompAbilityEffect_CellRecombination</compClass>
+        <healingHediff>ChunPing_CellRecombination</healingHediff>
+        <durationTicks>900</durationTicks>
+      </li>
+    </comps>
+  </AbilityDef>
+
+  <AbilityDef>
+    <defName>ChunPing_Ability_ReleaseTokugawa</defName>
+    <label>释放德川</label>
+    <description>像战争女皇释放战争小镰一样，在指定位置释放一台擅长近战的德川机械体。召唤物会在 120 秒后失效。</description>
+    <iconPath>UI/Abilities/Skip</iconPath>
+    <cooldownTicksRange>2700~2700</cooldownTicksRange>
+    <displayOrder>210</displayOrder>
+    <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+    <showWhenDrafted>true</showWhenDrafted>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>24.9</range>
+      <warmupTime>0.5</warmupTime>
+      <requireLineOfSight>false</requireLineOfSight>
+      <drawAimPie>false</drawAimPie>
+      <targetParams>
+        <canTargetLocations>true</canTargetLocations>
+        <canTargetPawns>false</canTargetPawns>
+        <canTargetBuildings>false</canTargetBuildings>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="ChunPingMech.CompProperties_AbilitySummonMech">
+        <compClass>ChunPingMech.CompAbilityEffect_SummonMech</compClass>
+        <pawnKind>Mech_ChunPing_Tokugawa</pawnKind>
+      </li>
+    </comps>
+  </AbilityDef>
+
+  <AbilityDef>
+    <defName>ChunPing_Ability_ReleaseIshuin</defName>
+    <label>释放我修院</label>
+    <description>像战争女皇释放战争小镰一样，在指定位置释放一台擅长短程射击的我修院机械体。召唤物会在 120 秒后失效。</description>
+    <iconPath>UI/Abilities/Skip</iconPath>
+    <cooldownTicksRange>2700~2700</cooldownTicksRange>
+    <displayOrder>220</displayOrder>
+    <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+    <showWhenDrafted>true</showWhenDrafted>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>24.9</range>
+      <warmupTime>0.5</warmupTime>
+      <requireLineOfSight>false</requireLineOfSight>
+      <drawAimPie>false</drawAimPie>
+      <targetParams>
+        <canTargetLocations>true</canTargetLocations>
+        <canTargetPawns>false</canTargetPawns>
+        <canTargetBuildings>false</canTargetBuildings>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="ChunPingMech.CompProperties_AbilitySummonMech">
+        <compClass>ChunPingMech.CompAbilityEffect_SummonMech</compClass>
+        <pawnKind>Mech_ChunPing_Ishuin</pawnKind>
+      </li>
+    </comps>
+  </AbilityDef>
+
+  <AbilityDef>
+    <defName>ChunPing_Ability_EMC</defName>
+    <label>EMC</label>
+    <description>指定一个区域，引发一次半径 8 格的大规模电磁脉冲，瘫痪范围内的机械体、护盾和电子设备。</description>
+    <iconPath>UI/Abilities/Stun</iconPath>
+    <cooldownTicksRange>6000~6000</cooldownTicksRange>
+    <displayOrder>230</displayOrder>
+    <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+    <showWhenDrafted>true</showWhenDrafted>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>30</range>
+      <warmupTime>1.0</warmupTime>
+      <requireLineOfSight>false</requireLineOfSight>
+      <drawAimPie>false</drawAimPie>
+      <targetParams>
+        <canTargetLocations>true</canTargetLocations>
+        <canTargetPawns>false</canTargetPawns>
+        <canTargetBuildings>false</canTargetBuildings>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="ChunPingMech.CompProperties_AbilityAreaEmp">
+        <compClass>ChunPingMech.CompAbilityEffect_AreaEmp</compClass>
+        <radius>8</radius>
+        <damageAmount>45</damageAmount>
+      </li>
+    </comps>
+  </AbilityDef>
+
+  <AbilityDef>
+    <defName>ChunPing_Ability_SchemeTrap</defName>
+    <label>做局陷阱</label>
+    <description>在指定位置部署一台小型隐蔽装置。敌人进入 3.5 格范围后，装置会自动引爆。</description>
+    <iconPath>UI/Abilities/Skip</iconPath>
+    <cooldownTicksRange>3600~3600</cooldownTicksRange>
+    <displayOrder>240</displayOrder>
+    <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+    <showWhenDrafted>true</showWhenDrafted>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>20</range>
+      <warmupTime>0.5</warmupTime>
+      <requireLineOfSight>true</requireLineOfSight>
+      <drawAimPie>false</drawAimPie>
+      <targetParams>
+        <canTargetLocations>true</canTargetLocations>
+        <canTargetPawns>false</canTargetPawns>
+        <canTargetBuildings>false</canTargetBuildings>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="ChunPingMech.CompProperties_AbilityDeployTrap">
+        <compClass>ChunPingMech.CompAbilityEffect_DeployTrap</compClass>
+        <trapDef>ChunPing_SchemeTrap</trapDef>
+      </li>
+    </comps>
+  </AbilityDef>
+
+  <AbilityDef>
+    <defName>ChunPing_Ability_TokugawaDecoy</defName>
+    <label>德川诱饵</label>
+    <description>在指定地点生成一台攻击力很低的德川诱饵。诱饵会强烈吸引 24 格内敌人的攻击，并在 60 秒后失效。</description>
+    <iconPath>UI/Abilities/Skip</iconPath>
+    <cooldownTicksRange>4500~4500</cooldownTicksRange>
+    <displayOrder>250</displayOrder>
+    <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+    <showWhenDrafted>true</showWhenDrafted>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>24.9</range>
+      <warmupTime>0.35</warmupTime>
+      <requireLineOfSight>false</requireLineOfSight>
+      <drawAimPie>false</drawAimPie>
+      <targetParams>
+        <canTargetLocations>true</canTargetLocations>
+        <canTargetPawns>false</canTargetPawns>
+        <canTargetBuildings>false</canTargetBuildings>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="ChunPingMech.CompProperties_AbilitySummonMech">
+        <compClass>ChunPingMech.CompAbilityEffect_SummonMech</compClass>
+        <pawnKind>Mech_ChunPing_TokugawaDecoy</pawnKind>
+      </li>
+    </comps>
+  </AbilityDef>
+
+  <AbilityDef>
+    <defName>ChunPing_Ability_IshuinMark</defName>
+    <label>我修院</label>
+    <description>标记一个敌人 20 秒，使其受到的伤害提高至 150%，移动速度降低至 80%。</description>
+    <iconPath>UI/Abilities/Stun</iconPath>
+    <cooldownTicksRange>3600~3600</cooldownTicksRange>
+    <displayOrder>260</displayOrder>
+    <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+    <showWhenDrafted>true</showWhenDrafted>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>30</range>
+      <warmupTime>0.35</warmupTime>
+      <requireLineOfSight>true</requireLineOfSight>
+      <drawAimPie>false</drawAimPie>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetHumans>true</canTargetHumans>
+        <canTargetAnimals>true</canTargetAnimals>
+        <canTargetMechs>true</canTargetMechs>
+        <canTargetSelf>false</canTargetSelf>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="ChunPingMech.CompProperties_AbilityEnemyDebuff">
+        <compClass>ChunPingMech.CompAbilityEffect_EnemyDebuff</compClass>
+        <hediffDef>ChunPing_IshuinMark</hediffDef>
+        <durationTicks>1200</durationTicks>
+      </li>
+    </comps>
   </AbilityDef>
 
 </Defs>

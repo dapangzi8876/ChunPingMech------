@@ -4,7 +4,7 @@
   <ThingDef ParentName="ChunPingMechBase">
     <defName>Mech_ChunPing_WasedaHero</defName>
     <label>早稻田英雄淳平</label>
-    <description>耐久较高的支援型机械体。冲锋、牺牲和光环技能暂未实现。</description>
+    <description>耐久较高的支援型机械体。能够瞬移救援友军、治愈伤口、转移伤势，并用早稻田精神鼓舞全场。</description>
     <statBases>
       <BandwidthCost>1</BandwidthCost>
       <ArmorRating_Sharp>1.0</ArmorRating_Sharp>
@@ -19,9 +19,23 @@
       <mechFixedSkillLevel>14</mechFixedSkillLevel>
       <mechEnabledWorkTypes>
         <li>Doctor</li>
-        <li>BasicWorker</li>
+      <li>BasicWorker</li>
       </mechEnabledWorkTypes>
     </race>
+    <abilities>
+      <li>ChunPing_Ability_HeroRescue</li>
+      <li>ChunPing_Ability_HeroHeal</li>
+      <li>ChunPing_Ability_DamageTransfer</li>
+      <li>ChunPing_Ability_WasedaSpirit</li>
+    </abilities>
+    <comps>
+      <li Class="ChunPingMech.CompProperties_WasedaHeroPassive">
+        <compClass>ChunPingMech.CompWasedaHeroPassive</compClass>
+        <lastStandHediff>ChunPing_HeroLastStand</lastStandHediff>
+        <deathTriggerHediff>ChunPing_HeroDeathTrigger</deathTriggerHediff>
+        <criticalHealthThreshold>0.3</criticalHealthThreshold>
+      </li>
+    </comps>
   </ThingDef>
 
 
@@ -68,6 +82,9 @@
       <MarketValue>3000</MarketValue>
       <MoveSpeed>2.2</MoveSpeed>
       <CarryingCapacity>1200</CarryingCapacity>
+      <EnergyShieldRechargeRate>0.12</EnergyShieldRechargeRate>
+      <EnergyShieldEnergyMax>2.4</EnergyShieldEnergyMax>
+      <EMPResistance>0.45</EMPResistance>
       <!-- 等效近战 14。 -->
       <MeleeHitChance>12</MeleeHitChance>
     </statBases>
@@ -88,6 +105,21 @@
       <baseHealthScale>2.2</baseHealthScale>
       <mechWeightClass>Heavy</mechWeightClass>
     </race>
+    <comps>
+      <li Class="CompProperties_ProjectileInterceptor">
+        <radius>4</radius>
+        <interceptGroundProjectiles>true</interceptGroundProjectiles>
+        <color>(0.4, 0.4, 0.4)</color>
+        <reactivateEffect>BulletShieldGenerator_Reactivate</reactivateEffect>
+        <activeSound>BulletShield_Ambience</activeSound>
+        <hitPoints>280</hitPoints>
+        <hitPointsRestoreInstantlyAfterCharge>true</hitPointsRestoreInstantlyAfterCharge>
+        <chargeDurationTicks>9000</chargeDurationTicks>
+        <drawWithNoSelection>True</drawWithNoSelection>
+        <disarmedByEmpForTicks>3000</disarmedByEmpForTicks>
+        <gizmoTipKey>ProjectileInterceptorTip</gizmoTipKey>
+      </li>
+    </comps>
   </ThingDef>
 
 
@@ -120,11 +152,10 @@
   </PawnKindDef>
 
 
-  <!-- TODO: 后续加入隐身、雪之呼吸、斩首和处决逻辑。 -->
   <ThingDef ParentName="ChunPingMechBase">
     <defName>Mech_ChunPing_SnowSamurai</defName>
     <label>雪之武士淳平</label>
-    <description>高速、高伤害但较脆弱的近战刺客。特殊剑术暂未实现。</description>
+    <description>高速、高伤害但较脆弱的近战刺客。能够隐身、使用雪之呼吸，并处决濒死敌人。</description>
     <statBases>
       <BandwidthCost>1</BandwidthCost>
       <ArmorRating_Sharp>0.8</ArmorRating_Sharp>
@@ -150,6 +181,11 @@
       <baseHealthScale>0.90</baseHealthScale>
       <mechWeightClass>Medium</mechWeightClass>
     </race>
+    <abilities>
+      <li>ChunPing_Ability_SnowInvisibility</li>
+      <li>ChunPing_Ability_SnowBreath</li>
+      <li>ChunPing_Ability_Execution</li>
+    </abilities>
   </ThingDef>
 
 
@@ -185,11 +221,11 @@
   </PawnKindDef>
 
 
-  <!-- 仅保留普通远程攻击；电子战和陷阱机制留待后续阶段。 -->
+  <!-- 电子战与战场控制单位。 -->
   <ThingDef ParentName="ChunPingMechBase">
     <defName>Mech_ChunPing_BigBrother</defName>
     <label>淳大哥</label>
-    <description>中高级远程机械体。电子战、EMC、陷阱和诱饵机制暂未实现。</description>
+    <description>中高级远程电子战机械体，能够制造大范围电磁脉冲、部署陷阱和诱饵，并标记敌人的弱点。</description>
     <statBases>
       <BandwidthCost>1</BandwidthCost>
       <ArmorRating_Sharp>1.2</ArmorRating_Sharp>
@@ -202,6 +238,12 @@
       <baseHealthScale>1.45</baseHealthScale>
       <mechWeightClass>Medium</mechWeightClass>
     </race>
+    <abilities>
+      <li>ChunPing_Ability_EMC</li>
+      <li>ChunPing_Ability_SchemeTrap</li>
+      <li>ChunPing_Ability_TokugawaDecoy</li>
+      <li>ChunPing_Ability_IshuinMark</li>
+    </abilities>
   </ThingDef>
 
 

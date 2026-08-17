@@ -19,11 +19,273 @@
       </li>
     </stages>
     <comps>
-      <!-- <li Class="HediffCompProperties_SeverityPerDay">
-        <severityPerDay>-50.0</severityPerDay>
-      </li> -->
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-5.0</severityPerDay>
+      </li>
       <li Class="HediffCompProperties_Disappears">
-        <disappearsAfterTicks>10000</disappearsAfterTicks>
+        <disappearsAfterTicks>12000</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>ChunPing_DashRush</defName>
+    <label>冲刺蓄势</label>
+    <description>短时间内大幅提高移动速度，帮助机械体快速冲向目标位置。</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>false</isBad>
+    <stages>
+      <li>
+        <statOffsets>
+          <MoveSpeed>3.6</MoveSpeed>
+        </statOffsets>
+      </li>
+    </stages>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>900</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>ChunPing_GuangZhouPolice</defName>
+    <label>广州警察</label>
+    <description>短时间内强化射击精度、开火效率和机动能力，并借助更好的视野提升远距离压制表现。</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>false</isBad>
+    <stages>
+      <li>
+        <statOffsets>
+          <ShootingAccuracyPawn>4</ShootingAccuracyPawn>
+          <AimingDelayFactor>-0.25</AimingDelayFactor>
+          <MoveSpeed>0.75</MoveSpeed>
+        </statOffsets>
+        <capMods>
+          <li>
+            <capacity>Sight</capacity>
+            <offset>0.2</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>1800</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>ChunPing_HeroProtection</defName>
+    <label>英雄救场</label>
+    <description>早稻田英雄正在替这名友军承受战场压力。</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>false</isBad>
+    <stages>
+      <li>
+        <statFactors>
+          <IncomingDamageFactor>0.5</IncomingDamageFactor>
+        </statFactors>
+      </li>
+    </stages>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>900</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>ChunPing_Heroism</defName>
+    <label>英雄主义</label>
+    <description>早稻田英雄为了保护友军而爆发出更快的速度和更强的承伤能力。</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>false</isBad>
+    <stages>
+      <li>
+        <statFactors>
+          <MoveSpeed>1.5</MoveSpeed>
+          <IncomingDamageFactor>0.5</IncomingDamageFactor>
+        </statFactors>
+      </li>
+    </stages>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>900</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>ChunPing_WasedaSpirit</defName>
+    <label>早稻田精神</label>
+    <description>早稻田英雄的精神鼓舞着所有友军。</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>false</isBad>
+    <stages>
+      <li>
+        <painFactor>0</painFactor>
+        <statFactors>
+          <MoveSpeed>1.3</MoveSpeed>
+          <IncomingDamageFactor>0.8</IncomingDamageFactor>
+          <MeleeHitChance>1.2</MeleeHitChance>
+          <ShootingAccuracyPawn>1.2</ShootingAccuracyPawn>
+        </statFactors>
+      </li>
+    </stages>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>900</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>ChunPing_HeroLastStand</defName>
+    <label>英雄不死于无名之处</label>
+    <description>英雄濒危时点燃了附近友军的战意。</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>false</isBad>
+    <stages>
+      <li>
+        <painFactor>0.5</painFactor>
+        <statFactors>
+          <MoveSpeed>1.3</MoveSpeed>
+          <MeleeHitChance>1.25</MeleeHitChance>
+          <ShootingAccuracyPawn>1.25</ShootingAccuracyPawn>
+        </statFactors>
+      </li>
+    </stages>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>900</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>ChunPing_HeroLegacy</defName>
+    <label>英雄的遗志</label>
+    <description>英雄倒下后留下的遗志，短暂提升战斗能力。</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>false</isBad>
+    <stages>
+      <li>
+        <painFactor>0.5</painFactor>
+        <statFactors>
+          <MoveSpeed>1.25</MoveSpeed>
+          <IncomingDamageFactor>0.75</IncomingDamageFactor>
+          <MeleeHitChance>1.3</MeleeHitChance>
+          <ShootingAccuracyPawn>1.3</ShootingAccuracyPawn>
+          <AimingDelayFactor>0.75</AimingDelayFactor>
+        </statFactors>
+      </li>
+    </stages>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>900</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>ChunPing_HeroDeathTrigger</defName>
+    <label>英雄遗志</label>
+    <description>记录英雄死亡时的遗志触发状态。</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="ChunPingMech.HediffCompProperties_HeroDeathLegacy">
+        <compClass>ChunPingMech.HediffComp_HeroDeathLegacy</compClass>
+        <legacyHediff>ChunPing_HeroLegacy</legacyHediff>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>ChunPing_SnowInvisibility</defName>
+    <label>隐身</label>
+    <description>雪之武士淳平暂时隐去身形。</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_Invisibility">
+        <visibleToPlayer>true</visibleToPlayer>
+      </li>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>900</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>ChunPing_SnowBreath</defName>
+    <label>雪之呼吸</label>
+    <description>寒冷的呼吸让雪之武士淳平以更快的速度移动和挥刀。</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>false</isBad>
+    <stages>
+      <li>
+        <statFactors>
+          <MoveSpeed>1.5</MoveSpeed>
+          <MeleeCooldownFactor>0.65</MeleeCooldownFactor>
+        </statFactors>
+      </li>
+    </stages>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>900</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>ChunPing_CellRecombination</defName>
+    <label>细胞重组</label>
+    <description>受影响单位的组织正在高速重组，每秒快速修复所有现存伤势。</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="ChunPingMech.HediffCompProperties_CellRecombination">
+        <compClass>ChunPingMech.HediffComp_CellRecombination</compClass>
+        <pulseIntervalTicks>60</pulseIntervalTicks>
+        <healPerInjury>2</healPerInjury>
+      </li>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>900</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>ChunPing_IshuinMark</defName>
+    <label>我修院标记</label>
+    <description>目标的弱点已被完全暴露，受到的伤害显著增加且移动速度下降。</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>true</isBad>
+    <stages>
+      <li>
+        <statFactors>
+          <IncomingDamageFactor>1.5</IncomingDamageFactor>
+          <MoveSpeed>0.8</MoveSpeed>
+        </statFactors>
+      </li>
+    </stages>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>1200</disappearsAfterTicks>
         <showRemainingTime>true</showRemainingTime>
       </li>
     </comps>

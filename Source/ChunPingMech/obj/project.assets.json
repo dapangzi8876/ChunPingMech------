@@ -8,16 +8,16 @@
     ".NETStandard,Version=v2.1": []
   },
   "packageFolders": {
-    "C:\\Users\\Administrator\\.nuget\\packages\\": {}
+    "C:\\Users\\CodexSandboxOffline\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Administrator\\Downloads\\ChunPingMech-------main\\Source\\ChunPingMech\\ChunPingMech.csproj",
+      "projectUniqueName": "E:\\BaiduNetdiskDownload\\Mods\\淳平机械体\\Source\\ChunPingMech\\ChunPingMech.csproj",
       "projectName": "ChunPingMech",
-      "projectPath": "C:\\Users\\Administrator\\Downloads\\ChunPingMech-------main\\Source\\ChunPingMech\\ChunPingMech.csproj",
-      "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Administrator\\Downloads\\ChunPingMech-------main\\Source\\ChunPingMech\\obj\\",
+      "projectPath": "E:\\BaiduNetdiskDownload\\Mods\\淳平机械体\\Source\\ChunPingMech\\ChunPingMech.csproj",
+      "packagesPath": "C:\\Users\\CodexSandboxOffline\\.nuget\\packages\\",
+      "outputPath": "E:\\BaiduNetdiskDownload\\Mods\\淳平机械体\\Source\\ChunPingMech\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config"

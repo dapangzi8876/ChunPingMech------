@@ -10,7 +10,6 @@
       <ArmorRating_Sharp>0.3</ArmorRating_Sharp>
       <CarryingCapacity>75</CarryingCapacity>
       <EMPResistance>0.1</EMPResistance>
-      <MoveSpeed>4.8</MoveSpeed>
       <WorkSpeedGlobal>1</WorkSpeedGlobal>
     </statBases>
     <race>
@@ -243,6 +242,9 @@
         </bodyGraphicData>
       </li>
     </lifeStages>
+    <weaponTags>
+      <li>MeleeWeapon_LongSword</li>
+    </weaponTags>
     <isFighter>true</isFighter>
     <combatPower>80</combatPower>
   </PawnKindDef>
@@ -305,7 +307,6 @@
       <BandwidthCost>1</BandwidthCost>
       <ArmorRating_Sharp>0.2</ArmorRating_Sharp>
       <ArmorRating_Blunt>0.3</ArmorRating_Blunt>
-      <BandwidthCost>1</BandwidthCost>
     </statBases>
     <race>
       <mechFixedSkillLevel>20</mechFixedSkillLevel>
